@@ -1,0 +1,41 @@
+<section class="home-three-section">
+  <div class="home-three-top-banner">
+    <div class="container home-three-top-container">
+      <div class="home-three-top-content">
+        <h2 class="home-three-top-title">
+          Axeria este echipa capabila sa ofere
+          <br>
+          rapid solutii de specialitate
+        </h2>
+
+        <a href="#" class="home-three-top-button">
+          ASIGURARI RCA
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="home-three-content">
+    <div class="container home-three-container">
+      <div class="row g-4">
+        <div class="col-12 col-md-6" *ngFor="let valueCard of valueCards">
+          <div class="home-three-card">
+            <div class="home-three-card-icon">
+              <i [class]="valueCard.iconClass"></i>
+            </div>
+
+            <div class="home-three-card-body">
+              <h3 class="home-three-card-title">
+                {{ valueCard.title }}
+              </h3>
+
+              <p class="home-three-card-description">
+                {{ valueCard.description }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

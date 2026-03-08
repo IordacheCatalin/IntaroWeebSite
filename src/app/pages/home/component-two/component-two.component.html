@@ -1,0 +1,54 @@
+<section class="about-home-section">
+  <div class="about-home-container">
+    <div class="about-home-header text-center-ic">
+      <h2 class="about-home-title color-primary-project fs-50 wheight500">
+        AXERIA IARD
+      </h2>
+
+      <div class="about-home-title-line"></div>
+
+      <p class="about-home-intro color-primary-project fs-20 wheight500 margin-center">
+        Companie activa pe piata de asigurari din Franta de peste 29 ani, a finalizat procesul de
+        notificare in baza dreptului de stabilire, pentru sucursala din Romania, primind aviz favorabil
+        de la autoritatea de supraveghere din Franta (Autorité de contrôle prudentiel et de résolution – ACPR),
+        cat si de la Autoritatea de Supraveghere Financiara din Romania.
+      </p>
+    </div>
+
+    <div class="about-timeline-panel">
+      <div class="about-timeline-item" *ngFor="let timelineItem of timelineItems; let isLast = last">
+        <div class="about-timeline-content text-center-ic">
+          <div
+            class="about-timeline-eyebrow fs-24 text-italic-ic"
+            *ngIf="timelineItem.eyebrow"
+          >
+            {{ timelineItem.eyebrow }}
+          </div>
+
+          <h3 class="about-timeline-title color-primary-project wheight500">
+            {{ timelineItem.title }}
+          </h3>
+
+          <p class="about-timeline-description color-primary-project fs-18 wheight500">
+            {{ timelineItem.description }}
+          </p>
+        </div>
+
+        <div class="about-timeline-line" *ngIf="!isLast"></div>
+      </div>
+    </div>
+
+    <div class="about-home-bottom-note center-flex-align">
+      <div class="about-home-bottom-image">
+        <img src="assets/Images/about-home-small.jpg" alt="Axeria detail">
+      </div>
+
+      <p class="about-home-bottom-text color-primary-project fs-24 text-italic-ic wheight500">
+        Prin structura avuta in vedere pentru emiterea politelor si instrumentarea dosarelor de dauna,
+        prin parteneriatele incheiate atat cu brokerii de asigurare cat si cu partenerul local INTARO,
+        compania AXERIA IARD se va pozitiona cat mai aproape de client, astfel incat sa ofere acestora
+        un acces simplu si rapid la serviciile companiei.
+      </p>
+    </div>
+  </div>
+</section>

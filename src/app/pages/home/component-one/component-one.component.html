@@ -1,0 +1,81 @@
+<section class="hero-wrapper">
+  <div class="hero-top-banner">
+    <div class="container hero-top-banner-container">
+      <p class="hero-top-banner-text">
+        Stimati clienti/colaboratori,
+      </p>
+
+      <p class="hero-top-banner-text">
+        Va informam ca, incepand cu data de 31.03.2025, sediul nostru s-a relocat la o noua adresa:
+      </p>
+
+      <p class="hero-top-banner-address">
+        <span class="hero-top-banner-dot"></span>
+        Str. Gheorghe Titeica 212-214 (Floreasca), Sector 2, Bucuresti
+      </p>
+
+      <p class="hero-top-banner-address">
+        Cladirea Ethos House, etj. 2
+      </p>
+    </div>
+  </div>
+
+  <section class="hero-section">
+    <div class="container hero-container">
+      <div class="row align-items-center hero-row">
+        <div class="col-12 col-lg-6">
+          <div class="hero-content">
+            <h1 class="hero-title">
+              Tu te asiguri, iar noi ne
+              <br>
+              ocupam de restul!
+            </h1>
+
+            <div class="hero-cards">
+              <ng-container *ngFor="let heroCard of heroCards">
+
+                <!-- Internal route -->
+                <a *ngIf="heroCard.route" class="hero-card" [routerLink]="heroCard.route">
+                  <div class="hero-card-icon">
+                    <i [class]="heroCard.iconClass"></i>
+                  </div>
+
+                  <div class="hero-card-text">
+                    <div class="hero-card-title">{{ heroCard.title }}</div>
+
+                    <div class="hero-card-subtitle" *ngIf="heroCard.subtitle">
+                      {{ heroCard.subtitle }}
+                    </div>
+                  </div>
+                </a>
+
+                <!-- External link -->
+                <a *ngIf="heroCard.href" class="hero-card" [href]="heroCard.href" target="_blank"
+                  rel="noopener noreferrer">
+                  <div class="hero-card-icon">
+                    <i [class]="heroCard.iconClass"></i>
+                  </div>
+
+                  <div class="hero-card-text">
+                    <div class="hero-card-title">{{ heroCard.title }}</div>
+
+                    <div class="hero-card-subtitle" *ngIf="heroCard.subtitle">
+                      {{ heroCard.subtitle }}
+                    </div>
+                  </div>
+                </a>
+
+              </ng-container>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-6">
+          <div class="hero-image-wrapper">
+            <img src="assets/Images/cropped-axeriaxx-1.png" alt="Axeria hero image" class="hero-image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>

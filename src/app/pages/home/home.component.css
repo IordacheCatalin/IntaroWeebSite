@@ -1,0 +1,71 @@
+.home-component-page {
+  position: relative;
+}
+
+.home-two-wrapper {
+  background: #ececec;
+  overflow: hidden;
+}
+
+.home-two-container {
+  max-width: 1400px;
+}
+
+.home-two-row {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+
+.component-two,
+.img-container-home {
+  flex: 0 0 50%;
+}
+
+.component-two {
+  position: relative;
+  z-index: 2;
+}
+
+.img-container-home {
+  position: absolute;
+  align-self: flex-start;
+  background-color: transparent;
+}
+
+.image-stored {
+  position: fixed;
+  height: calc(100vh - 108px);
+  background-image: url("../../../assets/Images/trafic_pagina_acasa-1024x682.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  right: calc(50% - 700px);
+  width: 50%;
+  max-width: 1000px;
+}
+
+@media (max-width: 991.98px) {
+  .home-two-row {
+    display: block;
+  }
+
+  .component-two,
+  .img-container-home {
+    width: 100%;
+    flex: none;
+  }
+
+  .img-container-home {
+    position: relative;
+    top: 0;
+    height: 520px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .img-container-home {
+    height: 340px;
+  }
+}
