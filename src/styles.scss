@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+}
+
+html,
+body {
+    padding-top: 0 !important;
+    scroll-behavior: smooth;
+    overscroll-behavior: none;
+    transition: all 0.3s ease-in-out;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+}
+
+button {
+    transition: all 0.3s ease-in-out;
+}
+
+
+main.main {
+    min-height: calc(100vh - 120px);
+}
+
+main.main-app {
+    min-height: 100vh;
+}
