@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HeroCard } from '../../../Interfaces/HomeCard.interface';
+import { Banner } from '../banner/banner.component';
 
 @Component({
   selector: 'app-home-component-one',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, Banner],
   templateUrl: './component-one.component.html',
   styleUrl: './component-one.component.css'
 })

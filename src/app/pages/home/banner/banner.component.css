@@ -1,0 +1,29 @@
+.hero-top-banner {
+  position: relative;
+  background: var(--color-secondary-project);
+  padding: 18px 0 16px;
+  text-align: center;
+  z-index: 1;
+}
+
+.hero-top-banner-container {
+  max-width: 1500px;
+}
+
+.hero-top-banner-text,
+.hero-top-banner-address {
+  margin: 0;
+  color: #ffffff;
+}
+
+.hero-top-banner-address {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.container.hero-top-banner-container p{
+  line-height: 1.5;
+  letter-spacing: 1px;
+}

@@ -1,0 +1,185 @@
+.brokers-page {
+  min-height: 100vh;
+  background-image: url("../../../assets/Images/echipa.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.brokers-overlay {
+  min-height: 100vh;
+  background: rgba(255, 255, 255, 0.88);
+  padding: 40px 0 70px;
+}
+
+.brokers-container {
+  max-width: 980px;
+}
+
+.brokers-title {
+  margin: 0 0 34px;
+  color: #3438b7;
+  font-size: 54px;
+  line-height: 1.1;
+  font-weight: 500;
+  text-align: center;
+}
+
+.brokers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.broker-row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  align-items: center;
+  gap: 36px;
+}
+
+.broker-logo-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.broker-logo {
+  max-width: 140px;
+  max-height: 70px;
+  width: auto;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.broker-logo-placeholder {
+  width: 72px;
+  height: 72px;
+  border: 3px solid #1e1e1e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9a9a9a;
+  font-size: 18px;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.broker-name-cell {
+  display: flex;
+  align-items: center;
+  min-height: 72px;
+}
+
+.broker-name,
+.broker-link {
+  color: #111111;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.broker-link:hover {
+  color: #3438b7;
+}
+
+/* Desktop medium */
+@media (max-width: 1199.98px) {
+  .brokers-title {
+    font-size: 46px;
+  }
+
+  .broker-row {
+    grid-template-columns: 150px 1fr;
+    gap: 28px;
+  }
+
+  .broker-name,
+  .broker-link {
+    font-size: 17px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 991.98px) {
+  .brokers-overlay {
+    padding: 30px 0 50px;
+  }
+
+  .brokers-title {
+    font-size: 38px;
+    margin-bottom: 28px;
+  }
+
+  .brokers-list {
+    gap: 22px;
+  }
+
+  .broker-row {
+    grid-template-columns: 120px 1fr;
+    gap: 20px;
+  }
+
+  .broker-logo {
+    max-width: 100px;
+    max-height: 56px;
+  }
+
+  .broker-logo-placeholder {
+    width: 60px;
+    height: 60px;
+    font-size: 16px;
+  }
+
+  .broker-name,
+  .broker-link {
+    font-size: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767.98px) {
+  .brokers-page {
+    background-attachment: scroll;
+  }
+
+  .brokers-overlay {
+    padding: 24px 0 40px;
+  }
+
+  .brokers-title {
+    font-size: 30px;
+    margin-bottom: 22px;
+  }
+
+  .brokers-list {
+    gap: 18px;
+  }
+
+  .broker-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .broker-name-cell {
+    justify-content: center;
+    min-height: auto;
+  }
+
+  .broker-name,
+  .broker-link {
+    font-size: 15px;
+    line-height: 1.45;
+  }
+
+  .broker-logo {
+    max-width: 110px;
+    max-height: 54px;
+  }
+}

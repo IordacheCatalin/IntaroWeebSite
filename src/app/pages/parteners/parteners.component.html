@@ -1,0 +1,33 @@
+<app-banner></app-banner>
+<section class="brokers-page">
+  <div class="brokers-overlay">
+    <div class="container brokers-container">
+      <h1 class="brokers-title">Brokeri parteneri</h1>
+
+      <div class="brokers-list">
+        <div class="broker-row" *ngFor="let broker of brokers">
+          <div class="broker-logo-cell">
+            <ng-container *ngIf="broker.logo; else logoPlaceholder">
+              <img [src]="broker.logo" [alt]="broker.name" class="broker-logo">
+            </ng-container>
+
+            <ng-template #logoPlaceholder>
+              <div class="broker-logo-placeholder">LOGO</div>
+            </ng-template>
+          </div>
+
+          <div class="broker-name-cell">
+            <a *ngIf="broker.website; else brokerText" class="broker-link" [href]="broker.website" target="_blank"
+              rel="noopener noreferrer">
+              {{ broker.name }}
+            </a>
+
+            <ng-template #brokerText>
+              <span class="broker-name">{{ broker.name }}</span>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -16,7 +16,12 @@ export const routes: Routes = [
     loadComponent: () =>
       import('../app/pages/directSettlement/directSettlement.component').then(m => m.DirectSettlement)
   }, 
-   {
+    {
+    path: 'brokeri',
+    loadComponent: () =>
+      import('../app/pages/parteners/parteners.component').then(m => m.BrokersComponent)
+  }, 
+  {
     path: '**',
     redirectTo: 'home'
   }
