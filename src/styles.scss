@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nokora:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 * {
-    font-family: "Playfair Display", serif;
     font-weight: 400;
+    font-family: "Nokora", sans-serif;
 }
 
 html,
@@ -11,8 +12,8 @@ body {
     scroll-behavior: smooth;
     overscroll-behavior: none;
     transition: all 0.3s ease-in-out;
-    font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
+    font-family: "Nokora", sans-serif;
 }
 
 button {
@@ -26,4 +27,27 @@ main.main {
 
 main.main-app {
     min-height: 100vh;
+}
+
+
+.home-three-top-button {
+    min-width: 175px;
+    height: 74px;
+    padding: 0 35px;
+    border-radius: 12px;
+    background: #113d8d;
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.home-three-top-button:hover {
+    background-color: #FFFFFF;
+    color: #06337A;
+    border-color: #FFFFFF;
+    transform: translateY(-1px);
 }

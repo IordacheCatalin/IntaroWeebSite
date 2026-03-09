@@ -18,26 +18,18 @@
 .hero-top-banner-address {
   margin: 0;
   color: #ffffff;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.45;
 }
 
 .hero-top-banner-address {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  font-weight: 600;
+
 }
 
-.hero-top-banner-dot {
-  width: 8px;
-  height: 8px;
-  min-width: 8px;
-  border-radius: 50%;
-  background: #ff4b6e;
-  display: inline-block;
+.container.hero-top-banner-container p{
+  line-height: 1.5;
+  letter-spacing: 1px;
 }
 
 /* Main hero */
@@ -64,7 +56,7 @@
 .hero-title {
   color: #ffffff;
   font-size: 4rem;
-  line-height: 1.15;
+  font-family: "Playfair Display", serif;
   font-weight: 500;
   margin: 0 0 52px;
 }
@@ -78,12 +70,13 @@
 .hero-card {
   display: flex;
   align-items: center;
-  gap: 22px;
+  height: 74px;
+  gap: 35px;
   width: 100%;
   max-width: 390px;
   min-height: 64px;
   padding: 16px 20px;
-  border-radius: 14px;
+  border-radius: 14px 3px 14px 3px;
   background: var(--color-secondary-project);
   text-decoration: none;
   color: #ffffff;
@@ -102,17 +95,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 28px;
+  font-size: 32px;
 }
 
 .hero-card-text {
   display: flex;
   flex-direction: column;
-  line-height: 1.2;
 }
 
 .hero-card-title {
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   font-weight: 500;
 }
 
@@ -216,7 +208,6 @@
   .hero-top-banner-text,
   .hero-top-banner-address {
     font-size: 13px;
-    line-height: 1.5;
   }
 
   .hero-top-banner-address {

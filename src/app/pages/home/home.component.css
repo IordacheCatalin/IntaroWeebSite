@@ -3,12 +3,13 @@
 }
 
 .home-two-wrapper {
-  background: #ececec;
+  background: #f4f4f4;
   overflow: hidden;
 }
 
 .home-two-container {
   max-width: 1400px;
+  padding: 0;
 }
 
 .home-two-row {

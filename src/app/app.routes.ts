@@ -2,6 +2,22 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
-    path: '',    loadComponent: () =>      import('../app/pages/home/home.component').then(m => m.HomeComponent)
+    path: '',
+    loadComponent: () =>
+      import('../app/pages/home/home.component').then(m => m.HomeComponent)
+  },
+  {
+    path: 'home',
+    loadComponent: () =>
+      import('../app/pages/home/home.component').then(m => m.HomeComponent)
+  },
+  {
+    path: 'clauza-decontare',
+    loadComponent: () =>
+      import('../app/pages/directSettlement/directSettlement.component').then(m => m.DirectSettlement)
+  }, 
+   {
+    path: '**',
+    redirectTo: 'home'
   }
 ];
