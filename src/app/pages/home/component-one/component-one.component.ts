@@ -13,7 +13,7 @@ import { Banner } from '../banner/banner.component';
 })
 export class ComponentOne {
 
-protected readonly heroCards: HeroCard[] = [
+  protected readonly heroCards: HeroCard[] = [
     {
       iconClass: 'fa-solid fa-book-open',
       title: 'Restituire RCA',
@@ -28,13 +28,13 @@ protected readonly heroCards: HeroCard[] = [
       iconClass: 'fa-solid fa-phone-volume',
       title: 'Notificare Daune',
       subtitle: 'Call center 021.9110',
-      href: 'https://extern-site.ro/daune'
+      href: 'tel:0219110'
     },
     {
       iconClass: 'fa-solid fa-laptop',
       title: 'Notificare Daune',
       subtitle: 'Online',
-      href: 'https://extern-site.ro/notificare'
+      href: 'https://www.axeria-iard.ro/notificare-dauna-axeria/index.php'
     }
   ];
 }

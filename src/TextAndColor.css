@@ -293,6 +293,14 @@ body {
 }
 
 /* Font sizes in rem */
+.fs-84 {
+    font-size: 6rem;
+}
+
+.fs-74 {
+    font-size: 5rem;
+}
+
 .fs-64 {
     font-size: 4rem;
 }

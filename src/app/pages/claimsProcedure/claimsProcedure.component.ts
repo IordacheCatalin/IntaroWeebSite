@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Banner } from '../home/banner/banner.component';
 
 type ClaimsSection = 'procedure' | 'romania' | 'abroad' | 'direct-settlement' | 'forms';
 
 @Component({
   selector: 'app-claimsProcedure',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,Banner],
   templateUrl: './claimsProcedure.component.html',
   styleUrl: './claimsProcedure.component.css'
 })
@@ -14,22 +15,22 @@ export class ClaimsProcedure {
   protected activeSection: ClaimsSection = 'procedure';
 
   protected readonly coveredItems: string[] = [
-    'vehiculele implicate: marca / tip auto, numere de inmatriculare, culoare, tip caroserie, localizare avarii, etc.;',
-    'care au luat parte la eveniment: nume soferi / pasageri / martori, date contact, etc.;',
-    'ziua, ora, locatia, puncte de localizare (nume strazi conexe, numarul strazii / soselei / bloc / casa, etc.);',
-    'carosabil: tip pavaj, numar benzi de circulatie, ax demarcare, etc.;'
+    '→ vehiculele implicate: marcă / tip auto, numere de înmatriculare, culoare, tip caroserie, localizare avarii, etc.;',
+    '→ care au luat parte la eveniment: nume şoferi / pasageri / martori, date contact, etc.;',
+    '→ ziua, ora, locaţia, puncte de localizare (nume străzi conexe, numărul străzii / şoselei / bloc / casă, etc.);',
+    '→ carosabil: tip pavaj, număr benzi de circulaţie, ax demarcare, etc.'
   ];
 
   protected readonly workflowItems: string[] = [
-    'managementul daunelor;',
-    'constatarea daunelor si colectarea documentelor necesare instrumentarii dosarului de dauna;',
-    'comunicarea rapida cu institutiile statului (ASF, Politie, etc.), cu forme de exercitare a profesiei de avocat si experti tehnici;',
-    'analizarea dinamicii si reconstituirea accidentului, privind stabilirea cauzelor si imprejurarilor producerii evenimentului;',
-    'citirea, colectarea si interpretarea erorilor generate de catre sistemele electronice ale vehiculului;',
-    'accesarea soft-urilor profesionale pentru piese auto;',
-    'analizarea manualelor de service furnizate de catre uzina producatoare pentru fiecare model de vehicul;',
-    'analizarea istoricului de intretinere / daunabilitate in retelele reparatorilor autorizati;',
-    'analizarea vocala.'
+    '→ managementul daunelor;',
+    '→ constatarea daunelor şi colectarea documentelor necesare instrumentării dosarului de daună;',
+    '→ comunicarea rapidă cu instituţiile statului (ASF, Poliţie, etc.), cu forme de exercitare a profesiei de avocat şi experţi tehnici;',
+    '→ analizarea dinamicii şi reconstituirea accidentului, privind stabilirea cauzelor şi împrejurărilor producerii evenimentului;',
+    '→ citirea, colectarea şi interpretarea erorilor generate de către sistemele electronice ale vehiculului;',
+    '→ accesarea soft-urilor profesionale pentru piese auto;',
+    '→ analizarea manualelor de service furnizate de către uzina producătoare pentru fiecare model de vehicul;',
+    '→ analizarea istoricului de intreţinere / daunalitate în reţelele reparatorilor autorizaţi;',
+    '→ analizarea vocală.'
   ];
 
   protected readonly documentItems: string[] = [

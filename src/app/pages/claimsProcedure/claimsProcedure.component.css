@@ -1,5 +1,5 @@
 .claims-page {
-  background: #ececec;
+  background: #f4f4f4;
 }
 
 /* =========================
@@ -25,6 +25,8 @@
   inset: 0;
   display: flex;
   align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .claims-hero-grid {
@@ -32,28 +34,28 @@
   grid-template-columns: 1.1fr 0.9fr;
   align-items: center;
   gap: 3rem;
+  width: 100%;
 }
 
 .claims-hero-title-box {
-  display: flex;
-  justify-content: center;
+  height: 150px;
 }
 
 .claims-hero-title-bg {
-  background: rgba(82, 80, 186, 0.55);
-  padding: 1.5rem 2.5rem;
+  background-color: #3827a788;
+  padding: 1.5rem 4.5rem;
+  height: 150px;
 }
 
 .claims-hero-title {
   margin: 0;
   line-height: 1;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
 }
 
 .claims-hero-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  align-items: flex-start;
+  gap: 40px;
 }
 
 .claims-hero-button {
@@ -62,18 +64,19 @@
   justify-content: center;
   min-height: 3.5rem;
   padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
+  border-radius: 12px 3px 12px 3px;
   background: #3776ee;
   color: #ffffff;
   text-decoration: none;
   border: none;
   cursor: pointer;
+  white-space: nowrap;
   transition: background 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
 }
 
 .claims-hero-button:hover {
-  background: #245fd1;
-  color: #ffffff;
+  background: #fff;
+  color: #245fd1;
   transform: translateY(-0.0625rem);
 }
 
@@ -89,7 +92,7 @@
 }
 
 .claims-content-container {
-  max-width: 68rem;
+  max-width: 1500px;
   margin: 0 auto;
 }
 
@@ -105,6 +108,7 @@
 .claims-list {
   margin: 0 0 1.75rem;
   padding-left: 1.5rem;
+  list-style-type: none;
   color: var(--color-primary-project);
 }
 
@@ -117,7 +121,7 @@
    BOTTOM SECTION
    ========================= */
 .claims-bottom-section {
-    background-image: url("../../../assets/Images/6-1024x682.png");
+  background-image: url("../../../assets/Images/6-1024x682.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -127,8 +131,9 @@
   min-height: 45rem;
 }
 
-.claims-bottom-left,.claims-bottom-right {
-background: transparent;
+.claims-bottom-left,
+.claims-bottom-right {
+  background: transparent;
 }
 
 .claims-bottom-overlay {
@@ -256,9 +261,6 @@ html {
    MOBILE
    ========================= */
 @media (max-width: 48rem) {
-  .claims-hero {
-    min-height: 28rem;
-  }
 
   .claims-hero-image {
     min-height: 28rem;
@@ -276,6 +278,7 @@ html {
     width: 100%;
     font-size: 1rem !important;
     min-height: 3rem;
+    white-space: wrap;
   }
 
   .claims-procedure-section {
@@ -324,11 +327,11 @@ html {
 }
 
 .claims-dynamic-card-container {
-  max-width: 70rem;
+  max-width: 1400px;
 }
 
 .claims-dynamic-card {
-  background: #ececec;
+  background: #ffffff;
   border-radius: 1rem;
   padding: 2.5rem 3rem;
   display: grid;
@@ -352,6 +355,7 @@ html {
 .claims-dynamic-title {
   line-height: 1.25;
   margin: 0;
+  color:var(--color-primary-project);
 }
 
 .claims-dots {
@@ -371,9 +375,9 @@ html {
 .claims-documents-button {
   min-width: 10rem;
   min-height: 3rem;
-  padding: 0.75rem 1.25rem;
+  padding: 0.75rem 2.5rem;
   border: none;
-  border-radius: 0.625rem;
+  border-radius: 14px 3px 14px 3px;
   background: #3776ee;
   color: #ffffff;
   cursor: pointer;
@@ -381,7 +385,8 @@ html {
 }
 
 .claims-documents-button:hover {
-  background: #245fd1;
+  background: #06337A;
+  scale:1.2;
 }
 
 .claims-steps-list {
@@ -417,11 +422,13 @@ html {
   margin-bottom: 1rem;
 }
 
+.claims-accident-icon img{
+  max-width: 150px;
+}
+
 .claims-accident-text {
   color: #111111;
-  line-height: 1.6;
-  max-width: 24rem;
-  margin: 0 0 1.5rem;
+  line-height: 1.4;
 }
 
 .claims-back-top-button {
@@ -446,13 +453,6 @@ html {
   border-left: 2rem solid transparent;
   border-right: 2rem solid transparent;
   border-bottom: 2rem solid #0f4599;
-}
-
-.claims-back-top-text {
-  color: #0f4599;
-  font-weight: 700;
-  font-size: 1.5rem;
-  margin-top: 0.25rem;
 }
 
 .claims-dynamic-text-section {
@@ -578,6 +578,7 @@ html {
 
 /* responsive */
 @media (max-width: 62rem) {
+
   .claims-dynamic-card,
   .claims-forms-container {
     grid-template-columns: 1fr;
@@ -627,7 +628,4 @@ html {
     border-bottom-width: 1.25rem;
   }
 
-  .claims-back-top-text {
-    font-size: 1rem;
-  }
 }

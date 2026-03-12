@@ -1,45 +1,46 @@
 <section class="claims-page">
+  <app-banner></app-banner>
   <section class="claims-hero">
     <img src="../../../assets/Images/masina.png" alt="Claims hero" class="claims-hero-image">
 
     <div class="claims-hero-overlay">
-      <div class="container gn-xxxlg-width">
-        <div class="claims-hero-grid">
-          <div class="claims-hero-title-box">
-            <div class="claims-hero-title-bg">
-              <h1 class="claims-hero-title fs-64 wheight500 color-white">
-                DAUNE RCA
-              </h1>
-            </div>
-          </div>
 
-          <div class="claims-hero-actions">
-            <button type="button" class="claims-hero-button fs-24 wheight500" (click)="openRepairShops()">
-              Unitati reparatoare
-            </button>
-
-            <button type="button" class="claims-hero-button fs-24 wheight500"
-              [class.active-button]="activeSection === 'romania'" (click)="showSection('romania')">
-              Eveniment intamplat si solutionat in Romania
-            </button>
-
-            <button type="button" class="claims-hero-button fs-24 wheight500"
-              [class.active-button]="activeSection === 'abroad'" (click)="showSection('abroad')">
-              Eveniment intamplat si solutionat in afara Romaniei
-            </button>
-
-            <button type="button" class="claims-hero-button fs-24 wheight500"
-              [class.active-button]="activeSection === 'direct-settlement'" (click)="showSection('direct-settlement')">
-              Decontare directa
-            </button>
-
-            <button type="button" class="claims-hero-button fs-24 wheight500"
-              [class.active-button]="activeSection === 'forms'" (click)="showSection('forms')">
-              Formulare daune
-            </button>
+      <div class="claims-hero-grid">
+        <div class="claims-hero-title-box center-flex">
+          <div class="claims-hero-title-bg center-flex">
+            <h1 class="claims-hero-title fs-84 wheight500 color-white ">
+              DAUNE RCA
+            </h1>
           </div>
         </div>
+
+        <div class="claims-hero-actions center-flex flex-column">
+          <button type="button" class="claims-hero-button fs-24 wheight500" (click)="openRepairShops()">
+            Unitati reparatoare
+          </button>
+
+          <button type="button" class="claims-hero-button fs-24 wheight500"
+            [class.active-button]="activeSection === 'romania'" (click)="showSection('romania')">
+            Eveniment intamplat si solutionat in Romania
+          </button>
+
+          <button type="button" class="claims-hero-button fs-24 wheight500"
+            [class.active-button]="activeSection === 'abroad'" (click)="showSection('abroad')">
+            Eveniment intamplat si solutionat in afara Romaniei
+          </button>
+
+          <button type="button" class="claims-hero-button fs-24 wheight500"
+            [class.active-button]="activeSection === 'direct-settlement'" (click)="showSection('direct-settlement')">
+            Decontare directa
+          </button>
+
+          <button type="button" class="claims-hero-button fs-24 wheight500"
+            [class.active-button]="activeSection === 'forms'" (click)="showSection('forms')">
+            Formulare daune
+          </button>
+        </div>
       </div>
+
     </div>
   </section>
 
@@ -52,18 +53,18 @@
 
       <div class="claims-text-block fs-16 wheight500 color-primary-project">
         <p>
-          Pentru simplificarea cazului este important sa efectuati fotografii la fata locului si sa
-          cunoasteti datele despre:
+          Pentru simplificarea cazului este important să efectuaţi fotografii la faţa locului şi să cunoaşteţi datele
+          despre:
         </p>
 
         <ul class="claims-list">
           <li *ngFor="let coveredItem of coveredItems">{{ coveredItem }}</li>
         </ul>
 
-        <p>
-          Pentru ca dosarul sa poata fi solutionat corect si rapid a daunelor, respectiv plata
-          cererilor temeinice, legale si dovedite, echipa tehnica AXERIA IARD utilizeaza in procesul
-          de instrumentare daune, tehnologii informatice inovatoare pentru:
+        <p classs="mt-2">
+          Pentru că dorim soluţionarea corectă şi rapidă a daunelor, respectiv plata cererilor temeinice, legale şi
+          dovedite, echipa tehnică AXERIA IARD utilizează în procesul de instrumentare daune, tehnologii informatice
+          inovatoare pentru:
         </p>
 
         <ul class="claims-list">
@@ -71,10 +72,21 @@
         </ul>
 
         <p>
-          Va rugam sa efectuati demersurile necesare pentru limitarea maririi avariilor si sa luati
-          pe cat posibil masuri de transportare si depozitare a vehiculului avariat in conditii optime,
-          pentru a evita degradarea, avarierea, incendierea sau furtul anumitor piese.
+          Va rugam sa efectuati demersurile necesare pentru limitarea măririi avariilor şi să luaţi pe cât posibil
+          măsuri de trasportare şi depozitare a vehiculului avariat în condiţii optime, pentru a evita degradarea,
+          avarierea, incendierea (prin pornirea motorului care prezintă scurgeri de combustibil) sau furtul anumitor
+          piese.
         </p>
+        <p>AXERIA IARD nu despagubeste avariile produse ulterior evenimentului, iar orice risc produs va fi despăgubit o
+          singură dată, indiferent dacă acest lucru se realizează în baza poliţei de asigurare RCA a vinovatului sau în
+          baza propriei poliţe RCA, în cazul achiziţionării serviciului auxiliar de gestionare a daunelor (decontare
+          directă).</p>
+        <p>Obtinerea din asigurare de foloase materiale necuvenite sau multiple, prin procurarea de înscrisuri, facturi
+          fiscale false sau nereale, declararea decalată a datei accidentului, declararea unor date inexacte, etc., dar
+          și prin inducerea în eroare a AXERIA IARD sub orice formă, se pedepseşte conform Codului Penal și va avea
+          drept consecință restituirea valorii încasate (dacă s-a realizat plata), iar persoana vinovată va raspunde din
+          punct de vedere penal conform legislației in vigoare, urmând a achita cheltuielile și daunele ocazionate de
+          respectivul litigiu.</p>
       </div>
     </div>
   </section>
@@ -84,7 +96,7 @@
     <div class="container claims-dynamic-card-container">
       <div class="claims-dynamic-card">
         <div class="claims-dynamic-left">
-          <h2 class="claims-dynamic-title color-primary-project fs-50 wheight500 text-center-ic">
+          <h2 class="claims-dynamic-title color-primary-project fs-42 wheight400 text-center-ic">
             DAUNE RCA -
             <br>
             EVENIMENT INTAMPLAT SI
@@ -94,32 +106,31 @@
 
           <div class="claims-dots">....</div>
 
-          <p class="claims-dynamic-paragraph fs-20 wheight500 text-center-ic">
-            In cazul protocolorii cazului pe baza Constatarii Amiabile de Accident, se recomanda prezenta la constatare
-            a ambilor conducatori si a ambelor autovehicule implicate in evenimentul rutier
+          <p class="claims-dynamic-paragraph fs-20 wheight400 text-center-ic">
+           In cazul protocolorii cazului pe baza Constatarii Amiabile de Accident, se recomanda prezenta la constatare a ambilor conducatori si a ambelor autovehicule implicate in evenimentul rutier
           </p>
 
-          <button type="button" class="claims-documents-button fs-20 wheight500">
+          <button type="button" class="claims-documents-button fs16 wheight400" (click)="showSection('forms')">
             DOCUMENTE
-            <span>⇢</span>
+            <i aria-hidden="true" class="fab fa-opencart"></i>
           </button>
         </div>
 
         <div class="claims-dynamic-right">
           <div class="claims-steps-list">
-            <div class="claims-step-item fs-16 wheight500" *ngFor="let romaniaStep of romaniaSteps">
+            <div class="claims-step-item fs-16 wheight400" *ngFor="let romaniaStep of romaniaSteps">
               {{ romaniaStep }}
             </div>
           </div>
 
           <div class="claims-accident-box">
-            <h3 class="claims-accident-title color-primary-project fs-40 wheight500">Accident!?!</h3>
+            <h3 class="claims-accident-title color-primary-project fs-40 wheight400">Accident!?!</h3>
 
             <div class="claims-accident-icon">
-              <i class="fa-solid fa-car-burst"></i>
+               <img src="../../../assets/Icons/1.png" alt="crash car">
             </div>
 
-            <p class="claims-accident-text fs-20 wheight500 text-center-ic">
+            <p class="claims-accident-text fs-18 wheight400 text-center-ic">
               Evenimentul este acoperit de o asigurare RCA AXERIA IARD.
               Echipa noastra tehnica este la dispozitia dvs. pentru solutionarea rapida a problemei!
             </p>
@@ -276,10 +287,11 @@
     </div>
   </section>
 
-  <button type="button" class="claims-back-top-button" (click)="scrollToTop()">
-    <span class="claims-back-top-arrow"></span>
-    <span class="claims-back-top-text">SUS</span>
-  </button>
+  <div class="center-flex mt-4 mb-2">
+    <button type="button" class="claims-back-top-button" (click)="scrollToTop()">
+      <img src="../../../assets/Icons/sageata_sus.png" alt="Claims hero" style="max-width:80px">
+    </button>
+  </div>
 
   <section class="claims-bottom-section">
     <div class="claims-bottom-left">
