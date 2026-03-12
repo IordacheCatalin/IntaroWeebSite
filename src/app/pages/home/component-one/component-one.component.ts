@@ -22,7 +22,7 @@ protected readonly heroCards: HeroCard[] = [
     {
       iconClass: 'fa-solid fa-book-open',
       title: 'Procedura daune',
-      route: '/procedura-daune'
+      route: '/claims-procedure'
     },
     {
       iconClass: 'fa-solid fa-phone-volume',

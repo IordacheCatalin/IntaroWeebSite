@@ -5,7 +5,7 @@
       <h1 class="brokers-title">Brokeri parteneri</h1>
 
       <div class="brokers-list">
-        <div class="broker-row" *ngFor="let broker of brokers">
+        <div class="broker-row mb-2" *ngFor="let broker of brokers">
           <div class="broker-logo-cell">
             <ng-container *ngIf="broker.logo; else logoPlaceholder">
               <img [src]="broker.logo" [alt]="broker.name" class="broker-logo">

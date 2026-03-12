@@ -46,8 +46,8 @@
 }
 
 .broker-logo {
-  max-width: 140px;
-  max-height: 70px;
+  max-width: 170px;
+  max-height: 100px;
   width: auto;
   height: auto;
   display: block;
@@ -55,17 +55,17 @@
 }
 
 .broker-logo-placeholder {
-  width: 72px;
-  height: 72px;
-  border: 3px solid #1e1e1e;
+  width: 80px;
+  height: 80px;
+  border: 3px solid #3776ee;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #9a9a9a;
+  color: #ffffff;
   font-size: 18px;
   font-weight: 700;
-  background: rgba(255, 255, 255, 0.4);
+  background: var(--background-primary-project);
 }
 
 .broker-name-cell {

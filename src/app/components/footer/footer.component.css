@@ -16,7 +16,8 @@
 }
 
 .footer-logo {
-  max-width: 170px;
+  max-width: 140px;
+  margin-bottom: 14px;
   height: auto;
 }
 
@@ -51,6 +52,7 @@
   font-weight: 500;
   color: #ffffff;
   text-transform: uppercase;
+  margin-bottom: 64px;
 }
 
 .footer-links {
@@ -90,17 +92,17 @@
 
   .footer-title {
     font-size: 1.35rem;
-    margin-bottom: 16px;
   }
 
-  .footer-logo {
-    max-width: 150px;
-  }
 }
 
 @media (max-width: 767.98px) {
   .site-footer {
     text-align: left;
+  }
+
+  .footer-title {
+    margin-bottom: 10px;
   }
 
   .footer-brand {

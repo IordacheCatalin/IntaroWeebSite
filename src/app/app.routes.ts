@@ -15,12 +15,22 @@ export const routes: Routes = [
     path: 'clauza-decontare',
     loadComponent: () =>
       import('../app/pages/directSettlement/directSettlement.component').then(m => m.DirectSettlement)
-  }, 
-    {
+  },
+  {
     path: 'brokeri',
     loadComponent: () =>
       import('../app/pages/parteners/parteners.component').then(m => m.BrokersComponent)
-  }, 
+  },
+  {
+    path: 'contact',
+    loadComponent: () =>
+      import('../app/pages/contact/contact.component').then(m => m.ContactComponent)
+  },
+  {
+    path: 'claims-procedure',
+    loadComponent: () =>
+      import('./pages/claimsProcedure/claimsProcedure.component').then(m => m.ClaimsProcedure)
+  },
   {
     path: '**',
     redirectTo: 'home'

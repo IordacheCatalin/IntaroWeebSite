@@ -1,0 +1,332 @@
+<section class="claims-page">
+  <section class="claims-hero">
+    <img src="../../../assets/Images/masina.png" alt="Claims hero" class="claims-hero-image">
+
+    <div class="claims-hero-overlay">
+      <div class="container gn-xxxlg-width">
+        <div class="claims-hero-grid">
+          <div class="claims-hero-title-box">
+            <div class="claims-hero-title-bg">
+              <h1 class="claims-hero-title fs-64 wheight500 color-white">
+                DAUNE RCA
+              </h1>
+            </div>
+          </div>
+
+          <div class="claims-hero-actions">
+            <button type="button" class="claims-hero-button fs-24 wheight500" (click)="openRepairShops()">
+              Unitati reparatoare
+            </button>
+
+            <button type="button" class="claims-hero-button fs-24 wheight500"
+              [class.active-button]="activeSection === 'romania'" (click)="showSection('romania')">
+              Eveniment intamplat si solutionat in Romania
+            </button>
+
+            <button type="button" class="claims-hero-button fs-24 wheight500"
+              [class.active-button]="activeSection === 'abroad'" (click)="showSection('abroad')">
+              Eveniment intamplat si solutionat in afara Romaniei
+            </button>
+
+            <button type="button" class="claims-hero-button fs-24 wheight500"
+              [class.active-button]="activeSection === 'direct-settlement'" (click)="showSection('direct-settlement')">
+              Decontare directa
+            </button>
+
+            <button type="button" class="claims-hero-button fs-24 wheight500"
+              [class.active-button]="activeSection === 'forms'" (click)="showSection('forms')">
+              Formulare daune
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POZA 1 / PROCEDURA -->
+  <section id="claims-dynamic-content" class="claims-procedure-section">
+    <div class="container claims-content-container">
+      <h2 class="claims-section-title color-primary-project fs-45 wheight500">
+        DAUNE RCA - Procedura
+      </h2>
+
+      <div class="claims-text-block fs-16 wheight500 color-primary-project">
+        <p>
+          Pentru simplificarea cazului este important sa efectuati fotografii la fata locului si sa
+          cunoasteti datele despre:
+        </p>
+
+        <ul class="claims-list">
+          <li *ngFor="let coveredItem of coveredItems">{{ coveredItem }}</li>
+        </ul>
+
+        <p>
+          Pentru ca dosarul sa poata fi solutionat corect si rapid a daunelor, respectiv plata
+          cererilor temeinice, legale si dovedite, echipa tehnica AXERIA IARD utilizeaza in procesul
+          de instrumentare daune, tehnologii informatice inovatoare pentru:
+        </p>
+
+        <ul class="claims-list">
+          <li *ngFor="let workflowItem of workflowItems">{{ workflowItem }}</li>
+        </ul>
+
+        <p>
+          Va rugam sa efectuati demersurile necesare pentru limitarea maririi avariilor si sa luati
+          pe cat posibil masuri de transportare si depozitare a vehiculului avariat in conditii optime,
+          pentru a evita degradarea, avarierea, incendierea sau furtul anumitor piese.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- POZA 2 / ROMANIA -->
+  <section *ngIf="activeSection === 'romania'" class="claims-dynamic-card-section claims-dynamic-card-section--blue">
+    <div class="container claims-dynamic-card-container">
+      <div class="claims-dynamic-card">
+        <div class="claims-dynamic-left">
+          <h2 class="claims-dynamic-title color-primary-project fs-50 wheight500 text-center-ic">
+            DAUNE RCA -
+            <br>
+            EVENIMENT INTAMPLAT SI
+            <br>
+            SOLUTIONAT IN ROMÂNIA
+          </h2>
+
+          <div class="claims-dots">....</div>
+
+          <p class="claims-dynamic-paragraph fs-20 wheight500 text-center-ic">
+            In cazul protocolorii cazului pe baza Constatarii Amiabile de Accident, se recomanda prezenta la constatare
+            a ambilor conducatori si a ambelor autovehicule implicate in evenimentul rutier
+          </p>
+
+          <button type="button" class="claims-documents-button fs-20 wheight500">
+            DOCUMENTE
+            <span>⇢</span>
+          </button>
+        </div>
+
+        <div class="claims-dynamic-right">
+          <div class="claims-steps-list">
+            <div class="claims-step-item fs-16 wheight500" *ngFor="let romaniaStep of romaniaSteps">
+              {{ romaniaStep }}
+            </div>
+          </div>
+
+          <div class="claims-accident-box">
+            <h3 class="claims-accident-title color-primary-project fs-40 wheight500">Accident!?!</h3>
+
+            <div class="claims-accident-icon">
+              <i class="fa-solid fa-car-burst"></i>
+            </div>
+
+            <p class="claims-accident-text fs-20 wheight500 text-center-ic">
+              Evenimentul este acoperit de o asigurare RCA AXERIA IARD.
+              Echipa noastra tehnica este la dispozitia dvs. pentru solutionarea rapida a problemei!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POZA 3 / ABROAD -->
+  <section *ngIf="activeSection === 'abroad'" class="claims-dynamic-text-section">
+    <div class="container claims-content-container">
+      <h2 class="claims-section-title color-primary-project fs-50 wheight500">
+        DAUNE RCA - EVENIMENT INTAMPLAT SI SOLUTIONAT IN AFARA ROMÂNIEI
+      </h2>
+
+      <div class="claims-text-block fs-20 wheight500 color-primary-project claims-abroad-content">
+        <p>Procedura diferă în funcţie de ţara unde a avut loc accidentul.</p>
+
+        <p>
+          Pentru evitarea complicaţiilor ulterioare, documentele pe care asiguratul Axeria IARD le semnează trebuie să
+          fie într-o limbă cunoscută de acesta sau traduse în limba română. Se prezumă că semnatarul documentelor
+          cunoaşte conţinutul şi eroarea de drept nu exonerează de răspundere.
+        </p>
+
+        <p>
+          Documentul Carte Verde reprezintă un document internaţional de asigurare emis în numele biroului naţional
+          auto, în baza căruia, proprietarul/utilizatorul/conducătorul vehiculului pentru care documentul a fost
+          eliberat, este asigurat în privinţa răspunderii civile pentru pagubele produse prin intermediul vehiculului
+          respectiv, în conformitate cu legislaţia fiecărui stat pentru care documentul de asigurare este valabil.
+        </p>
+
+        <p>
+          Dacă evenimentul este acoperit de o asigurare Carte Verde AXERIA (ataşată asigurării RCA) şi s-a produs în
+          afara teritoriului României, asiguratul trebuie să anunţe cât mai rapid reprezentanţii Axeria IARD, astfel:
+        </p>
+
+        <div class="claims-contact-row">
+          <i class="fa-solid fa-phone-volume"></i>
+          <p>
+            <strong>TELEFONIC (Luni ÷ Vineri, 09:00-18:00)</strong> – apelând Serviciul Call-Center, un reprezentant
+            Customer Care vă oferă suportul necesar unei notificări complete şi corecte;
+          </p>
+        </div>
+
+        <div class="claims-contact-row">
+          <i class="fa-solid fa-envelope"></i>
+          <p>
+            <strong>E-mail</strong> – trimiteţi un mesaj la adresa greencard@axeria-iard.ro, în care menţionaţi
+            detaliile evenimentului, daunele materiale şi/sau vătămările corporale produse şi cui aparţine vinovăţia,
+            iar dacă este cazul sau solicitaţi, un specialist daune vă contactează în vederea clarificării tuturor
+            aspectelor.
+          </p>
+        </div>
+
+        <p>
+          Completaţi cu atenţie toate rubricile formularului Constatare Amiabilă de Accident sau aşteptaţi să vină
+          Autorităţile Competente să întocmească documentele în care se consemnează datele privind împrejurările în care
+          a avut loc accidentul, dacă legislaţia ţării respective impune acest lucru.
+        </p>
+
+        <p>
+          Predaţi celuilalt şofer o copie după documentul dumneavoastră de asigurare Carte Verde, după certificatul de
+          înmatriculare (talon), permisul dvs. de conducere, actul de identitate, etc.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- POZA 4 / DIRECT SETTLEMENT -->
+  <section *ngIf="activeSection === 'direct-settlement'" class="claims-dynamic-text-section">
+    <div class="container claims-content-container">
+      <h2 class="claims-section-title color-primary-project fs-50 wheight500">
+        DAUNE RCA - DECONTARE DIRECTĂ
+      </h2>
+
+      <div class="claims-text-block fs-20 wheight500 color-primary-project claims-direct-content">
+        <p>
+          Dacă sunteţi implicat într-un eveniment rutier, aveţi calitatea de păgubit şi sunteţi beneficiarul serviciului
+          auxiliar de gestionare a daunelor de către asigurătorii RCA a propriilor asiguraţi şi se îndeplinesc
+          condiţiile cumulative:
+        </p>
+
+        <ul class="claims-list claims-list-large">
+          <li *ngFor="let directSettlementItem of directSettlementItems">{{ directSettlementItem }}</li>
+        </ul>
+
+        <p>
+          atunci puteţi să urmaţi procedura standard pentru soluţionarea unui dosar de daună, primind din partea noastră
+          tot sprijinul de care aveţi nevoie, nefiind nevoie să apelaţi la serviciile oferite de asigurătorul persoanei
+          vinovate.
+        </p>
+
+        <p>
+          La momentul efectuării constatării, pentru deschiderea dosarului de daună, asiguratul trebuie să prezinte
+          următoarele documente:
+        </p>
+
+        <ul class="claims-list claims-list-large claims-list-strong">
+          <li *ngFor="let directSettlementDocument of directSettlementDocuments">{{ directSettlementDocument }}</li>
+        </ul>
+
+        <p class="claims-direct-warning">
+          ATENŢIE!!! În cazul protocolării cazului pe baza Constatării Amiabile de Accident, se recomandă prezenţa la
+          constatare a ambilor conducători şi a ambelor autovehicule implicate în evenimentul rutier.
+        </p>
+
+        <p>
+          Decontarea directă nu afectează dreptul persoanei prejudiciate în urma unui accident auto produs de un vehicul
+          asigurat RCA de a exercita acţiunea directă pentru recuperarea prejudiciului produs împotriva asigurătorului
+          RCA al persoanei vinovate de producerea accidentului auto.
+        </p>
+
+        <p>
+          Pe parcursul instrumentării, în funcţie de conţinutul actelor prezentate, se pot solicita păgubitului şi alte
+          documente, pentru completarea dosarului de daună:
+        </p>
+
+        <ul class="claims-list claims-list-large">
+          <li *ngFor="let directSettlementExtraDoc of directSettlementExtraDocs">{{ directSettlementExtraDoc }}</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- POZA 5 / FORMS -->
+  <section *ngIf="activeSection === 'forms'" class="claims-dynamic-forms-section">
+    <div class="container claims-forms-container">
+      <div class="claims-forms-left">
+        <div class="claims-forms-card">
+          <div class="claims-forms-caption">- AXERIA IARD -</div>
+
+          <h2 class="claims-forms-title">Formulare dauna</h2>
+
+          <p class="claims-forms-text">
+            Pentru notificarea asigurătorului de către persoana prejudiciată, asigurat sau mandatarii acestora, cu
+            privire la producerea evenimentului asigurat notificarea trebuie să fie însoţită de documentele necesare
+            stabilirii răspunderii asigurătorului RCA;
+          </p>
+        </div>
+      </div>
+
+      <div class="claims-forms-right">
+        <div class="claims-forms-links">
+          <div class="claims-forms-links">
+            <a [href]="formItem.pdfUrl" class="claims-forms-link" *ngFor="let formItem of formsItems" target="_blank"
+              rel="noopener noreferrer">
+              <i class="fa-regular fa-file-lines"></i>
+              <span>{{ formItem.title }}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <button type="button" class="claims-back-top-button" (click)="scrollToTop()">
+    <span class="claims-back-top-arrow"></span>
+    <span class="claims-back-top-text">SUS</span>
+  </button>
+
+  <section class="claims-bottom-section">
+    <div class="claims-bottom-left">
+      <div class="claims-bottom-overlay">
+        <div class="claims-bottom-content">
+          <div class="claims-bottom-caption fs-18 wheight500 color-white">
+            AXERIA - IARD
+          </div>
+
+          <h3 class="claims-bottom-title fs-60 wheight500 color-white">
+            Notificare
+            <br>
+            Daune RCA
+          </h3>
+
+          <p class="claims-bottom-text fs-16 wheight500 color-white">
+            La efectuarea constatarii daunelor, se recomanda prezenta ambilor conducatori si a
+            ambelor autovehicule implicate in evenimentul rutier.
+          </p>
+
+          <div class="claims-bottom-links">
+            <a class="claims-bottom-link fs-24 wheight500" href="/claims-online">
+              NOTIFICARE DAUNA ONLINE
+              <span>→</span>
+            </a>
+
+            <a class="claims-bottom-link fs-24 wheight500" href="tel:0219110">
+              NOTIFICARE DAUNA PRIN CALL CENTER
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="claims-bottom-right">
+      <div class="claims-bottom-overlay">
+        <div class="claims-documents-box">
+          <h3 class="claims-documents-title color-primary-project fs-36 wheight500">
+            Documente:
+          </h3>
+
+          <ul class="claims-documents-list fs-18 wheight500">
+            <li *ngFor="let documentItem of documentItems">{{ documentItem }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>

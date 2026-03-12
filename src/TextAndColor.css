@@ -33,7 +33,7 @@ body {
    ========================================== */
  .theme-1 {
     /* text */
-    --color-primary-project: #133f8b;
+    --color-primary-project: #06337a;
     --color-secondary-project: #3776ee;
     --color-third-project: #0bc7d3;
     --color-error: #cc0000;
@@ -99,7 +99,7 @@ body {
     --color-hover-text-btn: #ffffff;
     --color-disabled-btn: #1a1f36;
 
-    --background-primary-project: linear-gradient(180deg, #FFFFFF 0%, #ECECEC 100%);
+    --background-primary-project: linear-gradient(180deg, #FFFFFF 0%, #f4f4f4 100%);
     --background-sidebar-primary-project: #ffffff;
     --background-designContainer-primary-project: #EFEFEF;
     --background-dropdown-primary-project: #ffffff;
