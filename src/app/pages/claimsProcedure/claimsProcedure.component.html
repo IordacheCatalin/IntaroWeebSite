@@ -47,7 +47,7 @@
   <!-- POZA 1 / PROCEDURA -->
   <section id="claims-dynamic-content" class="claims-procedure-section">
     <div class="container claims-content-container">
-      <h2 class="claims-section-title color-primary-project fs-45 wheight500">
+      <h2 class="claims-section-title color-primary-project fs-38 wheight500">
         DAUNE RCA - Procedura
       </h2>
 
@@ -107,7 +107,8 @@
           <div class="claims-dots">....</div>
 
           <p class="claims-dynamic-paragraph fs-20 wheight400 text-center-ic">
-           In cazul protocolorii cazului pe baza Constatarii Amiabile de Accident, se recomanda prezenta la constatare a ambilor conducatori si a ambelor autovehicule implicate in evenimentul rutier
+            In cazul protocolorii cazului pe baza Constatarii Amiabile de Accident, se recomanda prezenta la constatare
+            a ambilor conducatori si a ambelor autovehicule implicate in evenimentul rutier
           </p>
 
           <button type="button" class="claims-documents-button fs16 wheight400" (click)="showSection('forms')">
@@ -118,8 +119,486 @@
 
         <div class="claims-dynamic-right">
           <div class="claims-steps-list">
-            <div class="claims-step-item fs-16 wheight400" *ngFor="let romaniaStep of romaniaSteps">
-              {{ romaniaStep }}
+            <button type="button" class="claims-step-item fs-16 wheight400"
+              [class.claims-step-item--active]="activeRomaniaStep === 1" (click)="toggleRomaniaStep(1)">
+              Pas 1 - Momentul accidentului
+            </button>
+
+            <div class="claims-step-content" *ngIf="activeRomaniaStep === 1">
+              <p>
+                La momentul evenimentului trebuie sa procedati pe cat posibil, astfel:
+              </p>
+
+              <div class="claims-step-subitems">
+                <button type="button" class="claims-hero-button fs14 wheight400 claims-inner-tab-button"
+                  [class.claims-inner-tab-button--active]="activeRomaniaStepOneTab === 'amiabil'"
+                  (click)="toggleRomaniaStepOneTab('amiabil')">
+                  AMIABIL
+                </button>
+
+                <button type="button" class="claims-hero-button fs14 wheight400 claims-inner-tab-button"
+                  [class.claims-inner-tab-button--active]="activeRomaniaStepOneTab === 'politie'"
+                  (click)="toggleRomaniaStepOneTab('politie')">
+                  POLITIE
+                </button>
+              </div>
+
+              <div class="claims-step-inner-content" *ngIf="activeRomaniaStepOneTab === 'amiabil'">
+                <p><strong>Eveniment soldat doar cu daune materiale, fara vatamari corporale.</strong></p>
+
+                <p>
+                  Daca evenimentul s-a produs in Romania (indiferent de loc: drumuri publice/inchise circulatiei,
+                  incinte, etc.),
+                  au fost implicate 2 vehicule asigurate RCA si au rezultat doar daune materiale (la cele doua
+                  vehicule),
+                  fara vatamari corporale, soferii au posibilitatea/optiunea sa completeze de comun acord formularul de
+                  Constatare Amiabila de Accident (fara interventia Organelor Abilitate sa cerceteze astfel de
+                  evenimente),
+                  astfel incat reprezentantii Axeria IARD sa stabileasca vinovatia conducatorilor auto implicati in
+                  accident
+                  si pagubele produse. Completarea acestui formular nu reprezinta o recunoastere a raspunderii unuia
+                  dintre
+                  conducatorii auto, ci un cumul de evenimente si fapte ce contribuie la solutionarea dosarelor de
+                  dauna.
+                </p>
+
+                <p><strong>Conducatorii auto trebuie sa procedeze astfel:</strong></p>
+
+                <ul class="claims-step-list">
+                  <li>sa scoata imediat vehiculele in afara partii carosabile, ori daca starea vehiculelor nu permite
+                    acest lucru, sa le deplaseze cat mai aproape de bordura sau acostament, astfel incat circulatia sa
+                    nu fie perturbata;</li>
+                  <li>sa completeze si sa semneze formularul Constatarea Amiabila de Accident;</li>
+                  <li>sa fotografieze sau sa fotocopieze documentele vinovatului si vehiculului vinovat;</li>
+                  <li>sa efectueze fotografii la locul accidentului.</li>
+                </ul>
+
+                <p>
+                  <strong>
+                    ATENTIE!!! In cazul protocolarii cazului pe baza Constatarii Amiabile de Accident,
+                    se recomanda prezenta la constatare a ambilor conducatori si a ambelor autovehicule implicate in
+                    evenimentul rutier.
+                  </strong>
+                </p>
+              </div>
+
+              <div class="claims-step-inner-content" *ngIf="activeRomaniaStepOneTab === 'politie'">
+                <p>
+                  Conform Codului Rutier, accidentul de circulatie protocolat de catre Politie, este evenimentul care
+                  intruneste cumulativ urmatoarele conditii:
+                </p>
+
+                <ul class="claims-step-list">
+                  <li>s-a produs pe un drum deschis circulatiei publice, ori si-a avut originea intr-un asemenea loc
+                    (intrare, alee, strada, bulevard, splai, etc.) ca urmare a nerespectarii unei reguli de circulatie;
+                  </li>
+                  <li>a avut ca urmare decesul, ranirea unuia sau a mai multor persoane ori avarierea a cel putin unui
+                    vehicul sau alte pagube materiale;</li>
+                  <li>in eveniment a fost implicat cel putin un vehicul in miscare.</li>
+                </ul>
+
+                <p><strong>EVENIMENT SOLDAT CU AVARII MATERIALE SI VATAMARI CORPORALE/DECES</strong></p>
+
+                <p>
+                  Daca evenimentul s-a produs in Romania, a fost implicat cel putin 1 vehicul asigurat RCA la AXERIA si
+                  in urma caruia au rezultat avarii si/sau moartea sau vatamarea integritatii corporale ori a sanatatii
+                  unei persoane, conducatorul vehiculului vinovat este obligat sa procedeze astfel:
+                </p>
+
+                <ul class="claims-step-list">
+                  <li>sa ia masuri de anuntare imediata la numarul unic 112 a autoritatilor (Politie / Salvare /
+                    Pompieri);</li>
+                  <li>sa nu modifice sau sa stearga urmele accidentului;</li>
+                  <li>sa nu paraseasca locul evenimentului fara incuviintarea Politiei;</li>
+                  <li>daca se impune, sa acorde primul ajutor persoanelor care au nevoie, fara a agrava starea de
+                    sanatate a acestora.</li>
+                </ul>
+
+                <p>
+                  Este interzis oricarei persoane sa schimbe pozitia vehiculului implicat intr-un accident de
+                  circulatie,
+                  sa modifice starea locului sau sa stearga urmele accidentului fara incuviintarea Politiei care
+                  cerceteaza accidentul.
+                </p>
+
+                <p><strong>Documentele pe care trebuie sa le prezentati Politiei sunt:</strong></p>
+
+                <ul class="claims-step-list">
+                  <li>permisul de conducere al soferului pagubit/vinovat;</li>
+                  <li>certificatul de inmatriculare (talon) a vehiculului pagubit/vinovat;</li>
+                  <li>actul de identitate al pagubitului/vinovatului (C.I./buletin);</li>
+                  <li>polita de asigurare obligatorie RCA a vehiculului vinovat;</li>
+                  <li>polita de asigurare obligatorie RCA a vehiculului pagubit.</li>
+                </ul>
+
+                <p><strong>EVENIMENT SOLDAT DOAR CU AVARII MATERIALE, NESOLUTIONAT AMIABIL</strong></p>
+
+                <p>
+                  Daca evenimentul s-a produs in Romania, s-au produs avarii la mai mult de 2 vehicule si / sau altor
+                  bunuri,
+                  in afara vehiculului dvs.; sau s-au produs doar la 2 vehicule, au rezultat doar daune materiale, fara
+                  vatamari corporale,
+                  dar conducatorii nu se inteleg amiabil, conducatorul vehiculului pagubit trebuie sa procedeze astfel:
+                </p>
+
+                <ul class="claims-step-list">
+                  <li>daca este posibil, sa fotografieze sau sa fotocopieze documentele vinovatului si vehiculului
+                    vinovat;</li>
+                  <li>daca este posibil, sa efectueze fotografii la locul accidentului;</li>
+                  <li>sa se prezinte la Unitatea de Politie competenta, pe raza careia s-a produs accidentul, in termen
+                    de cel mult 24 de ore de la producerea evenimentului, pentru declararea evenimentului si intocmirea
+                    documentelor de constatare.</li>
+                </ul>
+
+                <p><strong>Documentele pe care trebuie sa le prezentati la Politie sunt:</strong></p>
+
+                <ul class="claims-step-list">
+                  <li>permisul de conducere al soferului pagubit;</li>
+                  <li>certificatul de inmatriculare (talon) a vehiculului pagubit;</li>
+                  <li>actul de identitate al pagubitului (C.I./buletin);</li>
+                  <li>polita de asigurare obligatorie RCA a vehiculului vinovat (daca este posibil);</li>
+                  <li>polita de asigurare obligatorie RCA a vehiculului pagubit.</li>
+                </ul>
+
+                <p><strong>Documentele pe care le emite Politia sunt:</strong></p>
+
+                <ul class="claims-step-list">
+                  <li>Proces-Verbal de Constatare a Contraventiei (daca se prezinta vinovatul);</li>
+                  <li>Autorizatie de Reparatie.</li>
+                </ul>
+              </div>
+            </div>
+
+            <button type="button" class="claims-step-item fs-16 wheight400"
+              [class.claims-step-item--active]="activeRomaniaStep === 2" (click)="toggleRomaniaStep(2)">
+              Pas 2 - Notificarea daunei (in max. 5 zile lucratoare de la momentul accidentului)
+            </button>
+
+            <div class="claims-step-content" *ngIf="activeRomaniaStep === 2">
+              <p>
+                Notificarea asiguratorului cu privire la producerea evenimentului asigurat poate fi facuta de catre
+                persoana prejudiciata, asigurat sau mandatarii acestora.
+              </p>
+
+              <p><strong>Notificarile daunelor se primesc si se inregistreaza astfel:</strong></p>
+              <p><strong>ONLINE →</strong></p>
+              <p><strong><a href="tel:0219110">Apeland serviciul CALL-CENTER: 021.9110 →</a></strong></p>
+
+              <p><strong>Notificarea daunei se poate face cu usurinta daca aveti la indemana documentele de mai
+                  jos:</strong></p>
+              <ul class="claims-step-list">
+                <li>Polita de asigurare a vehiculului vinovat (daca este posibil);</li>
+                <li>Actul de identitate (C.I./buletin) a persoanei care face notificarea;</li>
+                <li>Certificatul de inmatriculare (talon)/cartea de identitate a vehiculului pagubit avariat;</li>
+                <li>Permisul de conducere al soferului pagubit;</li>
+                <li>Constatarea amiabila de accident sau documentele emise de autoritati (Politie / Pompieri / etc);
+                </li>
+                <li>Datele proprietarului vehiculului pagubit;</li>
+                <li>Alte documente, in functie de evenimentul care a avut loc.</li>
+              </ul>
+
+              <p><strong>ATENTIE!!!</strong> In cazul in care avariile au survenit ca urmare a mai multor evenimente,
+                acestea trebuie notificate separat.</p>
+            </div>
+
+            <button type="button" class="claims-step-item fs-16 wheight400"
+              [class.claims-step-item--active]="activeRomaniaStep === 3" (click)="toggleRomaniaStep(3)">
+              Pas 3 - Contactarea beneficiarului politei de asigurare
+            </button>
+
+            <div class="claims-step-content" *ngIf="activeRomaniaStep === 3">
+              <p>
+                In maxim 24 h, reprezentantii AXERIA analizeaza datele notificate si aloca cazului dvs. un specialist
+                constatari daune (din zona dvs.), care va contacteaza telefonic si va ofera consiliere, stabilind
+                totodata, de comun acord, data, ora si locul in care va avea loc constatarea avariilor si colectarea
+                documentelor necesare instrumentarii dosarului de dauna.
+              </p>
+
+              <p>
+                <strong>NOTA:</strong> Procedura se aplica atat pentru vehiculele deplasabile prin forta proprie, cat si
+                pentru cele nedeplasabile.
+              </p>
+            </div>
+
+            <button type="button" class="claims-step-item fs-16 wheight400"
+              [class.claims-step-item--active]="activeRomaniaStep === 4" (click)="toggleRomaniaStep(4)">
+              Pas 4 - Constatarea avariilor si colectarea documentelor
+            </button>
+
+            <div class="claims-step-content" *ngIf="activeRomaniaStep === 4">
+              <div class="claims-step-subitems claims-step-subitems--vertical">
+                <button type="button" class="claims-hero-button fs14 wheight400 claims-inner-tab-button"
+                  [class.claims-inner-tab-button--active]="activeRomaniaStepFourTab === 'damage-assessment'"
+                  (click)="toggleRomaniaStepFourTab('damage-assessment')">
+                  A. Constatarea avariilor
+                </button>
+
+                <button type="button" class="claims-hero-button fs14 wheight400 claims-inner-tab-button"
+                  [class.claims-inner-tab-button--active]="activeRomaniaStepFourTab === 'document-collection'"
+                  (click)="toggleRomaniaStepFourTab('document-collection')">
+                  B. Colectarea documentelor
+                </button>
+              </div>
+
+              <div class="claims-step-inner-content" *ngIf="activeRomaniaStepFourTab === 'damage-assessment'">
+                <p>
+                  In urma notificarii, reprezentantii AXERIA stabilesc de comun acord cu beneficiarul politei data, ora
+                  si locul
+                  constatarii avariilor, pentru instrumentarea dosarului de dauna.
+                </p>
+
+                <p>
+                  Constatarea se poate efectua pentru vehiculele deplasabile, dar si pentru cele nedeplasabile.
+                </p>
+
+                <p>
+                  In cadrul acestui proces sunt analizate avariile rezultate in urma evenimentului si sunt identificate
+                  elementele necesare evaluarii dosarului de dauna.
+                </p>
+              </div>
+
+              <div class="claims-step-inner-content" *ngIf="activeRomaniaStepFourTab === 'document-collection'">
+                <p>
+                  La momentul efectuarii constatarii, pentru deschiderea dosarului de dauna, beneficiarul politei de
+                  asigurare
+                  trebuie sa prezinte urmatoarele documente:
+                </p>
+
+                <p><strong>1. Obligatorii</strong></p>
+                <ul class="claims-step-list">
+                  <li>actul de identitate al pagubitului sau reprezentantului acestuia (C.I./buletin) - original;</li>
+                  <li>permisul de conducere al soferului pagubit (daca vehiculul era condus la momentul evenimentului) -
+                    original;</li>
+                  <li>certificat de inmatriculare (talon) sau cartea de identitate a autovehiculului pagubit - original;
+                  </li>
+                </ul>
+
+                <p><strong>2. Specifice cazului</strong></p>
+                <p>
+                  Se depun in acest stadiu, pentru operativitatea instrumentarii dosarului de dauna:
+                </p>
+
+                <ul class="claims-step-list">
+                  <li>actul de identitate (C.I./Buletin) si permisul soferului vinovat (daca este posibil) - copie;</li>
+                  <li>polita de asigurare obligatorie RCA al vehiculului vinovat (sau cel putin dovada existentei
+                    acesteia) - copie;</li>
+                  <li>Constatarea Amiabila de Accident sau Documentul emis de catre Autoritati (P.V. Politie / Pompieri,
+                    Autorizatie de Reparatie, Anexa 2, etc.) - original;</li>
+                  <li>imputernicirea de reprezentare (PJ)/procura notariala (PF), in cazul in care soferul care se
+                    prezinta la constatare nu este proprietarul vehiculului avariat - original;</li>
+                  <li>alte documente, in functie de evenimentul care a avut loc.</li>
+                </ul>
+
+                <p>
+                  <strong>
+                    ATENTIE!!! In cazul protocolarii cazului pe baza Constatarii Amiabile de Accident, se recomanda
+                    prezenta la constatare a ambilor conducatori si a ambelor autovehicule implicate in evenimentul
+                    rutier.
+                  </strong>
+                </p>
+
+                <p><strong>3. Alte documente</strong></p>
+                <p>
+                  Pe parcursul instrumentarii, in functie de continutul actelor prezentate, se pot solicita pagubitului
+                  si alte documente,
+                  pentru completarea dosarului de dauna:
+                </p>
+
+                <ul class="claims-step-list">
+                  <li>declaratii suplimentare si/sau schita accidentului;</li>
+                  <li>documente care atesta dreptul de proprietate asupra vehiculului, in cazul in care acesta nu este
+                    inmatriculat / inregistrat fiscal de catre noul proprietar;</li>
+                  <li>fotografii ale autovehiculului avariat;</li>
+                  <li>copii pasaport, etc.</li>
+                </ul>
+              </div>
+            </div>
+
+            <button type="button" class="claims-step-item fs-16 wheight400"
+              [class.claims-step-item--active]="activeRomaniaStep === 5" (click)="toggleRomaniaStep(5)">
+              Pas 5 - Despagubirea
+            </button>
+
+            <div class="claims-step-content" *ngIf="activeRomaniaStep === 5">
+              <p>
+                AXERIA doreste solutionarea corecta si rapida a daunelor, respectiv plata cererilor temeinice, legale,
+                dovedite si respingerea celor nejustificate.
+              </p>
+
+              <p>
+                <strong>
+                  Orice tentativa de obtinere sau facilitare de despagubiri prin declaratii false sau utilizarea de
+                  documente false se pedepseste conform Codului Penal din Romania, iar raspunderea apartine in
+                  exclusivitate declarantului. Anularea dosarului de dauna si a politei de asigurare se face "sine die",
+                  de catre asigurator.
+                </strong>
+              </p>
+
+              <p>
+                <strong>
+                  Declararea asigurarii multiple (daca este cazul), este obligatorie, iar plata riscului produs se va
+                  face proportional in acest caz.
+                </strong>
+              </p>
+
+              <div class="claims-step-subitems claims-step-subitems--vertical">
+                <button type="button" class="claims-hero-button fs14 wheight400 claims-inner-tab-button"
+                  [class.claims-inner-tab-button--active]="activeRomaniaStepFiveTab === 'three-day-payment'"
+                  (click)="toggleRomaniaStepFiveTab('three-day-payment')">
+                  A. Banii in 3 zile !!!
+                </button>
+
+                <button type="button" class="claims-hero-button fs14 wheight400 claims-inner-tab-button"
+                  [class.claims-inner-tab-button--active]="activeRomaniaStepFiveTab === 'partner-repair-shop'"
+                  (click)="toggleRomaniaStepFiveTab('partner-repair-shop')">
+                  B. Reparatie in Unitati Service Specializate, agreate de catre Axeria IARD
+                </button>
+
+                <button type="button" class="claims-hero-button fs14 wheight400 claims-inner-tab-button"
+                  [class.claims-inner-tab-button--active]="activeRomaniaStepFiveTab === 'total-economic-loss'"
+                  (click)="toggleRomaniaStepFiveTab('total-economic-loss')">
+                  C. Dauna Totala Economica
+                </button>
+
+                <button type="button" class="claims-hero-button fs14 wheight400 claims-inner-tab-button"
+                  [class.claims-inner-tab-button--active]="activeRomaniaStepFiveTab === 'other-repair-shop'"
+                  (click)="toggleRomaniaStepFiveTab('other-repair-shop')">
+                  D. Reparatie efectuata in alte Unitati Reparatoare
+                </button>
+              </div>
+
+              <div class="claims-step-inner-content" *ngIf="activeRomaniaStepFiveTab === 'three-day-payment'">
+                <p>
+                  Banii in 3 zile !!!... printr-o plata anticipata in baza unei evaluari intocmite rapid de catre
+                  AXERIA, conform legislatiei in vigoare, folosind sistemele de evaluare specializate pentru evaluarea
+                  costurilor de readucere a vehiculului la starea anterioara producerii evenimentului. Plata se poate
+                  efectua in contul bancar personal sau in contul bancar al unei terte persoane, situatie in care
+                  persoana pagubita completeaza cererea de plata a sumei in contul bancar al unei terte persoane, la
+                  care ataseaza dovada contului bancar si actul de identitate al titularului contului bancar.
+                </p>
+
+                <p><strong>Avantaje:</strong></p>
+                <ul class="claims-step-list">
+                  <li>Primirea despagubirii in termen scurt (maxim 3 zile lucratoare de la depunerea ultimului
+                    document);</li>
+                  <li>Constatarea rapida a avariilor;</li>
+                  <li>Accesul rapid si facil la informatia privind stadiul instrumentarii / solutionarii dosarului de
+                    dauna;</li>
+                  <li>Simplificarea formalitatilor;</li>
+                  <li>Pagubitul este liber sa-si repare autovehiculul unde si cum doreste;</li>
+                  <li>Calculul este cel maximal avand in vedere preturile pieselor de la unitatile de specialitate.</li>
+                </ul>
+
+                <p><strong>Documentele necesare pentru efectuarea platii:</strong></p>
+                <ul class="claims-step-list">
+                  <li>Actele solicitate, necesare instrumentarii dosarului de dauna;</li>
+                  <li>Formularul de Acceptare a ofertei AXERIA.</li>
+                </ul>
+
+                <p>
+                  <strong>
+                    Atentie!!! In cazul in care vehiculul este proprietatea unei firme de leasing sau a fost
+                    achizitionat printr-un sistem de rate cu dobandirea dreptului de proprietate la finalul
+                    contractului, viramentul aferent despagubirii se realizeaza in contul utilizatorului doar cu acordul
+                    proprietarului, care a garantat finantarea achizitia.
+                  </strong>
+                </p>
+
+                <p>
+                  In astfel de cazuri, proprietarul vehiculului va fi notificat de catre utilizator sau de catre
+                  reprezentantii AXERIA, solicitandu-se un document de cesiune pentru incasarea despagubirii de catre
+                  utilizator. Raspunsul cesionarului (proprietarului) va reprezenta titlu executoriu privind incasarea
+                  despagubirii.
+                </p>
+              </div>
+
+              <div class="claims-step-inner-content" *ngIf="activeRomaniaStepFiveTab === 'partner-repair-shop'">
+                <ul class="claims-step-list">
+                  <li>AXERIA garanteaza ca Reparatorul intruneste toate standardele de calitate;</li>
+                  <li>Comunicare rapida Reparator - AXERIA - Beneficiarul politei de asigurare;</li>
+                  <li>Constatarea/reconstatarea rapida a avariilor;</li>
+                  <li>Accesul rapid si facil la informatie privind stadiul instrumentarii/solutionarii dosarului de
+                    dauna;</li>
+                  <li>Rapiditate in transmiterea centralizata a documentelor, fara implicarea directa a Beneficiarului
+                    politei de asigurare;</li>
+                  <li>Solutionare rapida a solicitarilor de reconstatare. Beneficiarul politei de asigurare nu are
+                    obligatia sa participe la reconstatare si nici sa semneze Procesul Verbal Suplimentar intocmit cu
+                    aceasta ocazie;</li>
+                  <li>Achitarea contravalorii reparatiilor direct de asigurator in contul reparatorului;</li>
+                  <li>Eliberarea autovehiculului din service pe baza Acceptului de Plata emis de asigurator;</li>
+                  <li>Prioritate la achizitionarea pieselor de schimb si efectuarea reparatiilor, etc.</li>
+                </ul>
+
+                <p><strong>UNITATILE REPARATOARE agreate de catre AXERIA IARD →</strong></p>
+
+                <p><strong>Documentele necesare pentru efectuarea platii:</strong></p>
+                <ul class="claims-step-list">
+                  <li>Actele solicitate, necesare instrumentarii dosarului de dauna;</li>
+                  <li>Facturi Fiscale care atesta efectuarea reparatiei;</li>
+                  <li>Deviz de reparatie;</li>
+                  <li>Cerere de Despagubire.</li>
+                </ul>
+              </div>
+
+              <div class="claims-step-inner-content" *ngIf="activeRomaniaStepFiveTab === 'total-economic-loss'">
+                <p>
+                  In situatia unui vehicul sau unui bun avariat a carui valoare de reparatie depaseste valoarea de piata
+                  a acestuia, cazul se trateaza ca Dauna Totala Economica.
+                </p>
+
+                <p><strong>Avantaje:</strong></p>
+                <ul class="claims-step-list">
+                  <li>Plata rapida;</li>
+                  <li>Posibilitatea de achizitie a unui autovehicul nou;</li>
+                  <li>Siguranta pe care o prezinta un autovehicul nou.</li>
+                </ul>
+
+                <p><strong>Documentele necesare pentru efectuarea platii:</strong></p>
+                <ul class="claims-step-list">
+                  <li>Actele solicitate, necesare instrumentarii dosarului de dauna;</li>
+                  <li>Cerere de Despagubire.</li>
+                </ul>
+              </div>
+
+              <div class="claims-step-inner-content" *ngIf="activeRomaniaStepFiveTab === 'other-repair-shop'">
+                <ul class="claims-step-list">
+                  <li>Asiguratorul nu garanteaza ca Reparatorul intruneste standardele de calitate;</li>
+                  <li>Comunicarea se realizeaza pe mail sau telefonic, respectand termenele legale pentru raspuns;</li>
+                  <li>Transmiterea documentelor se realizeaza prin posta sau depunere directa la Sediul Central Axeria
+                    IARD;</li>
+                  <li>Solutionarile de reconstatare se transmit exclusiv pe adresa de mail reconstatare@axeria-iard.ro,
+                    iar raspunsul se transmite in termenul indicat de lege, cu deplasarea obligatorie a unui
+                    reprezentant Axeria IARD care sa verifice toate datele cuprinse in solicitare;</li>
+                  <li>Reparatiile se achita in termenul indicat de lege;</li>
+                  <li>Eliberarea autovehiculului din service se efectueaza fara Accept de Plata emis de asigurator, iar
+                    dupa reparatie un reprezentant Axeria IARD verifica realitatea lucrarii, comparand cu documentatia
+                    depusa pentru efectuarea despagubirii.</li>
+                </ul>
+
+                <p><strong>Documentele necesare pentru efectuarea platii:</strong></p>
+                <ul class="claims-step-list">
+                  <li>Actele solicitate, necesare instrumentarii dosarului de dauna;</li>
+                  <li>Facturi si Chitante Fiscale/OP care atesta efectuarea si achitarea reparatiei;</li>
+                  <li>Deviz de reparatie;</li>
+                  <li>Cerere de Despagubire.</li>
+                </ul>
+
+                <p>
+                  <strong>
+                    ATENTIE!!! In cazul in care doriti cu ocazia reparatiilor efectuate pe dosarul de dauna ca anumite
+                    piese sau subansamble sa fie montate la un nivel superior calitativ sau constructiv, nefiind
+                    similare celor avariate, diferenta de cost va fi suportata de catre beneficiar.
+                  </strong>
+                </p>
+
+                <p>
+                  <strong>
+                    NOTA: Reparatiile se pot efectua in orice unitate reparatoare auto, in conditiile legii, fara nicio
+                    restrictie sau constrangere din partea asiguratorului RCA sau a unitatii reparatoare auto, care ar
+                    putea sa influenteze optiunea partii prejudiciate.
+                  </strong>
+                </p>
+              </div>
             </div>
           </div>
 
@@ -127,7 +606,7 @@
             <h3 class="claims-accident-title color-primary-project fs-40 wheight400">Accident!?!</h3>
 
             <div class="claims-accident-icon">
-               <img src="../../../assets/Icons/1.png" alt="crash car">
+              <img src="../../../assets/Icons/1.png" alt="crash car">
             </div>
 
             <p class="claims-accident-text fs-18 wheight400 text-center-ic">
@@ -143,11 +622,11 @@
   <!-- POZA 3 / ABROAD -->
   <section *ngIf="activeSection === 'abroad'" class="claims-dynamic-text-section">
     <div class="container claims-content-container">
-      <h2 class="claims-section-title color-primary-project fs-50 wheight500">
+      <h2 class="claims-section-title color-primary-project fs-38 wheight500">
         DAUNE RCA - EVENIMENT INTAMPLAT SI SOLUTIONAT IN AFARA ROMÂNIEI
       </h2>
 
-      <div class="claims-text-block fs-20 wheight500 color-primary-project claims-abroad-content">
+      <div class="claims-text-block fs-16 wheight500 color-primary-project claims-abroad-content">
         <p>Procedura diferă în funcţie de ţara unde a avut loc accidentul.</p>
 
         <p>
@@ -169,7 +648,7 @@
         </p>
 
         <div class="claims-contact-row">
-          <i class="fa-solid fa-phone-volume"></i>
+          <a href="tel:0219110"><i class="fa-solid fa-phone-volume"></i></a>
           <p>
             <strong>TELEFONIC (Luni ÷ Vineri, 09:00-18:00)</strong> – apelând Serviciul Call-Center, un reprezentant
             Customer Care vă oferă suportul necesar unei notificări complete şi corecte;
@@ -177,7 +656,7 @@
         </div>
 
         <div class="claims-contact-row">
-          <i class="fa-solid fa-envelope"></i>
+           <a href="mailto:greencard@axeria-iard.ro"><i class="fa-solid fa-envelope"></i></a>
           <p>
             <strong>E-mail</strong> – trimiteţi un mesaj la adresa greencard@axeria-iard.ro, în care menţionaţi
             detaliile evenimentului, daunele materiale şi/sau vătămările corporale produse şi cui aparţine vinovăţia,
@@ -203,24 +682,24 @@
   <!-- POZA 4 / DIRECT SETTLEMENT -->
   <section *ngIf="activeSection === 'direct-settlement'" class="claims-dynamic-text-section">
     <div class="container claims-content-container">
-      <h2 class="claims-section-title color-primary-project fs-50 wheight500">
+      <h2 class="claims-section-title color-primary-project fs-38 wheight500">
         DAUNE RCA - DECONTARE DIRECTĂ
       </h2>
 
-      <div class="claims-text-block fs-20 wheight500 color-primary-project claims-direct-content">
+      <div class="claims-text-block fs-16 wheight500 color-primary-project claims-direct-content">
         <p>
           Dacă sunteţi implicat într-un eveniment rutier, aveţi calitatea de păgubit şi sunteţi beneficiarul serviciului
           auxiliar de gestionare a daunelor de către asigurătorii RCA a propriilor asiguraţi şi se îndeplinesc
           condiţiile cumulative:
         </p>
 
-        <ul class="claims-list claims-list-large">
-          <li *ngFor="let directSettlementItem of directSettlementItems">{{ directSettlementItem }}</li>
+        <ul class="claims-list claims-list-large fs-16">
+          <li *ngFor="let directSettlementItem of directSettlementItems" class="fs-16">{{ directSettlementItem }}</li>
         </ul>
 
         <p>
           atunci puteţi să urmaţi procedura standard pentru soluţionarea unui dosar de daună, primind din partea noastră
-          tot sprijinul de care aveţi nevoie, nefiind nevoie să apelaţi la serviciile oferite de asigurătorul persoanei
+          tot sprijinul de care aveţi nevoie, nefiind nevoit să apelaţi la serviciile oferite de asigurătorul persoanei
           vinovate.
         </p>
 

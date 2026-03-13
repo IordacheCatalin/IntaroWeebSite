@@ -457,7 +457,7 @@ html {
 
 .claims-dynamic-text-section {
   padding: 2.5rem 0 3rem;
-  background: #ececec;
+  background: #f4f4f4;
 }
 
 .claims-abroad-content,
@@ -484,7 +484,6 @@ html {
 }
 
 .claims-list-large li {
-  font-size: 1.875rem;
   line-height: 1.7;
 }
 
@@ -574,6 +573,107 @@ html {
 
 .claims-forms-link:hover {
   color: #245fd1;
+}
+
+.claims-step-item {
+  background: #3776ee;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  width: fit-content;
+  max-width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.claims-step-item:hover {
+  background: #245fd1;
+}
+
+.claims-step-item--active {
+  background: #245fd1;
+}
+
+.claims-step-content {
+  padding: 1rem 1.25rem 1.25rem;
+  margin: 0 0 0.75rem;
+  color: var(--color-primary-project);
+  line-height: 1.8;
+}
+
+.claims-step-content p {
+  margin: 0 0 1rem;
+}
+
+.claims-step-list {
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+}
+
+.claims-step-list li {
+  margin-bottom: 0.5rem;
+}
+
+.claims-step-subitems {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.claims-step-subitems--vertical {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.claims-inner-tab-button {
+  border: 1px solid #3776ee;
+  min-height: 2.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.claims-inner-tab-button--active {
+  background: #06337A;
+  color: #ffffff;
+}
+
+.claims-step-inner-content {
+  margin-top: 1rem;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  color: var(--color-primary-project);
+  line-height: 1.8;
+}
+
+.claims-step-inner-content p {
+  margin: 0 0 1rem;
+}
+
+.claims-step-inner-content strong {
+  font-weight: 700;
+}
+
+.claims-step-list {
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+  list-style: none;
+}
+
+.claims-step-list li {
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.claims-step-list li::before {
+  content: "→ ";
+  position: relative;
+  left: 0;
+}
+
+.claims-step-subitems--vertical .claims-inner-tab-button {
+  width: fit-content;
+  max-width: 100%;
+  text-align: left;
 }
 
 /* responsive */

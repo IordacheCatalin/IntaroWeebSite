@@ -32,6 +32,11 @@ export const routes: Routes = [
       import('./pages/claimsProcedure/claimsProcedure.component').then(m => m.ClaimsProcedure)
   },
   {
+    path: 'cookie-policy',
+    loadComponent: () =>
+      import('./pages/cookiePolicy/cookiePolicy.component').then(m => m.CookiePolicyComponent)
+  },
+  {
     path: '**',
     redirectTo: 'home'
   }
