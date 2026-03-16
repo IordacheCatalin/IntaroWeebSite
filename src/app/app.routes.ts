@@ -37,6 +37,11 @@ export const routes: Routes = [
       import('./pages/cookiePolicy/cookiePolicy.component').then(m => m.CookiePolicyComponent)
   },
   {
+    path: 'petitii-online',
+    loadComponent: () =>
+      import('./pages/onlinePetitions/petitii-online.component').then(m => m.PetitiiOnlineComponent)
+  },
+  {
     path: '**',
     redirectTo: 'home'
   }

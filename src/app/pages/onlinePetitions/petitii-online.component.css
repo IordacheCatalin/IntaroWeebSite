@@ -1,0 +1,287 @@
+.petition-page {
+  background: #ececec;
+  min-height: 100vh;
+}
+
+/* Hero */
+.petition-hero {
+  position: relative;
+  width: 100%;
+  height: 34rem;
+  overflow: hidden;
+}
+
+.petition-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(10%);
+}
+
+.petition-hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+}
+
+.petition-hero-container {
+  max-width: 78rem;
+}
+
+.petition-hero-title-box {
+  max-width: 500px;
+  width: 100%;
+  background: rgba(90, 86, 190, 0.48);
+  padding: 1.25rem 2rem;
+}
+
+.petition-hero-title {
+  margin: 0;
+  color: #ffffff;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.petition-hero-subtitle {
+  color: #ffffff;
+  line-height: 1.2;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* Main content */
+.petition-content-section {
+  padding: 3rem 0 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.petition-content-container {
+  max-width: 100%;
+}
+
+.petition-section-title {
+  color: var(--color-primary-text);
+}
+
+.petition-intro {
+  line-height: 1.7;
+  margin: 0 0 1.5rem;
+}
+
+/* Tables */
+.petition-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 2rem;
+}
+
+.petition-table-wrap-secondary {
+  margin-bottom: 3rem;
+}
+
+.petition-table {
+  width: 100%;
+  min-width: 62rem;
+  border-collapse: collapse;
+  background: #f7f7f7;
+}
+
+.table-header{
+    background: #d9edf7;
+    height: 70px;
+}
+
+.petition-table th,
+.petition-table td {
+  border: 0.0625rem solid #d7d7d7;
+  padding: 0.875rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #222222;
+  text-align: left;
+  vertical-align: top;
+}
+
+.petition-table th {
+  font-weight: 700;
+}
+
+.petition-table tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.petition-table tbody tr:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+.petition-table tbody tr:hover {
+  background-color: #dcdcdc;
+  transition: background-color 0.2s ease;
+}
+
+/* Tabs */
+.petition-tabs-title {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.petition-tabs-card {
+  display: grid;
+  grid-template-columns: 18rem 1fr;
+  background: #f4f4f4;
+  box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.22);
+  min-height: 30rem;
+}
+
+.petition-tabs-sidebar {
+  background: #f3f3f3;
+  border-right: 0.0625rem solid #d0d0d0;
+  display: flex;
+  flex-direction: column;
+}
+
+.petition-tab-button {
+  min-height: 4rem;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-bottom: 0.0625rem solid #d0d0d0;
+  background: #f3f3f3;
+  color: #3a35b8;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.petition-tab-button:hover {
+  background: #e7e7e7;
+}
+
+.petition-tab-button.active {
+  background: #dedede;
+  color: #3776ee;
+}
+
+.petition-tabs-content {
+  background: #ffffff;
+  padding: 2rem 2.5rem 3rem;
+}
+
+.petition-tabs-logo-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.petition-tabs-logo {
+  max-width: 8rem;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.petition-tab-panel {
+  line-height: 1.8;
+}
+
+.petition-tab-panel p {
+  margin: 0 0 0.75rem;
+}
+
+.petition-highlight-link {
+  color: #3776ee;
+}
+
+/* Bottom link */
+.petition-send-link-wrap {
+  margin-top: 2.5rem;
+}
+
+.petition-send-text {
+  margin-right: 0.5rem;
+  color: var(--color-primary-text);
+}
+
+.petition-send-link {
+  color: #3776ee;
+  text-decoration: none;
+}
+
+.petition-send-link:hover {
+  text-decoration: underline;
+}
+
+/* Tablet */
+@media (max-width: 62rem) {
+  .petition-hero {
+    height: 20rem;
+  }
+
+  .petition-hero-title {
+    font-size: 4rem;
+  }
+
+  .petition-hero-subtitle {
+    font-size: 2rem;
+  }
+
+  .petition-tabs-card {
+    grid-template-columns: 1fr;
+  }
+
+  .petition-tabs-sidebar {
+    border-right: none;
+    border-bottom: 0.0625rem solid #d0d0d0;
+  }
+
+  .petition-content-container {
+    padding: 0 1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 48rem) {
+  .petition-hero {
+    height: 16rem;
+  }
+
+  .petition-hero-title-box {
+    padding: 1rem 1.25rem;
+  }
+
+  .petition-hero-title {
+    font-size: 2.75rem;
+  }
+
+  .petition-hero-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .petition-content-section {
+    padding: 2rem 0 3rem;
+  }
+
+  .petition-table th,
+  .petition-table td {
+    font-size: 0.875rem;
+    padding: 0.75rem 0.625rem;
+  }
+
+  .petition-tabs-content {
+    padding: 1.5rem 1rem 2rem;
+  }
+
+  .petition-send-link-wrap {
+    line-height: 1.5;
+  }
+
+  .petition-send-text,
+  .petition-send-link {
+    font-size: 2rem !important;
+  }
+}

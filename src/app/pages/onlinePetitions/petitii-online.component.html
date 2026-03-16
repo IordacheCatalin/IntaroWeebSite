@@ -1,0 +1,443 @@
+<app-banner></app-banner>
+<section class="petition-page">
+  <!-- Hero -->
+  <section class="petition-hero">
+    <img src="../../assets/Images/shutterstock.png" alt="Petitii online" class="petition-hero-image">
+
+    <div class="petition-hero-overlay">
+      <div class="container petition-hero-container">
+        <div class="petition-hero-title-box text-center-ic ">
+          <h1 class="petition-hero-title fs-84">Axeria</h1>
+          <div class="petition-hero-subtitle fs-50">– Petitii –</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="petition-content-section">
+    <div class="petition-content-container">
+      <h2 class="petition-section-title fs-45 wheight500 mt-4 mb-4">
+        PETITII PRIMITE
+      </h2>
+
+      <p class="petition-intro fs-14 wheight400">
+        In vederea asigurarii transparentei modului de înregistrare şi soluţionare a petiţiilor, precum și a
+        solicitărilor de soluționare alternativă a litigiilor de către AXERIA IARD SA Lyon – Sucursala Bucuresti, va
+        prezentam situatia petitiilor adresate companiei noastre:
+      </p>
+
+      <!-- Table 1 -->
+      <div class="petition-table-wrap">
+        <div class="table-header center-flex fs-20 wheight500">Perioada de raportare</div>
+        <table class="petition-table">
+          <thead>
+            <tr>
+              <th class="petition-main-column">PETITII</th>
+              <th>Anul precedent 2025</th>
+              <th>2026 ianuarie - luna curenta (cumulat)</th>
+              <th colspan="3">ULTIMELE 3 LUNI ALE PERIOADEI DE RAPORTARE</th>
+            </tr>
+            <tr>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th>Ianuarie 2026</th>
+              <th>Februarie 2026</th>
+              <th>Martie 2026</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr *ngFor="let petitionStat of petitionStats">
+              <td>{{ petitionStat.label }}</td>
+              <td>{{ petitionStat.previousYear }}</td>
+              <td>{{ petitionStat.currentYearCumulative }}</td>
+              <td>{{ petitionStat.january }}</td>
+              <td>{{ petitionStat.february }}</td>
+              <td>{{ petitionStat.march }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Table 2 -->
+      <div class="petition-table-wrap petition-table-wrap-secondary">
+        <div class="table-header center-flex fs-20 wheight500">Perioada de raportare</div>
+        <table class="petition-table">
+          <thead>
+            <tr>
+              <th>SOLICITARI DE SOLUTIONARE ALTERNATIVA A LITIGIILOR</th>
+              <th>Anul precedent 2025</th>
+              <th>Perioada de raportare: 2026 ianuarie - luna curenta (cumulat)</th>
+              <th colspan="3">ULTIMELE 3 LUNI ALE PERIOADEI DE RAPORTARE</th>
+            </tr>
+            <tr>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th>Ianuarie 2026</th>
+              <th>Februarie 2026</th>
+              <th>Martie 2026</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr *ngFor="let alternativeDisputeStat of alternativeDisputeStats">
+              <td>{{ alternativeDisputeStat.label }}</td>
+              <td>{{ alternativeDisputeStat.previousYear }}</td>
+              <td>{{ alternativeDisputeStat.currentYearCumulative }}</td>
+              <td>{{ alternativeDisputeStat.january }}</td>
+              <td>{{ alternativeDisputeStat.february }}</td>
+              <td>{{ alternativeDisputeStat.march }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="petition-section-title fs-45 wheight500 petition-tabs-title">
+        PROCEDURA DE SOLUTIONARE A PETITIILOR
+      </h2>
+
+      <!-- Tabs card -->
+      <div class="petition-tabs-card">
+        <div class="petition-tabs-sidebar">
+          <button type="button" class="petition-tab-button" [class.active]="activeTab === 'scope'"
+            (click)="setActiveTab('scope')">
+            SCOP
+          </button>
+
+          <button type="button" class="petition-tab-button" [class.active]="activeTab === 'domain'"
+            (click)="setActiveTab('domain')">
+            DOMENIU DE APLICARE
+          </button>
+
+          <button type="button" class="petition-tab-button" [class.active]="activeTab === 'reference-documents'"
+            (click)="setActiveTab('reference-documents')">
+            DOCUMENTE DE REFERINTA
+          </button>
+
+          <button type="button" class="petition-tab-button" [class.active]="activeTab === 'definitions'"
+            (click)="setActiveTab('definitions')">
+            DEFINITII
+          </button>
+
+          <button type="button" class="petition-tab-button" [class.active]="activeTab === 'responsibilities'"
+            (click)="setActiveTab('responsibilities')">
+            RESPONSABILITATI
+          </button>
+
+          <button type="button" class="petition-tab-button" [class.active]="activeTab === 'activity-description'"
+            (click)="setActiveTab('activity-description')">
+            DESCRIEREA ACTIVITATILOR
+          </button>
+        </div>
+
+        <div class="petition-tabs-content">
+          <div class="petition-tabs-logo-wrap">
+            <img src="assets/Axeria_Logo_Couleurs.svg" alt="Axeria" class="petition-tabs-logo">
+          </div>
+
+          <!-- Scope -->
+          <div *ngIf="activeTab === 'scope'" class="petition-tab-panel fs-16 wheight400 color-black">
+            <p>
+              Prezenta procedura are drept scop stabilirea modalitatilor de control al tuturor raspunsurilor la petiile
+              primite in cadrul AXERIA IARD SA Lyon – Sucursala Bucuresti, in concordanta cu cerintele Normei ASF nr 18
+              / 13.07.2017.
+            </p>
+          </div>
+
+          <!-- Domain -->
+          <div *ngIf="activeTab === 'domain'" class="petition-tab-panel fs-16 wheight400 color-black">
+            <p>
+              Prezenta procedura se aplica de catre toti salariatii din cadrul tuturor structurilor organizatorice ale
+              AXERIA IARD SA Lyon – Sucursala Bucuresti. leo. Phasellus viverra nulla ut metus varius laoreet. Sed
+              aliquam ultrices mauris.
+            </p>
+          </div>
+
+          <!-- Reference documents -->
+          <div *ngIf="activeTab === 'reference-documents'" class="petition-tab-panel fs-16 wheight400 color-black">
+            <p>→ Legea nr 237 / 2015 privind autorizarea si supravegherea activitatii de asigurare si reasigurare</p>
+            <p>→ Legea nr 132 / 2017 privind asigurarea obligatorie de raspundere civila auto pentru prejudicii produse
+              tertilor prin accidente de vehicule si tramvaie</p>
+            <p>→ Norma ASF nr 18 / 2017 privind procedura de solutionare a petitiilor referitoare la activitatea
+              societatilor de asigurare si reasigurare si brokerilor de asigurare</p>
+          </div>
+
+          <!-- Definitions -->
+          <div *ngIf="activeTab === 'definitions'" class="petition-tab-panel fs-16 wheight400 color-black">
+            <p><strong>Petent</strong> – persoana fizica sau juridica care are calitatea de asigurat, contractant,
+              beneficiar, persoana prejudiciata sau reprezentanti ai acestora, asa cum sunt definiti de legislația in
+              vigoare;</p>
+            <p><strong>Petitie</strong> – cererea, reclamatia, sesizarea, formulata in scris ori prin posta electronica,
+              prin intermediul careia un petent işi exprima nemultumirea cu privire la activitatea societatii.</p>
+            <p><strong>Registrul Unic al Petitiilor</strong> registrul electronic al petitiilor unde se introduc
+              informatiile prezentate in petitiile primite, precum si toate informatiile solicitate de catre ASF prin
+              modelul de raportare trimestriala.
+              Aplicatie informatica – aplicatia informatica specifica in care se inregistreaza reclamatiile clientilor
+              si cu ajutorul careia se pot realiza rapoarte pe anumite categorii de probleme.</p>
+            <p><strong>Aplicatie informatica</strong> – aplicatia informatica specifica in care se inregistreaza
+              reclamatiile clientilor si cu ajutorul careia se pot realiza rapoarte pe anumite categorii de probleme.
+            </p>
+            <p><strong>Responsabil proces</strong> angajatul AXERIA IARD SA Lyon – Sucursala Bucuresti care are datoria
+              indeplinirii unui anumit proces, conform responsabilitatilor specifice si individuale mentionate in fisa
+              postului. Responsabilitatea solutionarii eventualelor reclamatii care au legatura cu procesele derulate
+              revine inspectorului de asigurare (in cazul petitiei referitoare la procesul de subscriere),
+              specialistului lichidare daune (in cazul petitiei referitoare la procesul de instrumentare a daunelor)
+              etc.</p>
+            <p><strong>Echipa de Analiza si Solutionare a Petitiilor (EASP)</strong> – echipa desemnata de catre AXERIA
+              IARD SA Lyon – Sucursala Bucuresti sa decida asupra celei mai bune solutii de raspuns adresate
+              reclamantilor sau institutiilor prin care se fac reclamatii, care cuprinde persoane specializate si cu
+              experienta in domeniul asigurarilor, pe clasele de asigurare pentru care compania este autorizata.</p>
+          </div>
+
+          <!-- Responsibilities -->
+          <div *ngIf="activeTab === 'responsibilities'" class="petition-tab-panel fs-16 wheight400 color-black">
+            <p class="mb-4 mt-4 px-3"><strong>Echipa de Analiza si Solutionare a Petitiilor are urmatoarele
+                responsabilitati:</strong></p>
+
+            <p>→ Primeste si inregistreaza petitia in registrul unic al petitiilor;</p>
+
+            <p>→ Solicita informatii cu privire la situatia reclamata de la persoanele responsabile (inspector de
+              asigurari / specialist lichidare daune);</p>
+
+            <p>→ Aduna informatiile din aplicatiile electronice specifice procesului reclamat, privitoare la cazul
+              semnalat in petitie;</p>
+
+            <p>→ Analizeaza aspectele mentionate in petitie coroborate cu informatiile obtinute privitoare la procesul
+              reclamat si formuleaza in termenele stabilite un raspuns argumentat tehnic si legal. In raspunsul formulat
+              se va preciza daca in urma evenimentului produs despagubirea poate fi stabilita pe cale amiabila sau sunt
+              necesare metode alternative de solutionare a litigiilor, prevazute de dispozitiile legale in vigoare;</p>
+
+            <p>→ Reanalizeaza reclamatia in urma dispunerii acestui lucru de catre ASF sau in urma revenirii petentului
+              cu elemente noi care pot fi luate in considerare in analiza cazului;</p>
+
+            <p>→ Inainteaza raspunsul formulat persoanelor semnificative in vederea semnarii adresei oficiale de
+              raspuns;</p>
+
+            <p>→ Decide daca petitia este fondata sau nu si cine este responsabilul de proces care, prin actiunea sa, a
+              determinat aparitia petitiei;</p>
+
+            <p>→ Transmite raspunsul avizat si aprobat catre destinatar;</p>
+
+            <p>→ Inregistreaza inchiderea petitiilor in aplicatia informatica;</p>
+
+            <p>→ Raspunde la apelurile telefonice venite prin numarul de telefon permanent accesibil publicului si
+              transmite catre solicitant informatii privind stadiul rezolvarii petitiilor;</p>
+
+            <p>→ Alcatuieste si transmite periodic catre ASF raportarea conform anexei la Norma 18 / 2017, conform
+              termenelor stabilite.</p>
+
+            <p>→ Alcatuieste si transmite raportari privind situatia reclamatiilor inregistrate, in functie de
+              solicitari, catre directorul societatii.</p>
+
+            <p class="mb-4 mt-4 px-3"><strong>Coordonatorul Echipei de Analiza si Solutionare a Petitiilor:</strong></p>
+
+            <p>→ Analizeaza si semneaza raspunsul formulat de Echipa de Analiza si Solutionare a Petitiilor, inainte ca
+              acesta sa fie transmis spre aprobare Directorului General;</p>
+
+            <p>→ Obtine aprobarea Directorului General, in cazul in care acest lucru este necesar;</p>
+
+            <p>→ Raspunde de activitatea desfasurata de Echipa de Analiza si Solutionare a Petitiilor si de legalitatea
+              solutiei adoptate in fiecare caz analizat;</p>
+
+            <p>→ Analizeaza si avizeaza toate raspunsurile si raportarile intocmite de Echipa de Analiza si Solutionare
+              a Petitiilor;</p>
+
+            <p>→ Organizeaza si verifica activitatea lucratorilor din Echipa de Analiza si Solutionare a Petitiilor in
+              vederea respectarii termenelor de raspuns la reclamatiile inregistrate;</p>
+
+            <p>→ Preia petitiile venite de la ASF/ adresa electronica dedicate / direct de la petenti;</p>
+
+            <p>→ Realizeaza o prima investigare privind reclamatia primita si in functie de clasa de asigurari in care
+              se incadreaza polita de referinta a petentului, repartizeaza reclamatia lucratorului de specialitate din
+              cadrul Echipei de Analiza si Solutionare a Petitiilor, lucrator ce se va ocupa de introducerea reclamatiei
+              si culegerea de informatii privitoare la aspectele sesizate in petitie. Pe baza datelor primite,
+              lucratorul intocmeste proiectul de raspuns si il inainteaza coordonatorului Echipei de Analiza si
+              Solutionare a Petitiilor, pentru verificare;</p>
+
+            <p>→ Urmareste si monitorizeaza timpul de raspuns pentru solutionarea fiecarei petitii.</p>
+
+            <p>→ Se ingrijeste permanent de instruirea lucratorilor din compartiment cu privire la conditiile de
+              asigurare, norme de lucru, proceduri.</p>
+
+            <p class="mb-4 mt-4 px-3"><strong>Directorul General</strong></p>
+
+            <p>Numeste o persoana pentru a prelua responsabilitatile privind inregistrarea, analiza, si raspunsul
+              reclamatiilor primite, mentionand aceste atributii in fisa postului persoanei numite ca responsabil cu
+              solutionarea petitiilor.</p>
+
+            <p class="mb-4 mt-4 px-3"><strong>Responsabilul de proces</strong></p>
+
+            <p>Suplimentar atributiilor pe care le are, fiecare responsabil de proces va analiza, investiga si va
+              formula in scris raspunsul pentru fiecare petitie primita, iar in termen de 24 h il inainteaza
+              coordonatorului Echipei de Analiza si Solutionare a Petitiilor</p>
+
+            <p class="mb-4 mt-4 px-3"><strong>Operatorul Call Center</strong></p>
+
+            <p>→ Preia si transcrie informatiile furnizate telefonic de petent; </p>
+
+            <p>→ Transmite prin email catre Coordonatorul Echipei de Analiza si Solutionare a Petitiilor informatia
+              preluata telefonic;</p>
+
+            <p>→ Transmite telefonic catre solicitant raspunsul primit de la persoana avizata din cadrul Echipei de
+              Analiza si Solutionare a Petitiilor.</p>
+
+          </div>
+
+          <!-- Activity description -->
+          <div *ngIf="activeTab === 'activity-description'" class="petition-tab-panel fs-16 wheight400 color-black">
+            <p class="mb-4 mt-4 px-3"><strong>Clientul, autoritatile sau orice alt factor afectat direct sau indirect de
+                deciziile salariatilor companiei, pot reclama/ contesta urmatoarele:</strong></p>
+
+            <p>→ Activitatea personalului din societate;</p>
+            <p>→ Termene, intarzieri;</p>
+            <p>→ O decizie / o solutie.</p>
+
+            <p>
+              Reclamatiile inregistrate in cadrul AXERIA IARD SA Lyon – Sucursala Bucuresti, in functie de continutul
+              lor, pot avea implicatii financiare majore, care pot duce la aparitie unui diferend. Timpul solutionarii
+              unei reclamatii trebuie sa fie cat mai scurt, maxim in limitele legale prevazute.
+            </p>
+
+            <p><strong>1. Primirea petitiilor</strong></p>
+
+            <p>Căile prin care se pot primi petitii sunt:</p>
+
+            <p class="mb-4 mt-4">Verbal</p>
+            <p>→ Telefonic;</p>
+            <p>→ Prezentare la sediul AXERIA IARD SA Lyon – Sucursala Bucuresti.</p>
+
+            <p class="mb-4 mt-4">Scris</p>
+            <p>→ Online;</p>
+            <p>→ Fax;</p>
+            <p>→ Posta.</p>
+
+            <p class="mb-4 mt-4 px-3"><strong>2. Inregistrarea petitiilor</strong></p>
+
+            <p>→ Petitii prin apeluri telefonice</p>
+            <p>În cazul comunicării telefonice a petitiilor, acestea vor fi preluate si inregistrate de operatorul Call
+              Center.</p>
+
+            <p>→ Petitii prin prezentarea la sediul AXERIA IARD SA Lyon – Sucursala Bucuresti</p>
+            <p>In cazul prezentarii petentului la sediul AXERIA IARD SA Lyon – Sucursala Bucuresti, acesta va fi
+              indrumat direct catre Coordonatorul Echipei de Analiza si Solutionare a Petitiilor care ii va solicita
+              formularea unei petitii in scris in vederea inregistrarii ei. In cazul in care petentul are deja formulata
+              petitia pe format de hartie, i se va realiza o copie a acesteia. Atat pe original, cat si pe copie, se va
+              mentiona numarul unic din Registrul Unic al Petitiilor, dupa care copia se inmaneaza reclamantului.
+              Ulterior, Coordonatului Echipei de Analiza si Solutionare a Petitiilor inregistreaza petitia in aplicatia
+              informatica.</p>
+
+            <p>→ Petitii prin posta sau fax</p>
+            <p>In cazul in primirii petitiillor prin posta sau fax de catre persoane cu astfel de responsabilitati,
+              acestea, odata inregistrate in Registrul Unic al Petitiilor, vor fi transmise catre Coordonatorul Echipei
+              de Analiza si Solutionare a Petitiilor care le va introduce in aplicatia informatica.</p>
+
+            <p>→ Petitii online</p>
+            <p>În cazul primirii petitiilor la adresa de mail <span
+                class="petition-highlight-link">petitii@axeria-iard.ro</span>, a acestea sunt inregistrate in aplicatia
+              informatica de catre lucratorul Echipei de Analiza si Solutionare a Petitiilor.</p>
+
+            <p class="mb-4 mt-4">In toate cazurile de mai sus, lucratorul Echipei de Analiza si Solutionare a Petitiilor
+              va completa cu atentie campurile specific din aplicatia informatica cu datele cerute de aceasta,
+              respectiv:</p>
+            <p>→ datele de identificare ale persoanei care face petitia (nume, prenume, calitatea pe care o are, numar
+              telefon, adresa);</p>
+            <p>→ modalitatea primirii inregistrarii (apel telefonic, e-mail, fax, posta, prezentare la sediu);</p>
+            <p>→ referinte ale petitiei (tip asigurare, serie si numar contract, numar dosar de dauna etc);</p>
+            <p>→ obiectul petitiei.</p>
+
+            <p class="mb-4 mt-4">Dupa inregistrare, petitia este automat transmisa catre Coordonatorul Echipei de
+              Analiza si Solutionare a Petitiilor.</p>
+
+            <p class="mb-4 mt-4 px-3"><strong>3. Solutionarea petitiilor</strong></p>
+
+            <p class="mb-2">→ Coordonatorul Echipei de Analiza si Solutionare a Petitiilor va efectua o investigare
+              primara in urma careia, in functie de clasa de asigurari in care se incadreaza polita de referinta a
+              petentului, o va repartiza lucratorului din cadrul Echipei de Analiza si Solutionare a Petitiilor care se
+              va ocupa de culegerea de informatii cu privire la situatia semnalata si care va transmite petitia si
+              solicitarea de informatii catre Responsabil de Proces.</p>
+
+            <p class="mb-2">→ In termen de 24 h de la primirea petitiei de la lucratorul din cadrul Echipei de Analiza
+              si Solutionare a Petitiilor, Responsabilul de Proces va formula in scris un raspuns argumentat temeinic,
+              cu privire la toate aspectele mentionate in petitie precizand daca in urma evenimentului produs
+              despagubirea poate fi stabilita pe cale amiabila sau sunt necesare metode alternative de solutionare a
+              litigiilor, prevazute de dispozitiile legale in vigoare. Nota de fundamentare o va transmite prin e-mail
+              catre Coordonatorul Echipei de Analiza si Solutionare a Petitiilor insotita de eventuale probe scrise.</p>
+
+            <p class="mb-2">→ Aplicatia informatica va genera un mesaj de atentionare (“reminder”) catre Coordonatorul
+              Echipei de Analiza si Solutionare a Petitiilor si gestionarul petitiei (care trebuie sa formuleze un
+              raspuns) incepand cu trei zile inaintea termenului scadent de formulare a raspunsului.</p>
+
+            <p class="mb-2">→ Lucratorul din cadrul Echipei de Analiza si Solutionare a Petitiilor va transmite pe email
+              zilnic o atentionare catre persoanele in a caror sarcina intra formularea unui raspuns la o petitie si nu
+              au facut acest lucru in termenul indicat. La cerere, aceasta va fi transmisa si Directorului General in
+              vederea informarii acestuia asupra respectarii reglementarilor interne.</p>
+
+            <p class="mb-2">→ Fiecare angajat are obligatia de a raspunde in maxim 24 ore oricarei solicitari venite din
+              partea lucratorilor din cadrul Echipei de Analiza si Solutionare a Petitiilor cu privire la aspecte legate
+              de solutionarea petitiilor si formularea raspunsurilor catre petenti.</p>
+
+            <p class="mb-2">→ Nota de fundamentare formulata de Responsabilul de Proces inscrisa in aplicatia
+              informatica sau transmisa catre lucratorul din cadrul Echipei de Analiza si Solutionare a Petitiilor va
+              sta la baza formularii raspunsului la reclamatie. Raspunsul va fi redactat de lucratorul din cadrul
+              Echipei de Analiza si Solutionare a Petitiilor competent pentru cazul analizat si inaintat catre
+              Coordonatorul Echipei de Analiza si Solutionare a Petitiilor pentru verificare.</p>
+
+            <p class="mb-2">→ Raspunsul va fi transmis de lucratorul Echipei de Analiza si Solutionare a Petitiilor
+              catre petent in functie de modalitatea solicitata, pe caile prezentate anterior sau pentru a fi analizat
+              si semnat de catre Coordonatorul Echipei de Analiza si Solutionare a Petitiilor, apoi persoanei
+              semnificative imputernicite sa semneze adresele de raspuns, in cazul in care acestea urmeaza a fi
+              transmise catre ASF sau alte organizatii indreptatite sa solicite astfel de informatii.</p>
+
+            <p class="mb-2">→ Dupa transmiterea raspunsului catre destinatar, lucratorul Echipei de Analiza si
+              Solutionare a Petitiilor va inchide petitia in aplicatia informatica, trecand-o la starea “Rezolvata” si
+              mentionand daca aceasta a fost fondata sau nu, in functie de raspunsul formulat.</p>
+
+            <p class="mb-2">→ Orice dispozitie primita de la ASF, de reanalizare a solutiei comunicate ASF si/sau
+              petentului, se va trata ca o noua petitie, aceasta trecand, daca este cazul, prin toate etapele procesului
+              de analiza si solutionare a petitiilor.</p>
+
+            <p class="mb-2">→ In acelasi mod descris mai sus vor fi tratate si revenirile petentilor prin care acestia
+              aduc elemente noi legate de caz, care pot fi luate in considerare intr-o noua analiza a petitiei.</p>
+
+            <p class="mb-2">→ La solutionarea petitiilor, salariatii vor avea in vedere in principal rezolvarea acestora
+              pe cale amiabila.</p>
+
+            <p class="mb-4 mt-4 px-3"><strong>4. Analiza reclamatiilor</strong></p>
+
+            <p>Coordonatorul Echipei de Analiza si Solutionare a Petitiilor monitorizeaza datele din aplicatia
+              informatica privind petitiile, modul si timpul de solutionare a acestora. Pe baza datelor extrase din
+              aplicatia informatica, Coordonatorul Echipei de Analiza si Solutionare a Petitiilor analizeaza lunar
+              rapoarte privind situatia petitiilor inregistrate si modul de solutionare a acestora, ce vor fi utilizate
+              ca date de intrare in analiza de management:</p>
+            <p>→ Numarul total de petitii;</p>
+            <p>→ Numarul total de petitii fondate;</p>
+            <p>→ Numarul de petitii intemeiate la dosarele de dauna;</p>
+            <p>→ Numarul total de petitii pentru care dosarele de dauna au fost achitate;</p>
+            <p>→ Numarul total de petitii finalizate nefavorabil.</p>
+
+            <p class="mb-4 mt-4">Coordonatorul Echipei de Analiza si Solutionare a Petitiilor propune corectii
+              privitoare la neconformitatile care au generat petitiile. Dupa aprobarea de catre conducere a masurilor
+              preventive si/ sau corective propuse, Coordonatorul Echipei de Analiza si Solutionare a Petitiilor
+              transmite salariatilor deciziile si verifica implementarea actiunilor corective/ preventive stabilite.</p>
+
+            <p>Nota: De asemenea, orice petitie/reclamatie se poate adresa si direct ASF. Mai multe informatii se gasesc
+              in linkul urmator <a href="https://asfromania.ro/consumatori/petitii" target="_blank">https://asfromania.ro/consumatori/petitii.</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="petition-send-link-wrap">
+        <span class="petition-send-text fs-45 wheight500">
+          PENTRU A TRIMITE O PETITIE
+        </span>
+        <a href="/contact" class="petition-send-link fs-45 wheight500">
+          click aici
+        </a>
+      </div>
+    </div>
+  </section>
+</section>
