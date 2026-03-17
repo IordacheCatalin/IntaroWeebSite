@@ -94,7 +94,10 @@
 
 /* Text blocks */
 .general-rca-text-section {
+    max-width: 1250px;
+    margin: 0 auto;
     padding: 3rem 0 5rem;
+   text-align: justify;
 }
 
 .general-rca-section-title {
@@ -113,18 +116,20 @@
 }
 
 .general-rca-split-grid {
+    width: 1400px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     background: #f7f7f8;
 }
 
 .general-rca-accordion-side {
-    background: #dbe6ef;
+    background: #dfeaf1;
     padding: 5rem 4rem;
 }
 
 .general-rca-accordion-list {
-    max-width: 31rem;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -168,7 +173,7 @@
 .general-rca-info-image-wrap {
     width: 100%;
     max-width: 31rem;
-    box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.18);
+    box-shadow: 7px 6px 10px 0px rgba(0, 0, 0, 0.48);
     margin-bottom: 1.5rem;
 }
 
@@ -195,6 +200,8 @@
 
 /* Bottom */
 .general-rca-bottom-section {
+    width: 1400px;
+    margin: 0 auto;
     padding: 1rem 0 6rem;
 }
 
