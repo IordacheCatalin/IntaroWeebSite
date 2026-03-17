@@ -42,6 +42,32 @@ export const routes: Routes = [
       import('./pages/onlinePetitions/petitii-online.component').then(m => m.PetitiiOnlineComponent)
   },
   {
+    path: 'terms-conditions',
+    loadComponent: () =>
+      import('./pages/cookiePolicy/termsConditions.component').then(m => m.TermsConditionsComponent)
+  },
+  {
+    path: 'gdpr-policy',
+    loadComponent: () =>
+      import('./pages/cookiePolicy/gdprPolicy.component').then(m => m.GdprPolicyComponent)
+  },
+  {
+    path: 'rca',
+    loadComponent: () =>
+      import('./pages/rca/rca.component').then(m => m.RcaComponent)
+  },
+  
+  {
+    path: 'rca-risc',
+    loadComponent: () =>
+      import('./pages/rcaRisc/rcaRisc.component').then(m => m.RcaRiscComponent)
+  },
+
+
+  
+
+
+  {
     path: '**',
     redirectTo: 'home'
   }

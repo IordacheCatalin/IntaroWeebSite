@@ -26,10 +26,15 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/web.config"
+              "src/web.config",
+              {
+                "glob": "**/*",
+                "input": "petitii_online",
+                "output": "petitii_online"
+              }
             ],
             "styles": [
-             "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
               "src/styles.scss",
               "src/TextAndColor.css",

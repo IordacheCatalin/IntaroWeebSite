@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact- formular</title>
+<style id="applicationStylesheet" type="text/css">
+/* unvisited link */
+a:link {
+  color: white;
+}
+
+/* visited link */
+a:visited {
+  color: white;
+}
+
+/* mouse over link */
+a:hover {
+  color: white;
+}
+
+/* selected link */
+a:active {
+  color: white;
+} 
+
+ /* unvisited link */
+.mail:link {
+  color: #06337A;
+}
+
+/* visited link */
+.mail:visited {
+  color: #06337A;
+}
+
+/* mouse over link */
+.mail:hover {
+  color: #06337A;
+}
+
+/* selected link */
+.mail:active {
+  color: #06337A;
+} 
+
+input[type=text], input[type=email], input[type=tel] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #06337A;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #06337A;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: none;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #06337A;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #2872FA;
+}
+
+.mediaViewInfo {
+		--web-view-name: https://www.axeria-iard.ro;
+		--web-view-id: https://www.axeria-iard.ro;
+		--web-scale-to-fit: true;
+		--web-scale-to-fit-type: width;
+		--web-scale-on-resize: true;
+		--web-center-horizontally: true;
+		--web-center-vertically: true;
+		--web-enable-deep-linking: true;
+	}
+	:root {
+		--web-view-ids: https://www.axeria-iard.ro;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		border: none;
+	}
+	
+
+	#axeria_fond_institutionnel_NEW_j {
+		position: absolute;
+		width: 1920px;
+		height: 100px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#logo-axeria_j {
+		position: absolute;
+		width: 151px;
+		height: 55px;
+		left: 140px;
+		top: 20px;
+		overflow: visible;
+		--web-animation: fadein 0.3s ease-out;
+		--web-action-type: page;
+		--web-action-target: index.html;
+		cursor: pointer;
+    }
+    
+	#Nume {
+		left: 488px;
+		top: 7702px;
+		position: absolute;
+		overflow: visible;
+		width: 49px;
+		white-space: nowrap;
+		line-height: 20px;
+		margin-top: -1px;
+		text-align: center;
+		font-family: Nokora;
+		font-style: 500px;
+		font-weight: normal;
+		font-size: 35px;
+		color: rgba(74,76,78,1);
+	}
+	#Trimite {
+		left: 932px;
+		top: 8589px;
+		position: absolute;
+		overflow: visible;
+		width: 59px;
+		white-space: nowrap;
+		line-height: 20px;
+		margin-top: -1px;
+		text-align: center;
+		font-family: Nokora;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(255,255,255,1);
+                
+	}
+	#Email {
+		left: 488px;
+		top: 7769px;
+		position: absolute;
+		overflow: visible;
+		width: 47px;
+		white-space: nowrap;
+		line-height: 20px;
+		margin-top: -1px;
+		text-align: center;
+		font-family: Nokora;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(74,76,78,1);
+	}
+	#Prenume {
+		left: 488px;
+		top: 7836px;
+		position: absolute;
+		overflow: visible;
+		width: 73px;
+		white-space: nowrap;
+		line-height: 20px;
+		margin-top: -1px;
+		text-align: center;
+		font-family: Nokora;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(74,76,78,1);
+	}
+	#CNP {
+		left: 488px;
+		top: 7903px;
+		position: absolute;
+		overflow: visible;
+		width: 33px;
+		white-space: nowrap;
+		line-height: 20px;
+		margin-top: -1px;
+		text-align: center;
+		font-family: Nokora;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(74,76,78,1);
+	}
+	#Email_m {
+		left: 488px;
+		top: 7970px;
+		position: absolute;
+		overflow: visible;
+		width: 47px;
+		white-space: nowrap;
+		line-height: 20px;
+		margin-top: -1px;
+		text-align: center;
+		font-family: Nokora;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(74,76,78,1);
+	}
+	#Adresa {
+		left: 488px;
+		top: 8037px;
+		position: absolute;
+		overflow: visible;
+		width: 57px;
+		white-space: nowrap;
+		line-height: 20px;
+		margin-top: -1px;
+		text-align: center;
+		font-family: Nokora;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(74,76,78,1);
+	}
+	#Telefon {
+		left: 488px;
+		top: 8104px;
+		position: absolute;
+		overflow: visible;
+		width: 61px;
+		white-space: nowrap;
+		line-height: 20px;
+		margin-top: -1px;
+		text-align: center;
+		font-family: Nokora;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(74,76,78,1);
+	}
+	#Mesajul_tau {
+		left: 488px;
+		top: 8171px;
+		position: absolute;
+		overflow: visible;
+		width: 197px;
+		white-space: nowrap;
+		line-height: 20px;
+		margin-top: -1px;
+		text-align: center;
+		font-family: Nokora;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(74,76,78,1);
+	}
+	#Sunt_de_acord_cu_prelucrarea_d {
+		left: 473px;
+		top: 8318px;
+		position: absolute;
+		overflow: visible;
+		width: 935px;
+		height: 192px;
+		line-height: 15px;
+		margin-top: 10px;
+		text-align: justified;
+		font-family: Nokora;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 10px;
+		color: rgba(132,132,132,1);
+	}
+
+	#Sunt_de_acord {
+		left: 473px;
+		top: 8522px;
+		position: absolute;
+		overflow: visible;
+		width: 402px;
+		height: 12px;
+		line-height: 15px;
+		margin-top: -2.5px;
+		text-align: left;
+		font-family: Nokora;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 10px;
+		color: rgba(132,132,132,1);
+
+	}
+	#Nu_sunt_de_acord {
+		left: 473px;
+		top: 8543px;
+		position: absolute;
+		overflow: visible;
+		width: 402px;
+		height: 12px;
+		line-height: 15px;
+		margin-top: -2.5px;
+		text-align: left;
+		font-family: Nokora;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 10px;
+		color: rgba(132,132,132,1);
+	}
+
+    
+.Trimite_mesaj  {
+        position: absolute;
+		overflow: visible;
+		line-height: 15px;
+		text-align: left;
+		font-family: Nokora;
+		font-style: normal;
+		font-weight: normal;
+		color: rgba(132,132,132,1);
+	}
+    
+    /* Stiluri pentru telefon */
+@media screen and (max-width: 767px) {
+  .Trimite_mesaj {
+   width: 300px;
+   height: 492px;   
+   top: 30px;
+   left: 5px;
+   bottom: 250px;
+   font-size: 12px;
+   color: #06337A; 
+   padding-left: 18px;
+  }
+    
+ titlu {
+ padding: 15px 10px 25px 60px; 
+ font-size: 22px; 
+}
+    }
+    
+ /* Stiluri pentru desktop */
+@media screen and (min-width: 1024px) {
+    .Trimite_mesaj {
+   width: 735px;
+   height: 892px;
+   top: 80px;
+   left: 400px;
+   right: 400px;
+   bottom: 100px;
+   color: #06337A; 
+   margin: 20px 15px 40px 15px;
+   }
+    
+titlu {
+ padding: 15px 10px 45px 250px; 
+ font-size: 30px; 
+}
+    }
+ 
+/* Stiluri pentru tableta */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .Trimite_mesaj {
+   width: 670px;
+   height: 492px;   
+   top: 30px;
+   left: 5px;
+   bottom: 250px;
+   font-size: 12px;
+   color: #06337A; 
+   padding-left: 25px;
+   margin: 20px 15px 40px 35px;
+  }
+    
+ titlu {
+ padding: 15px 10px 45px 240px; 
+ font-size: 27px; 
+}
+}
+
+</style>
+
+
+</head>
+<body>
+
+	<div class="Trimite_mesaj" >
+		<span><titlu>TRIMITE MESAJ</titlu></span>
+		
+		<form method="post" action="send_message.php">
+		<span>
+		<input type="text" name="your-last-name" value="" size="40" aria-required="true" required aria-invalid="false" placeholder="Nume">
+		</span>
+		<br>
+		<span>
+		<input type="text" name="your-first-name" value="" size="40" aria-required="true" required aria-invalid="false" placeholder="Prenume">
+		</span>
+		<br>
+		<span>
+		<input type="email" name="your-email" value="" size="40" aria-required="true" required aria-invalid="false" placeholder="Email">
+		</span>
+		<br>
+		<span>
+		<input type="tel" name="your-phone" value="" size="40" aria-required="true" required aria-invalid="false" placeholder="Telefon">
+		</span>
+		<br>
+		<span><textarea name="your-message" cols="40" rows="8" aria-invalid="false" required placeholder="Mesajul tau"></textarea></span>
+		<br>
+		<span style="float:justified; font-size: 16px; color: rgba(0,0,0,1);font-weight: normal; text-align: justified; font-style: nokora;"><input type="checkbox" name="acceptance-893" value="1" aria-invalid="false" checked="checked"> Sunt de acord  cu prelucrarea datelor cu caracter personal în scopurile mai jos-precizate:<br>
+		<p>  În conformitate cu prevederile RegulamentuluI UE 679/ 2016 pentru protecţia persoanelor cu privire la prelucrarea datelor cu caracter personal şi libera circulaţie a acestor date, vă informăm că AXERIA IARD SA Lyon – Sucursala Bucuresti prelucrează datele dvs. cu caracter personal (inclusiv CNP) în temeiul legii, cu bună-credinţă, în scopuri legitime, pentru oferirea (inclusiv calcularea tarifelor de prime de asigurare) încheierea, administrarea și executarea contractului de asigurare. <br>
+		Am luat la cunostinta de faptul ca, potrivit Regulamentului UE 679/2016, am urmatoarele drepturi: dreptul de acces la date, dreptul la rectificarea sau actualizarea datelor, dreptul la stergerea datelor, cand sunt indeplinite o serie de conditii (spre ex. daca datele nu mai sunt necesare pentru scopurile de mai sus) dreptul la restrictionarea prelucrarii, dreptul de a mi se comunica orice rectificare sau stergere sau restrictionare a prelucrarii, dreptul la portabilitatea datelor, dreptul la opozitie, dreptul de a fi notificat in caz de incalcare a securitatii datelor, dreptul de a modifica sau de a-mi retrage consimțământul cu privire la prelucrarea datelor cu caracter personal pentru cazurile in care mi-am exprimat acest consimtamant,  dreptul de adresare justiţiei si le pot exercita prin adresare fie catre AXERIA IARD SA Lyon – Sucursala Bucuresti, A.N.S.P.D.C.P. sau instanţa de judecată competentă, după caz.<br>
+		Prelucrarea datelor cu caracter personal în scop de reclamă, marketing, publicitate, acţiuni de direct mailing şi primirea materialelor promoţionale de la AXERIA IARD SA Lyon – Sucursala Bucuresti prin mijloace electronice (sms, e-mail).<br>
+		</p>
+		</span>
+		<input type="submit" value="Trimite" name="send" style="font-family: nokora; font-size: 22px;">
+		</form>
+		
+	</div>
+	<div id="Subsol_mesaj">
+    <p></p>
+    </div>
+<div>
+
+</div>
+</body>
+</html>

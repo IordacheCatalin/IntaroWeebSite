@@ -1,0 +1,230 @@
+<app-banner></app-banner>
+<section class="general-rca-page">
+
+    <!-- Hero -->
+    <section class="general-rca-hero">
+        <div class="general-rca-hero-overlay"></div>
+
+
+        <div class="general-rca-hero-content center-flex-align h-100-ic">
+            <h1 class="general-rca-hero-title color-white fs-84 wheight600">
+                Asigurari
+                <br>
+                Generale
+                <br>
+                RCA
+            </h1>
+        </div>
+
+    </section>
+
+    <!-- Quick cards -->
+    <section class="general-rca-cards-section mt-4">
+
+        <div class="general-rca-cards-grid">
+
+            <ng-container *ngFor="let quickCard of quickCards">
+
+                <!-- PDF -->
+                <a *ngIf="quickCard.pdfUrl" [href]="quickCard.pdfUrl" target="_blank" rel="noopener noreferrer"
+                    class="general-rca-card text-decoration-none-ic">
+
+                    <div class="general-rca-card-header">
+                        <div class="fs-24 wheight500 color-white">{{ quickCard.title }}</div>
+                        <div *ngIf="quickCard.subtitle" class="fs-20 wheight400 color-white">
+                            {{ quickCard.subtitle }}
+                        </div>
+                    </div>
+
+                    <div class="general-rca-card-body">
+                        <p class="fs-18 wheight400 color-primary-project">
+                            {{ quickCard.description }}
+                        </p>
+
+                        <span class="general-rca-card-arrow center-flex fs-32 wheight700 color-white">
+                            ›
+                        </span>
+                    </div>
+                </a>
+
+                <!-- LINK NORMAL -->
+                <a *ngIf="!quickCard.pdfUrl" [href]="quickCard.href" [target]="quickCard.target || '_self'"
+                    rel="noopener noreferrer" class="general-rca-card text-decoration-none-ic">
+
+                    <div class="general-rca-card-header">
+                        <div class="fs-24 wheight500 color-white">{{ quickCard.title }}</div>
+                        <div *ngIf="quickCard.subtitle" class="fs-20 wheight400 color-white">
+                            {{ quickCard.subtitle }}
+                        </div>
+                    </div>
+
+                    <div class="general-rca-card-body">
+                        <p class="fs-18 wheight400 color-primary-project">
+                            {{ quickCard.description }}
+                        </p>
+
+                        <span class="general-rca-card-arrow center-flex fs-32 wheight700 color-white">
+                            ›
+                        </span>
+                    </div>
+                </a>
+
+            </ng-container>
+
+        </div>
+
+    </section>
+
+    <!-- Coverage text -->
+    <section class="general-rca-text-section">
+        <div class="container gn-xxxlg-width">
+            <h2 class="color-primary-project fs-50 wheight500 general-rca-section-title">
+                Asigurari Generale RCA - Acoperire teritoriala
+            </h2>
+
+            <div class="general-rca-paragraphs fs-24 wheight500 color-primary-project">
+                <p>
+                    In cazul in care aveti incheiata o asigurare RCA, pe perioada valabilitatii acesteia aveti
+                    in mod automat si o asigurare Carte Verde valabila pentru teritoriul statelor membre ale
+                    Uniunii Europene precum si pentru teritoriul Islandei, Norvegiei, Liechtenstein, Elvetiei,
+                    Serbiei, Albaniei, Andorei, Moldovei, Turciei, Ucrainei, Azerbaidjan, Belarus, Muntenegru
+                    fara a plati nici o prima de asigurare suplimentara.
+                </p>
+
+                <p>
+                    Atunci cand doriti sa circulati/tranzitati cu vehiculul intr-o alta tara, verificati
+                    acoperirea acesteia pe documentul de asigurare Carte Verde pe care l-ati primit atunci cand
+                    ati incheiat asigurarea RCA.
+                </p>
+
+                <p>
+                    Daca simbolul tarii care va intereseaza este barat/taiat, atunci va trebui sa incheiati la
+                    un asigurator din Romania o asigurare Carte Verde distincta fata de asigurarea RCA pe care o
+                    detineti, care sa fie valabila in acea tara pe perioada deplasarii. In caz contrar, la
+                    granita acelei tari va trebui sa cumparati o asigurare de frontiera valabila doar pentru
+                    acea tara.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main split section -->
+    <section class="general-rca-split-section">
+        <div class="container gn-xxxlg-width">
+            <div class="general-rca-split-grid">
+
+                <!-- Left -->
+                <div class="general-rca-accordion-side">
+                    <div class="general-rca-accordion-list">
+                        <div *ngFor="let accordionItem of accordionItems" class="general-rca-accordion-item"
+                            [class.is-open]="isAccordionOpen(accordionItem.id)">
+                            <button type="button" class="general-rca-accordion-trigger center-flex-align"
+                                (click)="setActiveAccordion(accordionItem.id)">
+                                <span class="general-rca-accordion-icon fs-18 wheight700 color-primary-project">
+                                    {{ isAccordionOpen(accordionItem.id) ? '▴' : '▸' }}
+                                </span>
+
+                                <span class="fs-28 wheight600 color-primary-project">
+                                    {{ accordionItem.title }}
+                                </span>
+                            </button>
+
+                            <div *ngIf="isAccordionOpen(accordionItem.id)" class="general-rca-accordion-content">
+                                <p *ngFor="let paragraph of accordionItem.content"
+                                    class="fs-20 wheight500 color-primary-project">
+                                    {{ paragraph }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right -->
+                <div class="general-rca-info-side">
+                    <h2 class="color-primary-project fs-60 wheight600 text-center-ic general-rca-info-title">
+                        Asigurari Generale
+                        <br>
+                        RCA
+                    </h2>
+
+                    <div class="general-rca-info-image-wrap">
+                        <img src="assets/Images/general-rca/general-rca-info.jpg" alt="Asigurari Generale RCA"
+                            class="general-rca-info-image">
+                    </div>
+
+                    <p class="fs-22 wheight500 color-primary-project general-rca-info-text">
+                        Asiguratorul ofera servicii de decontare directa propriilor Asigurati RCA pentru daunele
+                        produse vehiculului asigurat prin accidente de vehicule de catre terte persoane vinovate,
+                        cu asigurare RCA valabila la data accidentului.
+                    </p>
+
+                    <a href="https://www.axeria-iard.ro/" target="_blank" rel="noopener noreferrer"
+                        class="general-rca-info-button text-decoration-none-ic center-flex-align">
+                        <span class="fs-20 wheight600 color-white">Tariful Informativ RCA</span>
+                        <span class="fs-28 wheight700 color-white">›</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom content -->
+    <section class="general-rca-bottom-section">
+        <div class="container gn-xxxlg-width">
+            <h2 class="color-primary-project fs-50 wheight500 general-rca-section-title">
+                Asigurari Generale RCA
+                <br>
+                Tarife de referinta RCA- ASF
+            </h2>
+
+            <p class="fs-24 wheight700 color-primary-project general-rca-bold-text">
+                Raport cu privire la determinarea tarifelor de referinta pentru asigurarea obligatorie de
+                raspundere civila pentru pagube produse tertilor prin accidente de vehicule.
+            </p>
+
+            <p class="fs-24 wheight700 color-primary-project general-rca-bold-text">
+                Criteriile de tarifare AXERIA IARD:
+            </p>
+
+            <div class="general-rca-paragraphs fs-22 wheight500 color-primary-project">
+                <p>
+                    A. Pentru asigurati persoane fizice, criteriile si ajustarile luate in calculul tarifului
+                    RCA sunt:
+                </p>
+
+                <p>→ varsta asiguratului;</p>
+                <p>→ capacitatea cilindrica / masa maxima autorizata / putere / numar de locuri;</p>
+                <p>→ durata contractului de asigurare;</p>
+                <p>→ ajustare conform sistem bonus-malus;</p>
+                <p>→ ajustarea in functie de perioada contractului de asigurare.</p>
+
+                <p>
+                    B. Pentru asigurati persoane juridice, criteriile si ajustarile luate in calculul tarifului
+                    RCA sunt:
+                </p>
+
+                <p>→ capacitatea cilindrica / masa maxima autorizata / putere / numar de locuri;</p>
+                <p>→ durata contractului de asigurare;</p>
+                <p>→ ajustare conform sistem bonus-malus;</p>
+                <p>→ ajustarea in functie de perioada contractului de asigurare.</p>
+            </div>
+
+            <h2 class="color-primary-project fs-50 wheight500 general-rca-section-title general-rca-pid-title">
+                PID - Document de informare privind produsul de asigurare
+            </h2>
+
+            <div class="general-rca-paragraphs fs-22 wheight500 color-primary-project">
+                <p>
+                    Acest document prezinta produsul de asigurare obligatorie de raspundere civila pentru
+                    prejudicii produse prin accidente de vehicule si tramvaie (RCA), asigurare obligatorie.
+                </p>
+
+                <p class="general-rca-bold-download fs-24 wheight700 color-black">
+                    Aici puteti descarca documentul de informare privind produsul de asigurare.
+                </p>
+            </div>
+        </div>
+    </section>
+
+</section>

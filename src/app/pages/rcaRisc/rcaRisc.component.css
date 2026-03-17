@@ -1,0 +1,95 @@
+:host {
+  display: block;
+}
+
+.rca-risk-page {
+  background: #f4f4f4;
+  min-height: 100vh;
+}
+
+.rca-risk-hero {
+  width: 100%;
+  height: 22rem;
+  background-image: url("assets/Images/rcaRisc.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.rca-risk-content-section {
+  padding: 2rem 0 4rem;
+}
+
+.rca-risk-content {
+  max-width: 52rem;
+}
+
+.rca-risk-title {
+  margin: 0 0 2rem;
+  line-height: 1.2;
+}
+
+.rca-risk-text {
+  margin: 0 0 2rem;
+  line-height: 1.8;
+}
+
+.rca-risk-subtitle {
+  margin: 0 0 1.5rem;
+  line-height: 1.45;
+}
+
+.rca-risk-list p,
+.rca-risk-contact p,
+.rca-risk-address,
+.rca-risk-note {
+  margin: 0 0 1rem;
+  line-height: 1.8;
+}
+
+.rca-risk-contact {
+  margin-top: 1rem;
+}
+
+.rca-risk-address {
+  margin-top: 0.5rem;
+}
+
+.rca-risk-note {
+  margin-top: 1rem;
+}
+
+/* tablet */
+@media (max-width: 62rem) {
+  .rca-risk-hero {
+    height: 18rem;
+  }
+
+  .rca-risk-content-section {
+    padding: 2rem 1rem 3rem;
+  }
+}
+
+/* mobile */
+@media (max-width: 48rem) {
+  .rca-risk-hero {
+    height: 14rem;
+  }
+
+  .rca-risk-title {
+    margin-bottom: 1.5rem;
+  }
+
+  .rca-risk-text,
+  .rca-risk-list p,
+  .rca-risk-contact p,
+  .rca-risk-address {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .rca-risk-subtitle {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+}
