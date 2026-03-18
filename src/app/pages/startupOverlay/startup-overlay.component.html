@@ -1,0 +1,24 @@
+<div class="startup-overlay" *ngIf="isVisible">
+  <div class="startup-overlay__backdrop"></div>
+
+  <div class="startup-overlay__content">
+    <div class="startup-overlay__text">
+      <h1>PETITII ONLINE</h1>
+
+      <p>
+        Petitiile/Reclamatiile, precum si solicitarile de solutionare
+        alternativa a litigiilor, inregistrate in ultimele 3 luni sunt in
+        numar de 153 respectiv de 0. Structura acestora poate fi consultata
+        <a
+          routerLink="/petitii-online"
+          (click)="markAsSeen()">
+          aici
+        </a>.
+      </p>
+
+      <div class="startup-overlay__countdown">
+        {{ secondsLeft }} secunde
+      </div>
+    </div>
+  </div>
+</div>

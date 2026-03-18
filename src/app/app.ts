@@ -5,15 +5,17 @@ import { filter } from 'rxjs/operators';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { StartupOverlayComponent } from './pages/startupOverlay/startup-overlay.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, NavbarComponent, FooterComponent],
+  imports: [CommonModule, RouterOutlet, NavbarComponent, FooterComponent, StartupOverlayComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
 export class App {
+  public showStartupOverlay = true;
   private readonly router = inject(Router);
 
   private readonly hiddenLayoutRoutes: string[] = [
@@ -39,5 +41,9 @@ export class App {
       .subscribe(() => {
         // No-op. Reading router.url in computed + navigation triggers change detection.
       });
+  }
+
+  public onOverlayClosed(): void {
+    this.showStartupOverlay = false;
   }
 }

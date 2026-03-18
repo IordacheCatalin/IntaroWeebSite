@@ -1,3 +1,5 @@
+<app-startup-overlay *ngIf="showStartupOverlay" (closed)="onOverlayClosed()">
+</app-startup-overlay>
 <app-navbar *ngIf="shouldShowLayout()"></app-navbar>
 <main [class]="mainClass()">
 
