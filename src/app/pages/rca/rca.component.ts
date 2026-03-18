@@ -161,9 +161,32 @@ export class RcaComponent {
     ];
 
     protected setActiveAccordion(itemId: string): void {
-        this.activeAccordionId = this.activeAccordionId === itemId ? '' : itemId;
-    }
+        const isSameItem = this.activeAccordionId === itemId;
+        const accordionElement = document.getElementById(`accordion-${itemId}`);
 
+        if (!accordionElement) {
+            this.activeAccordionId = isSameItem ? '' : itemId;
+            return;
+        }
+
+        if (isSameItem) {
+            this.activeAccordionId = '';
+            return;
+        }
+
+        const headerOffset = 100;
+        const elementTop = accordionElement.getBoundingClientRect().top + window.scrollY;
+        const scrollTarget = elementTop - headerOffset;
+
+        window.scrollTo({
+            top: scrollTarget,
+            behavior: 'smooth'
+        });
+
+        setTimeout(() => {
+            this.activeAccordionId = itemId;
+        }, 250);
+    }
     protected isAccordionOpen(itemId: string): boolean {
         return this.activeAccordionId === itemId;
     }

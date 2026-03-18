@@ -119,6 +119,7 @@
                 <div class="general-rca-accordion-list">
                     <div *ngFor="let accordionItem of accordionItems" class="general-rca-accordion-item"
                         [class.is-open]="isAccordionOpen(accordionItem.id)">
+
                         <button type="button" class="general-rca-accordion-trigger center-flex-align"
                             (click)="setActiveAccordion(accordionItem.id)">
                             <span class="general-rca-accordion-icon fs-18 wheight700 color-primary-project">
@@ -130,11 +131,14 @@
                             </span>
                         </button>
 
-                        <div *ngIf="isAccordionOpen(accordionItem.id)" class="general-rca-accordion-content">
-                            <p *ngFor="let paragraph of accordionItem.content"
-                                class="fs-16 wheight400 color-primary-project">
-                                {{ paragraph }}
-                            </p>
+                        <div class="general-rca-accordion-content-wrapper"
+                            [class.is-open]="isAccordionOpen(accordionItem.id)">
+                            <div class="general-rca-accordion-content">
+                                <p *ngFor="let paragraph of accordionItem.content"
+                                    class="fs-16 wheight400 color-primary-project">
+                                    {{ paragraph }}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -170,58 +174,66 @@
 
     <!-- Bottom content -->
     <section class="general-rca-bottom-section">
-            <h2 class="color-primary-project fs-34 wheight600 general-rca-section-title">
-                Asigurari Generale RCA
-                <br>
-                Tarife de referinta RCA- ASF
-            </h2>
+        <h2 class="color-primary-project fs-34 wheight600 general-rca-section-title">
+            Asigurari Generale RCA
+            <br>
+            Tarife de referinta RCA- ASF
+        </h2>
 
-            <p class="fs-20 wheight600 color-primary-project general-rca-bold-text">
-          Raport cu privire la determinarea tarifelor de referință pentru asigurarea obligatorie de răspundere civilă pentru pagube produse terților prin accidente de vehicule.
+        <p class="fs-20 wheight600 color-primary-project general-rca-bold-text">
+            Raport cu privire la determinarea tarifelor de referință pentru asigurarea obligatorie de răspundere civilă
+            pentru pagube produse terților prin accidente de vehicule.
+        </p>
+
+        <p class="fs-20 wheight700 color-primary-project general-rca-bold-text">
+            Criteriile de tarifare AXERIA IARD:
+        </p>
+
+        <div class="general-rca-paragraphs fs-18 wheight500 color-primary-project">
+            <p>
+                A. Pentru asigurati persoane fizice, criteriile si ajustarile luate in calculul tarifului RCA sunt:
             </p>
 
-            <p class="fs-20 wheight700 color-primary-project general-rca-bold-text">
-              Criteriile de tarifare AXERIA IARD:
+            <p class="mx-4">→ varsta asiguratului;</p>
+            <p class="mx-4">→ capacitatea cilindrica / masa maxima autorizata / putere / numar de locuri, in functie de
+                categoria autovehiculului;</p>
+            <p class="mx-4">→ durata contractului de asigurare;</p>
+            <p class="mx-4">→ ajustare conform sistem bonus-malus;</p>
+            <p class="mx-4">→ ajustarea in functie de perioada contractului de asigurare (pentru polite cu perioada sub
+                12 luni).</p>
+
+            <p>
+                B. Pentru asigurati persoane juridice, criteriile si ajustarile luate in calculul tarifului RCA sunt:
             </p>
 
-            <div class="general-rca-paragraphs fs-18 wheight500 color-primary-project">
-                <p>
-                   A. Pentru asigurati persoane fizice, criteriile si ajustarile luate in calculul tarifului RCA sunt:
-                </p>
+            <p class="mx-4">→ capacitatea cilindrica / masa maxima autorizata / putere / numar de locuri, in functie de
+                categoria autovehiculului;</p>
+            <p class="mx-4">→ durata contractului de asigurare;</p>
+            <p class="mx-4">→ ajustare conform sistem bonus-malus;</p>
+            <p class="mx-4">→ ajustarea in functie de perioada contractului de asigurare (pentru polite cu perioada sub
+                12 luni).</p>
+        </div>
 
-                <p class="mx-4">→   varsta asiguratului;</p>
-                <p class="mx-4">→   capacitatea cilindrica / masa maxima autorizata / putere / numar de locuri, in functie de categoria autovehiculului;</p>
-                <p class="mx-4">→   durata contractului de asigurare;</p>
-                <p class="mx-4">→   ajustare conform sistem bonus-malus;</p>
-                <p class="mx-4">→   ajustarea in functie de perioada contractului de asigurare (pentru polite cu perioada sub 12 luni).</p>
+        <h2 class="color-primary-project fs-34 wheight500 general-rca-section-title general-rca-pid-title">
+            PID - Document de informare privind produsul de asigurare
+        </h2>
 
-                <p>
-                   B. Pentru asigurati persoane juridice, criteriile si ajustarile luate in calculul tarifului RCA sunt:
-                </p>
+        <div class="general-rca-paragraphs fs-18 wheight400">
+            <p>
+                Acest document prezintă produsul de asigurare obligatorie de răspundere civilă pentru prejudicii produse
+                prin accidente de vehicule
+                și tramvaie (RCA), asigurare obligatorie, în conformitate cu prevederile legale (Legea nr.132/2017 și
+                Norma ASF nr. 20/2017).
+            </p>
 
-                <p class="mx-4">→   capacitatea cilindrica / masa maxima autorizata / putere / numar de locuri, in functie de categoria autovehiculului;</p>
-                <p class="mx-4">→   durata contractului de asigurare;</p>
-                <p class="mx-4">→   ajustare conform sistem bonus-malus;</p>
-                <p class="mx-4">→   ajustarea in functie de perioada contractului de asigurare (pentru polite cu perioada sub 12 luni).</p>
-            </div>
+            <p class="general-rca-bold-download fs-18 wheight700">
+                <a href="../../assets/pdfs/Axeria_RCA_PID.pdf" target="_blank" rel="noopener noreferrer"
+                    class="text-decoration-none">
+                    Aici puteti descarca documentul de informare privind produsul de asigurare.
+                </a>
+            </p>
+        </div>
 
-            <h2 class="color-primary-project fs-34 wheight500 general-rca-section-title general-rca-pid-title">
-              PID - Document de informare privind produsul de asigurare
-            </h2>
-
-            <div class="general-rca-paragraphs fs-18 wheight400">
-                <p>
-                  Acest document prezintă produsul de asigurare obligatorie de răspundere civilă pentru prejudicii produse prin accidente de vehicule
-și tramvaie (RCA), asigurare obligatorie, în conformitate cu prevederile legale (Legea nr.132/2017 și Norma ASF nr. 20/2017).
-                </p>
-
-                <p class="general-rca-bold-download fs-18 wheight700 olor-blackc">
-                    <a href="../../assets/pdfs/Axeria_RCA_PID.pdf" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
-                        Aici puteti descarca documentul de informare privind produsul de asigurare.
-                    </a>
-                </p>
-            </div>
- 
     </section>
 
 </section>

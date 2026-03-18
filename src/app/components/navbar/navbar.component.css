@@ -27,7 +27,8 @@
   border-radius: 10px 3px;
 }
 
-.main-menu .nav-link:hover, .call-btn:hover {
+.main-menu .nav-link:hover,
+.call-btn:hover {
   color: #cde1ff;
   background-color: #1559ed;
   border-radius: 10px 3px;
@@ -57,6 +58,16 @@
   border-radius: 10px 3px;
   text-decoration: none;
   font-weight: 500;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  background-image: url('../../../assets//Icons/toggler_white.png') !important;
+  width: 2em;
+  height: 2rem;
+}
+
+.navbar-toggler.mobile-burger{
+padding: 2px;
 }
 
 /* Dropdown look like screenshot */
@@ -123,9 +134,11 @@
 
 /* OFFCANVAS look */
 .mobile-offcanvas {
-  background: var(--color-primary-project);
+  background: #06327ace;
   color: #ffffff;
   width: min(90vw, 420px);
+  margin: 20px 0;
+  border-radius: 10px 0px 0px 10px;
 }
 
 .offcanvas-header {
@@ -133,9 +146,12 @@
 }
 
 .mobile-offcanvas-topline {
-  height: 1px;
+  height: auto;
   width: 100%;
-  background: rgba(255, 255, 255, 0.2);
+}
+
+.mobile-offcanvas-topline img{
+  width: 120px;
 }
 
 /* Mobile menu items */

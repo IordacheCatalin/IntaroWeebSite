@@ -42,8 +42,8 @@
 
           <ul class="dropdown-menu nav-dropdown">
             <li><a class="dropdown-item nav-dropdown-item" href="https://portal.axeria-iard.ro/restituiri/" target="_blank" rel="restituiri" >Restituire RCA</a></li>
-            <li><a class="dropdown-item nav-dropdown-item" routerLink="/asigurare-rca">Asigurare generale RCA</a></li>
-            <li><a class="dropdown-item nav-dropdown-item" routerLink="/daune-rca">Daune RCA</a></li>
+            <li><a class="dropdown-item nav-dropdown-item" routerLink="/rca">Asigurare generale RCA</a></li>
+            <li><a class="dropdown-item nav-dropdown-item" routerLink="/claims-procedure">Daune RCA</a></li>
           </ul>
         </li>
 
@@ -86,7 +86,9 @@
   aria-labelledby="mobileMenuLabel"
 >
   <div class="offcanvas-header">
-    <div class="mobile-offcanvas-topline"></div>
+    <div class="mobile-offcanvas-topline">
+      <img src="../../../assets/Axeria.png" alt="Axeria">
+    </div>
 
     <button
       type="button"
@@ -118,9 +120,9 @@
         </button>
 
         <div id="mobileProducts" class="collapse mobile-submenu">
-          <a class="mobile-sublink" routerLink="/restituire-rca" data-bs-dismiss="offcanvas">Restituire RCA</a>
-          <a class="mobile-sublink" routerLink="/asigurare-rca" data-bs-dismiss="offcanvas">Asigurare generale RCA</a>
-          <a class="mobile-sublink" routerLink="/daune-rca" data-bs-dismiss="offcanvas">Daune RCA</a>
+          <a class="mobile-sublink" href="https://portal.axeria-iard.ro/restituiri/" target="_blank" rel="restituiri" data-bs-dismiss="offcanvas">Restituire RCA</a>
+          <a class="mobile-sublink" routerLink="/rca" data-bs-dismiss="offcanvas">Asigurare generale RCA</a>
+          <a class="mobile-sublink" routerLink="/claims-procedure" data-bs-dismiss="offcanvas">Daune RCA</a>
         </div>
       </li>
 
@@ -139,14 +141,12 @@
         </button>
 
         <div id="mobilePartners" class="collapse mobile-submenu">
-          <a class="mobile-sublink" routerLink="/parteneri/brokeri" data-bs-dismiss="offcanvas">Brokeri</a>
-          <a class="mobile-sublink" routerLink="/parteneri/service" data-bs-dismiss="offcanvas">Service-uri</a>
-          <a class="mobile-sublink" routerLink="/parteneri/contact" data-bs-dismiss="offcanvas">Contact parteneri</a>
+          <a class="mobile-sublink" routerLink="/brokeri" data-bs-dismiss="offcanvas">Brokeri</a>
         </div>
       </li>
 
       <li class="mobile-item">
-        <a class="mobile-link" routerLink="/axeria-iard" data-bs-dismiss="offcanvas">Axeria IARD</a>
+        <a class="mobile-link" href="https://axeria.fr/" target="_blank" rel="axeria-iard fr" data-bs-dismiss="offcanvas">Axeria IARD</a>
       </li>
 
       <li class="mobile-item">
