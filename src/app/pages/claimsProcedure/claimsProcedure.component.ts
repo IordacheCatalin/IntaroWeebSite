@@ -8,6 +8,12 @@ type RomaniaStepOneTab = 'amiabil' | 'politie' | null;
 type RomaniaStepFourTab = 'damage-assessment' | 'document-collection' | null;
 type RomaniaStepFiveTab = 'three-day-payment' | 'partner-repair-shop' | 'total-economic-loss' | 'other-repair-shop' | null;
 
+type FormItem = {
+  title: string;
+  pdfUrl: string;
+  iconUrl: string;
+  iconAlt: string;
+};
 @Component({
   selector: 'app-claimsProcedure',
   standalone: true,
@@ -86,26 +92,36 @@ export class ClaimsProcedure {
     '→ copii paşaport, etc.'
   ];
 
-  protected readonly formsItems = [
+  protected readonly formsItems: FormItem[] = [
     {
       title: 'Declaratie accident sofer in Romania',
-      pdfUrl: '../../../assets/pdfs/declaratie-accident-sofer-romania-AXERIA.pdf'
+      pdfUrl: '../../../assets/pdfs/declaratie-accident-sofer-romania-AXERIA.pdf',
+      iconUrl: '../../../assets/Icons/accident_1.png',
+      iconAlt: 'Romania form icon'
     },
     {
       title: 'Declaratie accident sofer in afara Romaniei',
-      pdfUrl: '../../../assets/pdfs/declaratie-accident-sofer-afara-romaniei-AXERIA.pdf'
+      pdfUrl: '../../../assets/pdfs/declaratie-accident-sofer-afara-romaniei-AXERIA.pdf',
+      iconUrl: '../../../assets/Icons/accident_2.png',
+      iconAlt: 'Abroad form icon'
     },
     {
       title: 'Cerere despagubire',
-      pdfUrl: '../../../assets/pdfs/Cerere-Despagubire-AXERIA.pdf'
+      pdfUrl: '../../../assets/pdfs/Cerere-Despagubire-AXERIA.pdf',
+      iconUrl: '../../../assets/Icons/accident_3.png',
+      iconAlt: 'Compensation form icon'
     },
     {
       title: 'Cerere de plata in alt cont (REGIE PROPRIE)',
-      pdfUrl: '../../../assets/pdfs/cerere-plata-alt-cont-AXERIA.pdf'
+      pdfUrl: '../../../assets/pdfs/cerere-plata-alt-cont-AXERIA.pdf',
+      iconUrl: '../../../assets/Icons/accident_4.png',
+      iconAlt: 'Payment form icon'
     },
     {
       title: 'Scrisoare GDPR',
-      pdfUrl: '../../../assets/pdfs/scrisoare-gdpr-AXERIA.pdf'
+      pdfUrl: '../../../assets/pdfs/scrisoare-gdpr-AXERIA.pdf',
+      iconUrl: '../../../assets/Icons/accident_5.png',
+      iconAlt: 'GDPR form icon'
     }
   ];
 

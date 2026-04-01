@@ -65,7 +65,7 @@
   min-height: 3.5rem;
   padding: 0.75rem 1.5rem;
   border-radius: 12px 3px 12px 3px;
-  background: #3776ee;
+  background: #2671fc;
   color: #ffffff;
   text-decoration: none;
   border: none;
@@ -212,6 +212,7 @@
   padding-left: 1.4rem;
   color: #111111;
   line-height: 1.9;
+  list-style-type: none;
 }
 
 .claims-documents-list li {
@@ -516,10 +517,29 @@ html {
 .claims-forms-card {
   width: 100%;
   max-width: 28rem;
-  background: rgba(255, 255, 255, 0.65);
   border-right: 0.1875rem solid #245fd1;
   box-shadow: 0 0.625rem 1.5rem rgba(0, 0, 0, 0.12);
   padding: 2.5rem;
+
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+    url('../../../assets/Images/7.png');
+
+  background-size: cover;
+  background-position: center;
+  transition: background 0.3s ease;
+}
+
+.claims-forms-card:hover {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+    url('../../../assets/Images/7.png');
+}
+
+/* asigură că textul e peste imagine */
+.claims-forms-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .claims-forms-caption {
@@ -531,7 +551,6 @@ html {
 .claims-forms-title {
   margin: 0 0 2rem;
   color: #0f4599;
-  font-size: 3.75rem;
   line-height: 1.05;
   font-style: italic;
   font-weight: 500;
@@ -540,7 +559,6 @@ html {
 .claims-forms-text {
   margin: 0;
   color: #111111;
-  font-size: 1.875rem;
   line-height: 1.8;
   font-weight: 500;
 }
@@ -562,13 +580,12 @@ html {
   gap: 1rem;
   color: #3776ee;
   text-decoration: none;
-  font-size: 1.75rem;
   font-weight: 500;
 }
 
-.claims-forms-link i {
-  font-size: 2.5rem;
-  min-width: 2.5rem;
+.claims-forms-link img {
+max-width: 80px;
+max-height: 50px;
 }
 
 .claims-forms-link:hover {
@@ -704,22 +721,13 @@ html {
 
   .claims-dynamic-paragraph,
   .claims-accident-text,
-  .claims-forms-text,
   .claims-contact-row p,
   .claims-list-large li {
     font-size: 1rem !important;
   }
 
-  .claims-forms-title {
-    font-size: 2.25rem;
-  }
-
-  .claims-forms-link {
-    font-size: 1rem;
-  }
-
-  .claims-forms-link i {
-    font-size: 1.5rem;
+  .claims-forms-link img {
+  
   }
 
   .claims-back-top-arrow {

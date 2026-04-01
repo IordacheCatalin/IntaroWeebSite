@@ -44,8 +44,8 @@
     </div>
   </section>
 
-  <!-- POZA 1 / PROCEDURA -->
-  <section id="claims-dynamic-content" class="claims-procedure-section">
+  <!-- PROCEDURA -->
+  <section id="claims-dynamic-content" class="claims-procedure-section text-justify-ic">
     <div class="container claims-content-container">
       <h2 class="claims-section-title color-primary-project fs-38 wheight500">
         DAUNE RCA - Procedura
@@ -91,8 +91,9 @@
     </div>
   </section>
 
-  <!-- POZA 2 / ROMANIA -->
-  <section *ngIf="activeSection === 'romania'" class="claims-dynamic-card-section claims-dynamic-card-section--blue">
+  <!-- ROMANIA -->
+  <section *ngIf="activeSection === 'romania'"
+    class="claims-dynamic-card-section claims-dynamic-card-section--blue text-justify-ic">
     <div class="container claims-dynamic-card-container">
       <div class="claims-dynamic-card">
         <div class="claims-dynamic-left">
@@ -619,8 +620,8 @@
     </div>
   </section>
 
-  <!-- POZA 3 / ABROAD -->
-  <section *ngIf="activeSection === 'abroad'" class="claims-dynamic-text-section">
+  <!-- ABROAD -->
+  <section *ngIf="activeSection === 'abroad'" class="claims-dynamic-text-section text-justify-ic">
     <div class="container claims-content-container">
       <h2 class="claims-section-title color-primary-project fs-38 wheight500">
         DAUNE RCA - EVENIMENT INTAMPLAT SI SOLUTIONAT IN AFARA ROMÂNIEI
@@ -656,7 +657,7 @@
         </div>
 
         <div class="claims-contact-row">
-           <a href="mailto:greencard@axeria-iard.ro"><i class="fa-solid fa-envelope"></i></a>
+          <a href="mailto:greencard@axeria-iard.ro"><i class="fa-solid fa-envelope"></i></a>
           <p>
             <strong>E-mail</strong> – trimiteţi un mesaj la adresa greencard@axeria-iard.ro, în care menţionaţi
             detaliile evenimentului, daunele materiale şi/sau vătămările corporale produse şi cui aparţine vinovăţia,
@@ -679,8 +680,8 @@
     </div>
   </section>
 
-  <!-- POZA 4 / DIRECT SETTLEMENT -->
-  <section *ngIf="activeSection === 'direct-settlement'" class="claims-dynamic-text-section">
+  <!-- DIRECT SETTLEMENT -->
+  <section *ngIf="activeSection === 'direct-settlement'" class="claims-dynamic-text-section text-justify-ic">
     <div class="container claims-content-container">
       <h2 class="claims-section-title color-primary-project fs-38 wheight500">
         DAUNE RCA - DECONTARE DIRECTĂ
@@ -735,16 +736,16 @@
     </div>
   </section>
 
-  <!-- POZA 5 / FORMS -->
-  <section *ngIf="activeSection === 'forms'" class="claims-dynamic-forms-section">
+  <!-- FORMS -->
+  <section *ngIf="activeSection === 'forms'" class="claims-dynamic-forms-section text-justify-ic">
     <div class="container claims-forms-container">
       <div class="claims-forms-left">
         <div class="claims-forms-card">
           <div class="claims-forms-caption">- AXERIA IARD -</div>
 
-          <h2 class="claims-forms-title">Formulare dauna</h2>
+          <h2 class="claims-forms-title fs-42">Formulare dauna</h2>
 
-          <p class="claims-forms-text">
+          <p class="claims-forms-text fs-16">
             Pentru notificarea asigurătorului de către persoana prejudiciată, asigurat sau mandatarii acestora, cu
             privire la producerea evenimentului asigurat notificarea trebuie să fie însoţită de documentele necesare
             stabilirii răspunderii asigurătorului RCA;
@@ -755,9 +756,9 @@
       <div class="claims-forms-right">
         <div class="claims-forms-links">
           <div class="claims-forms-links">
-            <a [href]="formItem.pdfUrl" class="claims-forms-link" *ngFor="let formItem of formsItems" target="_blank"
-              rel="noopener noreferrer">
-              <i class="fa-regular fa-file-lines"></i>
+            <a [href]="formItem.pdfUrl" class="claims-forms-link fs-16" *ngFor="let formItem of formsItems"
+              target="_blank" rel="noopener noreferrer">
+              <img [src]="formItem.iconUrl" [alt]="formItem.iconAlt" class="claims-forms-link-icon" />
               <span>{{ formItem.title }}</span>
             </a>
           </div>
@@ -786,13 +787,13 @@
             Daune RCA
           </h3>
 
-          <p class="claims-bottom-text fs-16 wheight500 color-white">
+          <p class="claims-bottom-text fs-16 wheight500 color-white text-justify-ic">
             La efectuarea constatarii daunelor, se recomanda prezenta ambilor conducatori si a
             ambelor autovehicule implicate in evenimentul rutier.
           </p>
 
           <div class="claims-bottom-links">
-            <a class="claims-bottom-link fs-24 wheight500" href="/claims-online">
+            <a class="claims-bottom-link fs-24 wheight500" href="/petitii_online/mesaje_transmise.html" target="_blank">
               NOTIFICARE DAUNA ONLINE
               <span>→</span>
             </a>

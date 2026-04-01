@@ -33,13 +33,13 @@
   font-size: 4rem;
   font-family: "Playfair Display", serif;
   font-weight: 500;
-  margin: 0 0 52px;
+  margin: 0 0 70px;
 }
 
 .hero-cards {
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 40px;
 }
 
 .hero-card {
@@ -48,7 +48,7 @@
   height: 74px;
   gap: 35px;
   width: 100%;
-  max-width: 390px;
+  max-width: 350px;
   min-height: 64px;
   padding: 16px 20px;
   border-radius: 14px 3px 14px 3px;

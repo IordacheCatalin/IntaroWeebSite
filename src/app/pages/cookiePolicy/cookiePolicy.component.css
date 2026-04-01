@@ -39,7 +39,7 @@
 .cookie-policy-list {
   margin: 0 0 1rem 1.5rem;
   padding: 0;
-  color: var(--color-primary-text);
+  list-style-type: none;
 }
 
 .cookie-policy-list li {
