@@ -17,7 +17,7 @@ export class ComponentOne {
     {
       iconClass: 'fa-solid fa-book-open',
       title: 'Restituire RCA',
-      href: 'https://portal.axeria-iard.ro/restituiri/'
+      href: '/restituiri/'
     },
     {
       iconClass: 'fa-solid fa-book-open',

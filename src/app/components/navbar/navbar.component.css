@@ -107,6 +107,28 @@ padding: 2px;
 }
 
 
+.language-button {
+  border: none;
+  background: none;
+  padding: 0;
+  max-width: 40px;
+  height: auto;
+  margin: 0px 10px;
+  opacity: 0.5;
+}
+
+.language-button img {
+  width: fit-content;
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.language-button:hover,
+.language-button.activ {
+  opacity: 1;
+}
+
+
 /* Mobile header layout like screenshot */
 .mobile-header {
   height: 108px;

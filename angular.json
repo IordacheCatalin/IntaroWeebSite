@@ -31,6 +31,11 @@
                 "glob": "**/*",
                 "input": "petitii_online",
                 "output": "petitii_online"
+              },
+              {
+                "glob": "**/*",
+                "input": "restituiri",
+                "output": "restituiri"
               }
             ],
             "styles": [
@@ -44,12 +49,9 @@
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
             ],
             "server": "src/main.server.ts",
-            "outputMode": "server",
+            "outputMode": "static",
             "security": {
               "allowedHosts": []
-            },
-            "ssr": {
-              "entry": "src/server.ts"
             }
           },
           "configurations": {
@@ -62,8 +64,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
+                  "maximumWarning": "1MB",
+                  "maximumError": "8MB"
                 }
               ],
               "outputHashing": "all"

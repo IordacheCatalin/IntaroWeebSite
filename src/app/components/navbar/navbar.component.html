@@ -14,14 +14,8 @@
         <img src="assets/Axeria.png" alt="Axeria" class="navbar-logo mobile-logo-img">
       </a>
 
-      <button
-        class="navbar-toggler mobile-burger fs-18"
-        type="button"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#mobileMenu"
-        aria-controls="mobileMenu"
-        aria-label="Open menu"
-      >
+      <button class="navbar-toggler mobile-burger fs-18" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Open menu">
         <span class="navbar-toggler-icon"></span>
       </button>
     </div>
@@ -30,25 +24,29 @@
     <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex" id="mainNavbar">
       <ul class="navbar-nav main-menu">
         <li class="nav-item">
-          <a class="nav-link fs-18" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-            ACASA
+          <a class="nav-link fs-18" routerLink="/" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }">
+            {{ t('home') }}
           </a>
         </li>
 
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle fs-18" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle fs-18" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
             PRODUSE SI SERVICII
           </a>
 
           <ul class="dropdown-menu nav-dropdown">
-            <li><a class="dropdown-item nav-dropdown-item" href="https://portal.axeria-iard.ro/restituiri/" target="_blank" rel="restituiri" >Restituire RCA</a></li>
+            <li><a class="dropdown-item nav-dropdown-item" href="/restituiri/" target="_blank"
+                rel="restituiri">Restituire RCA</a></li>
             <li><a class="dropdown-item nav-dropdown-item" routerLink="/rca">Asigurare generale RCA</a></li>
             <li><a class="dropdown-item nav-dropdown-item" routerLink="/claims-procedure">Daune RCA</a></li>
           </ul>
         </li>
 
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle fs-18" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle fs-18" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
             PARTENERI
           </a>
 
@@ -63,6 +61,17 @@
 
         <li class="nav-item">
           <a class="nav-link" routerLink="/contact" routerLinkActive="active">CONTACT</a>
+        </li>
+
+        <li class="nav-item">
+          <div class="d-flex-ic mt-1">
+            <button (click)="changeLanguage('ro')" class="language-button"
+              [class.activ]="currentLanguageValue === 'ro'"> <img src="assets/ro.png" alt="ro"
+                class="language-logo" /></button>
+            <button (click)="changeLanguage('en')" class="language-button"
+              [class.activ]="currentLanguageValue === 'en'"><img src="assets/en.png" alt="en"
+                class="language-logo" /></button>
+          </div>
         </li>
       </ul>
     </div>
@@ -79,48 +88,34 @@
 </nav>
 
 <!-- Mobile OFFCANVAS (slides from right) -->
-<div
-  class="offcanvas offcanvas-end mobile-offcanvas"
-  tabindex="-1"
-  id="mobileMenu"
-  aria-labelledby="mobileMenuLabel"
->
+<div class="offcanvas offcanvas-end mobile-offcanvas" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
   <div class="offcanvas-header">
     <div class="mobile-offcanvas-topline">
       <img src="../../../assets/Axeria.png" alt="Axeria">
     </div>
 
-    <button
-      type="button"
-      class="btn-close btn-close-white ms-auto"
-      data-bs-dismiss="offcanvas"
-      aria-label="Close"
-    ></button>
+    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="offcanvas"
+      aria-label="Close"></button>
   </div>
 
   <div class="offcanvas-body">
     <ul class="mobile-menu list-unstyled">
 
       <li class="mobile-item">
-        <a class="mobile-link active" routerLink="/" data-bs-dismiss="offcanvas">Acasa</a>
+        <a class="mobile-link active" routerLink="/" data-bs-dismiss="offcanvas">{{ t('home') }}</a>
       </li>
 
       <!-- Produse si servicii (collapse) -->
       <li class="mobile-item">
-        <button
-          class="mobile-link mobile-collapse-btn"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#mobileProducts"
-          aria-expanded="false"
-          aria-controls="mobileProducts"
-        >
+        <button class="mobile-link mobile-collapse-btn" type="button" data-bs-toggle="collapse"
+          data-bs-target="#mobileProducts" aria-expanded="false" aria-controls="mobileProducts">
           Produse si servicii
           <i class="fa-solid fa-chevron-down"></i>
         </button>
 
         <div id="mobileProducts" class="collapse mobile-submenu">
-          <a class="mobile-sublink" href="https://portal.axeria-iard.ro/restituiri/" target="_blank" rel="restituiri" data-bs-dismiss="offcanvas">Restituire RCA</a>
+          <a class="mobile-sublink" href="https://portal.axeria-iard.ro/restituiri/" target="_blank" rel="restituiri"
+            data-bs-dismiss="offcanvas">Restituire RCA</a>
           <a class="mobile-sublink" routerLink="/rca" data-bs-dismiss="offcanvas">Asigurare generale RCA</a>
           <a class="mobile-sublink" routerLink="/claims-procedure" data-bs-dismiss="offcanvas">Daune RCA</a>
         </div>
@@ -128,14 +123,8 @@
 
       <!-- Parteneri (collapse) -->
       <li class="mobile-item">
-        <button
-          class="mobile-link mobile-collapse-btn"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#mobilePartners"
-          aria-expanded="false"
-          aria-controls="mobilePartners"
-        >
+        <button class="mobile-link mobile-collapse-btn" type="button" data-bs-toggle="collapse"
+          data-bs-target="#mobilePartners" aria-expanded="false" aria-controls="mobilePartners">
           Parteneri
           <i class="fa-solid fa-chevron-down"></i>
         </button>
@@ -146,7 +135,8 @@
       </li>
 
       <li class="mobile-item">
-        <a class="mobile-link" href="https://axeria.fr/" target="_blank" rel="axeria-iard fr" data-bs-dismiss="offcanvas">Axeria IARD</a>
+        <a class="mobile-link" href="https://axeria.fr/" target="_blank" rel="axeria-iard fr"
+          data-bs-dismiss="offcanvas">Axeria IARD</a>
       </li>
 
       <li class="mobile-item">

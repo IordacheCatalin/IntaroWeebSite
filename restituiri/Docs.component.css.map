@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pages/home/Docs/Docs.component.css"],
+  "sourcesContent": [".res-ax-card{\r\n    position: relative;\r\n    z-index: 2000000;\r\n}\r\n\r\n.res-ax-card input, .res-ax-card textarea {\r\n    background: transparent;\r\n}"],
+  "mappings": ";AAAA,CAAC;AACG,YAAU;AACV,WAAS;AACb;AAEA,CALC,YAKY;AAAO,CALnB,YAKgC;AAC7B,cAAY;AAChB;",
+  "names": []
+}

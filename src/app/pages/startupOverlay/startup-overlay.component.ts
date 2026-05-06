@@ -1,5 +1,14 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { Component, EventEmitter, Inject, OnDestroy, OnInit, Output, PLATFORM_ID } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  EventEmitter,
+  Inject,
+  OnDestroy,
+  OnInit,
+  Output,
+  PLATFORM_ID
+} from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -16,10 +25,12 @@ export class StartupOverlayComponent implements OnInit, OnDestroy {
   public isVisible = true;
 
   private intervalId: ReturnType<typeof setInterval> | null = null;
-  private timeoutId: ReturnType<typeof setTimeout> | null = null;
   private readonly storageKey = 'startupOverlaySeen';
 
-  constructor(@Inject(PLATFORM_ID) private platformId: object) {}
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: object,
+    private changeDetectorRef: ChangeDetectorRef
+  ) {}
 
   ngOnInit(): void {
     if (!isPlatformBrowser(this.platformId)) {
@@ -34,49 +45,45 @@ export class StartupOverlayComponent implements OnInit, OnDestroy {
       return;
     }
 
-    this.startTimers();
+    this.startCountdown();
   }
 
   ngOnDestroy(): void {
-    this.clearTimers();
+    this.clearCountdown();
+  }
+
+  public markAsSeen(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      sessionStorage.setItem(this.storageKey, 'true');
+    }
+
+    this.closeOverlay();
   }
 
   public closeOverlay(): void {
     this.isVisible = false;
-    this.clearTimers();
+    this.clearCountdown();
     this.closed.emit();
+    this.changeDetectorRef.detectChanges();
   }
 
-  public markAsSeen(): void {
-    if (!isPlatformBrowser(this.platformId)) {
-      return;
-    }
-
-    sessionStorage.setItem(this.storageKey, 'true');
-    this.closeOverlay();
-  }
-
-  private startTimers(): void {
+  private startCountdown(): void {
     this.intervalId = setInterval(() => {
-      if (this.secondsLeft > 1) {
-        this.secondsLeft--;
-      }
-    }, 1000);
+      this.secondsLeft--;
 
-    this.timeoutId = setTimeout(() => {
-      this.markAsSeen();
-    }, 5000);
+      if (this.secondsLeft <= 0) {
+        this.markAsSeen();
+        return;
+      }
+
+      this.changeDetectorRef.detectChanges();
+    }, 1000);
   }
 
-  private clearTimers(): void {
+  private clearCountdown(): void {
     if (this.intervalId !== null) {
       clearInterval(this.intervalId);
       this.intervalId = null;
-    }
-
-    if (this.timeoutId !== null) {
-      clearTimeout(this.timeoutId);
-      this.timeoutId = null;
     }
   }
 }

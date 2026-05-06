@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pages/home/Form/Form.component.css"],
+  "sourcesContent": [".acordTitular {\r\n    border: 1px solid rgba(33, 37, 41, 0.75);\r\n    padding: 10px;\r\n    border-radius: 8px;\r\n}\r\n\r\n.res-ax-form {\r\n    position: relative;\r\n    z-index: 2000000;\r\n}\r\n\r\ninput.res-ax-form ,\r\ntextarea.res-ax-form  {\r\n    background: transparent;\r\n}\r\n\r\n.position-relative {\r\n  position: relative;\r\n}\r\n\r\n.valid-icon {\r\n  position: absolute;\r\n  right: 15px;\r\n  top: 51px;\r\n  transform: translateY(-50%);\r\n  font-size: 1.2rem;\r\n  color: #198754; /* verde Bootstrap */\r\n  pointer-events: none; /* nu blocheaz\u0103 inputul */\r\n}"],
+  "mappings": ";AAAA,CAAC;AACG,UAAQ,IAAI,MAAM,KAAK,EAAE,EAAE,EAAE,EAAE,EAAE,EAAE;AACnC,WAAS;AACT,iBAAe;AACnB;AAEA,CAAC;AACG,YAAU;AACV,WAAS;AACb;AAEA,KAAK,CALJ;AAMD,QAAQ,CANP;AAOG,cAAY;AAChB;AAEA,CAAC;AACC,YAAU;AACZ;AAEA,CAAC;AACC,YAAU;AACV,SAAO;AACP,OAAK;AACL,aAAW,WAAW;AACtB,aAAW;AACX,SAAO;AACP,kBAAgB;AAClB;",
+  "names": []
+}
