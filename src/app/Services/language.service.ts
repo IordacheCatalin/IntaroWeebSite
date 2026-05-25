@@ -29,4 +29,10 @@ export class LanguageService {
   translate(key: string): string {
     return this.translationsMap[this.getCurrentLanguage()][key] ?? key;
   }
+
+  getRestitutionUrl(): string {
+    return this.getCurrentLanguage() === 'en'
+      ? 'https://portal.axeria-iard.ro/restituiri/en'
+      : 'https://portal.axeria-iard.ro/restituiri/ro';
+  }
 }

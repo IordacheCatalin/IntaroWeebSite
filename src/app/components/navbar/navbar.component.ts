@@ -29,6 +29,10 @@ export class NavbarComponent {
     this.languageService.setLanguage(language);
   }
 
+  public get restitutionUrl(): string {
+    return this.languageService.getRestitutionUrl();
+  }
+
   public t(key: string): string {
     return this.languageService.translate(key);
   }

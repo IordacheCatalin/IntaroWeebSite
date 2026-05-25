@@ -26,32 +26,31 @@
         <li class="nav-item">
           <a class="nav-link fs-18" routerLink="/" routerLinkActive="active"
             [routerLinkActiveOptions]="{ exact: true }">
-            {{ t('home') }}
+            {{ t('navbar') }}
           </a>
         </li>
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle fs-18" href="#" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
-            PRODUSE SI SERVICII
+            {{ t('navbar1') }}
           </a>
 
           <ul class="dropdown-menu nav-dropdown">
-            <li><a class="dropdown-item nav-dropdown-item" href="/restituiri/" target="_blank"
-                rel="restituiri">Restituire RCA</a></li>
-            <li><a class="dropdown-item nav-dropdown-item" routerLink="/rca">Asigurare generale RCA</a></li>
-            <li><a class="dropdown-item nav-dropdown-item" routerLink="/claims-procedure">Daune RCA</a></li>
+            <li><a class="dropdown-item nav-dropdown-item" [href]="restitutionUrl" target="_blank" rel="restituiri">{{
+                t('navbar2') }}</a></li>
+            <li><a class="dropdown-item nav-dropdown-item" routerLink="/rca"> {{ t('navbar3') }}</a></li>
+            <li><a class="dropdown-item nav-dropdown-item" routerLink="/claims-procedure">{{ t('navbar4') }}</a></li>
           </ul>
         </li>
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle fs-18" href="#" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
-            PARTENERI
+            {{ t('navbar5') }}
           </a>
-
           <ul class="dropdown-menu nav-dropdown">
-            <li><a class="dropdown-item nav-dropdown-item" routerLink="/brokeri">Brokeri</a></li>
+            <li><a class="dropdown-item nav-dropdown-item" routerLink="/brokeri"> {{ t('navbar6') }}</a></li>
           </ul>
         </li>
 
@@ -90,8 +89,16 @@
 <!-- Mobile OFFCANVAS (slides from right) -->
 <div class="offcanvas offcanvas-end mobile-offcanvas" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
   <div class="offcanvas-header">
-    <div class="mobile-offcanvas-topline">
+    <div class="mobile-offcanvas-topline d-flex-ic">
       <img src="../../../assets/Axeria.png" alt="Axeria">
+
+      <span class="d-flex-ic mt-4">
+        <button (click)="changeLanguage('ro')" class="language-button" [class.activ]="currentLanguageValue === 'ro'">
+          <img src="assets/ro.png" alt="ro" class="language-logo" /></button>
+        <button (click)="changeLanguage('en')" class="language-button"
+          [class.activ]="currentLanguageValue === 'en'"><img src="assets/en.png" alt="en"
+            class="language-logo" /></button>
+      </span>
     </div>
 
     <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="offcanvas"
@@ -102,22 +109,22 @@
     <ul class="mobile-menu list-unstyled">
 
       <li class="mobile-item">
-        <a class="mobile-link active" routerLink="/" data-bs-dismiss="offcanvas">{{ t('home') }}</a>
+        <a class="mobile-link active" routerLink="/" data-bs-dismiss="offcanvas">{{ t('navbar') }}</a>
       </li>
 
       <!-- Produse si servicii (collapse) -->
       <li class="mobile-item">
         <button class="mobile-link mobile-collapse-btn" type="button" data-bs-toggle="collapse"
           data-bs-target="#mobileProducts" aria-expanded="false" aria-controls="mobileProducts">
-          Produse si servicii
+          {{ t('navbar1') }}
           <i class="fa-solid fa-chevron-down"></i>
         </button>
 
         <div id="mobileProducts" class="collapse mobile-submenu">
-          <a class="mobile-sublink" href="https://portal.axeria-iard.ro/restituiri/" target="_blank" rel="restituiri"
-            data-bs-dismiss="offcanvas">Restituire RCA</a>
-          <a class="mobile-sublink" routerLink="/rca" data-bs-dismiss="offcanvas">Asigurare generale RCA</a>
-          <a class="mobile-sublink" routerLink="/claims-procedure" data-bs-dismiss="offcanvas">Daune RCA</a>
+          <a class="mobile-sublink" [href]="restitutionUrl" target="_blank" rel="restituiri"
+            data-bs-dismiss="offcanvas">{{ t('navbar2') }}</a>
+          <a class="mobile-sublink" routerLink="/rca" data-bs-dismiss="offcanvas">{{ t('navbar3') }}</a>
+          <a class="mobile-sublink" routerLink="/claims-procedure" data-bs-dismiss="offcanvas">{{ t('navbar4') }}</a>
         </div>
       </li>
 
@@ -125,12 +132,12 @@
       <li class="mobile-item">
         <button class="mobile-link mobile-collapse-btn" type="button" data-bs-toggle="collapse"
           data-bs-target="#mobilePartners" aria-expanded="false" aria-controls="mobilePartners">
-          Parteneri
+          {{ t('navbar5') }}
           <i class="fa-solid fa-chevron-down"></i>
         </button>
 
         <div id="mobilePartners" class="collapse mobile-submenu">
-          <a class="mobile-sublink" routerLink="/brokeri" data-bs-dismiss="offcanvas">Brokeri</a>
+          <a class="mobile-sublink" routerLink="/brokeri" data-bs-dismiss="offcanvas">{{ t('navbar6') }}</a>
         </div>
       </li>
 

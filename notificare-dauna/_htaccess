@@ -1,0 +1,9 @@
+<Files config.json>
+Order Allow,Deny
+Deny from all
+</Files>
+
+<Files error_log>
+Order Allow,Deny
+Deny from all
+</Files>

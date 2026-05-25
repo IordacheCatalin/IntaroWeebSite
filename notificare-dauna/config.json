@@ -1,0 +1,7 @@
+{
+  "server": "intaro-services.ro:8443/coreservice",
+  "AuthKey": "7c3f0ae03dffb05da7cc6f453705d90230953ec3",
+  "clientId": "INTARO_DESCHIDERE_NOTIFICARE",
+  "captchaSecret": "6LeOV1wUAAAAAFqYaZ2ktALMF6QX-ZNQfDlvC5xY",
+  "debug": false
+}
