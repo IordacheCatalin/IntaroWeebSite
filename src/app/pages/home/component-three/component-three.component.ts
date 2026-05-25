@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { LanguageService } from '../../../Services/language.service';
+
 @Component({
   selector: 'app-home-component-three',
   standalone: true,
@@ -9,26 +11,35 @@ import { CommonModule } from '@angular/common';
   styleUrl: './component-three.component.css'
 })
 export class ComponentThree {
-  protected readonly valueCards = [
-    {
-      iconClass: 'fa-solid fa-lightbulb',
-      title: 'Puterea echipei',
-      description: 'Puterea companiei noastre se datoreaza aptitudinilor singulare care se unesc in slujba unei ambitii colective.'
-    },
-    {
-      iconClass: 'fa-regular fa-handshake',
-      title: 'Respect',
-      description: 'In calitate de asiguratori, lucram intr-un spirit de transparenta si onestitate. Ne tratam clientii cu respect si umanitate mai ales in situatii dificile.'
-    },
-    {
-      iconClass: 'fa-solid fa-people-group',
-      title: 'Coeziune',
-      description: 'Suntem accesibili si disponibili preferand dialogul cu clientii si partenerii nostri.'
-    },
-    {
-      iconClass: 'fa-regular fa-gem',
-      title: 'Munca inteligenta',
-      description: 'Solutiile noastre sunt flexibile si personalizate pentru clientii si partenerii nostri.'
-    }
-  ];
+
+  constructor(private readonly languageService: LanguageService) {}
+
+  protected get valueCards() {
+    return [
+      {
+        iconClass: 'fa-solid fa-lightbulb',
+        title: this.t('valueCardTitle1'),
+        description: this.t('valueCardDescription1')
+      },
+      {
+        iconClass: 'fa-regular fa-handshake',
+        title: this.t('valueCardTitle2'),
+        description: this.t('valueCardDescription2')
+      },
+      {
+        iconClass: 'fa-solid fa-people-group',
+        title: this.t('valueCardTitle3'),
+        description: this.t('valueCardDescription3')
+      },
+      {
+        iconClass: 'fa-regular fa-gem',
+        title: this.t('valueCardTitle4'),
+        description: this.t('valueCardDescription4')
+      }
+    ];
+  }
+
+  public t(key: string): string {
+    return this.languageService.translate(key);
+  }
 }
