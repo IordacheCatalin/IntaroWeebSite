@@ -1,26 +1,34 @@
 <footer class="site-footer">
+
   <div class="container footer-content">
+
     <div class="row gy-4">
+
       <div class="col-12 col-lg-4">
-        <div class="footer-brand text-center ">
+
+        <div class="footer-brand text-center">
           <img src="assets/Axeria.png" alt="Axeria" class="footer-logo">
         </div>
 
         <div class="footer-info-list mt-4">
+
           <div class="footer-info-item">
             <span class="footer-icon">
               <i class="fa-regular fa-building"></i>
             </span>
-            <span>AXERIA IARD SA Lyon – Sucursala Bucuresti</span>
+
+            <span>
+              {{ t('footerCompany') }}
+            </span>
           </div>
 
           <div class="footer-info-item">
             <span class="footer-icon">
               <i class="fa-solid fa-location-dot"></i>
             </span>
+
             <span>
-              Str. Gheorghe Titeica 212-214 (Floreasca), Sector 2, Bucuresti -
-              Cladirea Ethos House, Etaj 2
+              {{ t('footerAddress') }}
             </span>
           </div>
 
@@ -28,54 +36,86 @@
             <span class="footer-icon">
               <i class="fa-solid fa-book-open"></i>
             </span>
-            <span>J40/11706/07.07.2021 CUI 44552384</span>
+
+            <span>
+              J40/11706/07.07.2021 CUI 44552384
+            </span>
           </div>
 
           <div class="footer-info-item">
             <span class="footer-icon">
               <i class="fa-regular fa-id-card"></i>
             </span>
+
             <span>
-              Autorizata si inregistrata sub numarul 352893200 si supravegheata
-              de Autorité de contrôle prudentiel et de résolution (ACPR) Franta
-              https://acpr.banque-france.fr
+              {{ t('footerAuthorization') }}
             </span>
           </div>
+
         </div>
+
       </div>
 
       <div class="col-12 col-md-6 col-lg-4">
-        <h5 class="footer-title">PROTECTIA DATELOR</h5>
+
+        <h5 class="footer-title">
+          {{ t('footerDataProtection') }}
+        </h5>
 
         <ul class="footer-links">
-          <li><a routerLink="/clauza-decontare">Clauza de decontare directa</a></li>
-          <li><a routerLink="/petitii-online">Petitii</a></li>
-          <li><a routerLink="/cookie-policy">Politica de cookies</a></li>
-          <li><a routerLink="/terms-conditions">Termeni si conditii</a></li>
-          <li><a routerLink="/gdpr-policy">GDPR</a></li>
+          <li><a routerLink="/clauza-decontare">{{ t('footerDirectSettlement') }}</a></li>
+          <li><a routerLink="/petitii-online">{{ t('footerPetitions') }}</a></li>
+          <li><a routerLink="/cookie-policy">{{ t('footerCookies') }}</a></li>
+          <li><a routerLink="/terms-conditions">{{ t('footerTerms') }}</a></li>
+          <li><a routerLink="/gdpr-policy">{{ t('footerGDPR') }}</a></li>
         </ul>
+
       </div>
 
       <div class="col-12 col-md-6 col-lg-4">
-        <h5 class="footer-title">LINK-URI UTILE</h5>
+
+        <h5 class="footer-title">
+          {{ t('footerUsefulLinks') }}
+        </h5>
+
         <ul class="footer-links">
-          <li><a href="https://asfromania.ro/" target="_blank" rel="asfromania">Autoritatea de supraveghere financiara
-              (ASF)</a></li>
-          <li><a routerLink="/petitii-online">Petitii AXERIA-IARD LYON – Sucursala Bucuresti</a></li>
-          <li><a href="https://anpc.ro/" target="_blank" rel="anpc">Protectia consumatorilor (ANPC)</a></li>
+
           <li>
-            <a href="/assets/pdfs/Raport-tarife-de-referinta-ASF.pdf" target="_blank" rel="noopener noreferrer">
-              Raport tarife de referinta RCA
+            <a href="https://asfromania.ro/" target="_blank" rel="asfromania">
+              {{ t('footerAsf') }}
             </a>
           </li>
+
+          <li>
+            <a routerLink="/petitii-online">
+              {{ t('footerPetitionsAxeria') }}
+            </a>
+          </li>
+
+          <li>
+            <a href="https://anpc.ro/" target="_blank" rel="anpc">
+              {{ t('footerAnpc') }}
+            </a>
+          </li>
+
+          <li>
+            <a href="/assets/pdfs/Raport-tarife-de-referinta-ASF.pdf" target="_blank" rel="noopener noreferrer">
+              {{ t('footerRcaReport') }}
+            </a>
+          </li>
+
         </ul>
+
       </div>
+
     </div>
+
   </div>
 
   <div class="footer-bottom-bar">
     <div class="container text-center">
-      Axeria-Iard © {{ currentYear }} – Toate drepturile rezervate – Axeria-Iard
+      Axeria-Iard © {{ currentYear }} – {{ t('footerRights') }}
     </div>
   </div>
+
 </footer>

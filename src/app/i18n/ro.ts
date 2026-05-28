@@ -53,7 +53,26 @@ export const roTranslations = {
 
   valueCardTitle4: 'Munca inteligenta',
   valueCardDescription4:
-    'Solutiile noastre sunt flexibile si personalizate pentru clientii si partenerii nostri.'
+    'Solutiile noastre sunt flexibile si personalizate pentru clientii si partenerii nostri.',
+
+
+  footerCompany: 'AXERIA IARD SA Lyon – Sucursala Bucuresti',
+  footerAddress:
+    'Str. Gheorghe Titeica 212-214 (Floreasca), Sector 2, Bucuresti - Cladirea Ethos House, Etaj 2',
+  footerAuthorization:
+    'Autorizata si inregistrata sub numarul 352893200 si supravegheata de Autorite de controle prudentiel et de resolution (ACPR) Franta https://acpr.banque-france.fr',
+  footerDataProtection: 'PROTECTIA DATELOR',
+  footerDirectSettlement: 'Clauza de decontare directa',
+  footerPetitions: 'Petitii',
+  footerCookies: 'Politica de cookies',
+  footerTerms: 'Termeni si conditii',
+  footerGDPR: 'Politica de confidentialitate – GDPR', 
+  footerUsefulLinks: 'LINK-URI UTILE',
+  footerAsf: 'Autoritatea de supraveghere financiara (ASF)',
+  footerPetitionsAxeria: 'Petitii AXERIA-IARD LYON – Sucursala Bucuresti',
+  footerAnpc: 'Protectia consumatorilor (ANPC)',
+  footerRcaReport: 'Raport tarife de referinta RCA',
+  footerRights: 'Toate drepturile rezervate – Axeria-Iard'
 
 };
 

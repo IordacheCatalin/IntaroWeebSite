@@ -53,6 +53,24 @@ export const enTranslations = {
 
   valueCardTitle4: 'Smart Work',
   valueCardDescription4:
-    'Our solutions are flexible and personalized for our clients and partners.'
+    'Our solutions are flexible and personalized for our clients and partners.',
+
+  footerCompany: 'AXERIA IARD SA Lyon – Bucharest Branch',
+  footerAddress:
+    '212-214 Gheorghe Titeica Street (Floreasca), District 2, Bucharest - Ethos House Building, 2nd Floor',
+  footerAuthorization:
+    'Authorized and registered under number 352893200 and supervised by Autorite de controle prudentiel et de resolution (ACPR) France https://acpr.banque-france.fr',
+  footerDataProtection: 'DATA PROTECTION',
+  footerDirectSettlement: 'Direct settlement clause',
+  footerPetitions: 'Petitions',
+  footerCookies: 'Cookie policy',
+  footerTerms: 'Terms and conditions',
+  footerUsefulLinks: 'USEFUL LINKS',
+  footerGDPR: 'Privacy Policy – GDPR', 
+  footerAsf: 'Financial Supervisory Authority (ASF)',
+  footerPetitionsAxeria: 'AXERIA-IARD LYON – Bucharest Branch Petitions',
+  footerAnpc: 'Consumer Protection Authority (ANPC)',
+  footerRcaReport: 'RCA reference tariff report',
+  footerRights: 'All rights reserved – Axeria-Iard'
 
 }; 
