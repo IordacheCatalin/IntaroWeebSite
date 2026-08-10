@@ -15,9 +15,9 @@ export class BrokersComponent {
   protected readonly brokers: BrokerItem[] = [
     { name: '5MM BROKER DE ASIGURARE', logo: '' },
     { name: 'ACTIV ASIGURARI – BROKER DE ASIGURARE – REASIGURARE' },
-    { name: 'ARPEMIX – CONSULT BROKER DE ASIGURARE', logo: '../../assets/Broker/arpemix.jpg' },
+    { name: 'ARPEMIX – CONSULT BROKER DE ASIGURARE', logo: 'assets/Broker/arpemix.jpg' },
 
-    { name: 'ASICONS BROKER DE ASIGURARE', logo: '../../assets/Broker/asicons.png' },
+    { name: 'ASICONS BROKER DE ASIGURARE', logo: 'assets/Broker/asicons.png' },
 
     { name: 'ASIMAR INSURANCE BROKER DE ASIGURARE REASIGURARE' },
 
@@ -25,51 +25,51 @@ export class BrokersComponent {
 
     { name: 'ATLANTIC BROKER GRUP BROKER DE ASIGURARE' },
 
-    { name: 'AUST INSURANCE BROKER DE ASIGURARE', logo: '../../assets/Broker/aust.png' },
+    { name: 'AUST INSURANCE BROKER DE ASIGURARE', logo: 'assets/Broker/aust.png' },
 
     { name: 'AXASIG BROKER DE ASIGURARE' },
 
-    { name: 'BAVARIA BROKER DE ASIGURARE', logo: '../../assets/Broker/bavaria.jpg' },
+    { name: 'BAVARIA BROKER DE ASIGURARE', logo: 'assets/Broker/bavaria.jpg' },
 
     { name: 'BROKASIG BROKER DE ASIGURARE' },
 
-    { name: 'BUSINESS BROKER – BROKER DE ASIGURARE=', logo: '../../assets/Broker/businessbroker.jpg' },
+    { name: 'BUSINESS BROKER – BROKER DE ASIGURARE=', logo: 'assets/Broker/businessbroker.jpg' },
 
     { name: 'C.P.R. EVAL BROKER DE ASIGURARE' },
 
-    { name: 'CAMPION BROKER DE ASIGURARE SI REASIGURARE', logo: '../../assets/Broker/campion.png' },
+    { name: 'CAMPION BROKER DE ASIGURARE SI REASIGURARE', logo: 'assets/Broker/campion.png' },
 
     { name: 'CONDOR BROKER DE ASIGURARE SI REASIGURARE' },
 
     { name: 'CONFISIO – BROKER DE ASIGURARE SRL' },
 
-    { name: 'CONSILIUM BROKER DE ASIGURARE', logo: '../../assets/Broker/consilium.jpg' },
+    { name: 'CONSILIUM BROKER DE ASIGURARE', logo: 'assets/Broker/consilium.jpg' },
 
-    { name: 'CONSULTANT AA BROKER DE ASIGURARE-REASIGURARE', logo: '../../assets/Broker/consultantaa.jpg' },
+    { name: 'CONSULTANT AA BROKER DE ASIGURARE-REASIGURARE', logo: 'assets/Broker/consultantaa.jpg' },
 
     { name: 'CONTRACT ASIG BROKER DE ASIGURARE' },
 
-    { name: 'DAW MANAGEMENT BROKER DE ASIGURARE', logo: '../../assets/Broker/dawmanagement.jpg' },
+    { name: 'DAW MANAGEMENT BROKER DE ASIGURARE', logo: 'assets/Broker/dawmanagement.jpg' },
 
-    { name: 'DELTA SRS BROKER DE ASIGURARE', logo: '../../assets/Broker/deltasrs.jpg' },
+    { name: 'DELTA SRS BROKER DE ASIGURARE', logo: 'assets/Broker/deltasrs.jpg' },
 
-    { name: 'DESTINE BROKER DE ASIGURARE-REASIGURARE', logo: '../../assets/Broker/destine.png' },
+    { name: 'DESTINE BROKER DE ASIGURARE-REASIGURARE', logo: 'assets/Broker/destine.png' },
 
     { name: 'DEXASIG BROKER DE ASIGURARE SRL' },
 
-    { name: 'DOMAS INSURANCE BROKER DE ASIGURARE', logo: '../../assets/Broker/domas.png' },
+    { name: 'DOMAS INSURANCE BROKER DE ASIGURARE', logo: 'assets/Broker/domas.png' },
 
     { name: 'EDEN PMB BROKER DE ASIGURARE' },
 
     { name: 'EK-BDP BROKER DE ASIGURARE REASIGURARE' },
 
-    { name: 'ENERGO BROKER – BROKER DE ASIGURARE', logo: '../../assets/Broker/energo.png' },
+    { name: 'ENERGO BROKER – BROKER DE ASIGURARE', logo: 'assets/Broker/energo.png' },
 
-    { name: 'EURIAL BROKER DE ASIGURARE', logo: '../../assets/Broker/eurialbroker.png' },
+    { name: 'EURIAL BROKER DE ASIGURARE', logo: 'assets/Broker/eurialbroker.png' },
 
-    { name: 'EVEREST BROKER DE ASIGURARE', logo: '../../assets/Broker/everest.png' },
+    { name: 'EVEREST BROKER DE ASIGURARE', logo: 'assets/Broker/everest.png' },
 
-    { name: 'EXA BROKER DE ASIGURARE', logo: '../../assets/Broker/exa.png' },
+    { name: 'EXA BROKER DE ASIGURARE', logo: 'assets/Broker/exa.png' },
 
     { name: 'EXE PREMIUM BROKER ASIGURARE – REASIGURARE' },
 
@@ -79,13 +79,13 @@ export class BrokersComponent {
 
     { name: 'FANBROK BROKER DE ASIGURARE REASIGURARE' },
 
-    { name: 'FAST BROKERS DE ASIGURARE REASIGURARE', logo: '../../assets/Broker/fast.png' },
+    { name: 'FAST BROKERS DE ASIGURARE REASIGURARE', logo: 'assets/Broker/fast.png' },
 
     { name: 'FILAS BROKER DE ASIGURARE' },
 
-    { name: 'FINANCIAL SERVICES GRUP BROKER DE ASIGURARE', logo: '../../assets/Broker/fsg.png' },
+    { name: 'FINANCIAL SERVICES GRUP BROKER DE ASIGURARE', logo: 'assets/Broker/fsg.png' },
 
-    { name: 'FLY INSURANCE BROKER DE ASIGURARE REASIGURARE', logo: '../../assets/Broker/fly.png' },
+    { name: 'FLY INSURANCE BROKER DE ASIGURARE REASIGURARE', logo: 'assets/Broker/fly.png' },
 
     { name: 'FORUM INSURANCE' },
 
@@ -113,9 +113,9 @@ export class BrokersComponent {
 
     { name: 'INK CONSULTANTA – BROKER DE ASIGURARE' },
 
-    { name: 'INTEGRA BROKER DE ASIGURARE', logo: '../../assets/Broker/integra.png' },
+    { name: 'INTEGRA BROKER DE ASIGURARE', logo: 'assets/Broker/integra.png' },
 
-    { name: 'INTER BROKER DE ASIGURARE', logo: '../../assets/Broker/inter.png' },
+    { name: 'INTER BROKER DE ASIGURARE', logo: 'assets/Broker/inter.png' },
 
     { name: 'INTERBUG INSURANCE BROKER DE ASIGURARE' },
 
@@ -127,15 +127,15 @@ export class BrokersComponent {
 
     { name: 'LION BROKER DE ASIGURARE' },
 
-    { name: 'LOYALTY INSURANCE AND REINSURANCE BROKER', logo: '../../assets/Broker/loyalty.png' },
+    { name: 'LOYALTY INSURANCE AND REINSURANCE BROKER', logo: 'assets/Broker/loyalty.png' },
 
     { name: 'MARSH BROKER DE ASIGURARE REASIGURARE' },
 
     { name: 'MAXYGO BROKER DE ASIGURARE' },
 
-    { name: 'MILLENIUM INSURANCE BROKER (MIB) SA', logo: '../../assets/Broker/mib.png' },
+    { name: 'MILLENIUM INSURANCE BROKER (MIB) SA', logo: 'assets/Broker/mib.png' },
 
-    { name: 'MIRA SOLUTIONS BROKER DE ASIGURARE REASIGURARE', logo: '../../assets/Broker/mira.png' },
+    { name: 'MIRA SOLUTIONS BROKER DE ASIGURARE REASIGURARE', logo: 'assets/Broker/mira.png' },
 
     { name: 'NEW AGE INSURANCE BROKER' },
 
@@ -147,7 +147,7 @@ export class BrokersComponent {
 
     { name: 'PERSONAL BROKER' },
 
-    { name: 'PINT.RO BROKER DE ASIGURARE', logo: '../../assets/Broker/pint.png' },
+    { name: 'PINT.RO BROKER DE ASIGURARE', logo: 'assets/Broker/pint.png' },
 
     { name: 'PRESTIGE INSURANCE BROKER DE ASIGURARE' },
 
@@ -159,7 +159,7 @@ export class BrokersComponent {
 
     { name: 'PSG INSURANCE BROKER' },
 
-    { name: 'QUARTZ-ASIG BROKER DE ASIGURARE', logo: '../../assets/Broker/quartz.png' },
+    { name: 'QUARTZ-ASIG BROKER DE ASIGURARE', logo: 'assets/Broker/quartz.png' },
 
     { name: 'RENOMIA SRBA INSURANCE BROKER' },
 
@@ -169,20 +169,20 @@ export class BrokersComponent {
 
     { name: 'RISK MANAGEMENT GRUP BROKER DE ASIGURARE' },
 
-    { name: 'RITTER BROKER DE ASIGURARE SI REASIGURARE', logo: '../../assets/Broker/ritter.png' },
+    { name: 'RITTER BROKER DE ASIGURARE SI REASIGURARE', logo: 'assets/Broker/ritter.png' },
 
     { name: 'ROMASIG BROKER DE ASIGURARE' },
 
 
-    { name: 'SAFE INVEST BROKER DE ASIGURARE', logo: '../../assets/Broker/saveinvest.png' },
+    { name: 'SAFE INVEST BROKER DE ASIGURARE', logo: 'assets/Broker/saveinvest.png' },
 
     { name: 'SAFETY BROKER SE ASIGURARE' },
 
-    { name: 'STAR BROKER DE ASIGURARE', logo: '../../assets/Broker/starbroker.png' },
+    { name: 'STAR BROKER DE ASIGURARE', logo: 'assets/Broker/starbroker.png' },
 
     { name: 'START BROKER DE BROKER DE ASIGURARE REASIGURARE' },
 
-    { name: 'STELLAR RE INTERMEDIARIES', logo: '../../assets/Broker/stellar.png' },
+    { name: 'STELLAR RE INTERMEDIARIES', logo: 'assets/Broker/stellar.png' },
 
     { name: 'TITAN BROKER DE ASIGURARE' },
 
@@ -190,9 +190,9 @@ export class BrokersComponent {
 
     { name: 'TRUST BROKERS BROKER DE ASIGURARE' },
 
-    { name: 'VECTOR BROKER DE ASIGURARE – REASIGURARE', logo: '../../assets/Broker/vector.png' },
+    { name: 'VECTOR BROKER DE ASIGURARE – REASIGURARE', logo: 'assets/Broker/vector.png' },
 
-    { name: 'VERASIG BROKER DE ASIGURARE', logo: '../../assets/Broker/verasig-300x92.png' },
+    { name: 'VERASIG BROKER DE ASIGURARE', logo: 'assets/Broker/verasig-300x92.png' },
 
     { name: 'VERTICAL ASSURANCE BROKER DE ASIGURARE REASIGURARE' },
 

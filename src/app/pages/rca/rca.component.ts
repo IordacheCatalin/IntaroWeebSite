@@ -35,7 +35,7 @@ export class RcaComponent {
         {
             title: 'Formular Restituire RCA',
             description: 'Cererea de restituire RCA se va transmite catre restituiri@axeria-iard.ro',
-            pdfUrl: '../../assets/pdfs/Cerere-restituire-RCA.pdf'
+            pdfUrl: 'assets/pdfs/Cerere-restituire-RCA.pdf'
         },
         {
             title: 'Polite BAAR',

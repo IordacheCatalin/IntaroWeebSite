@@ -95,32 +95,32 @@ export class ClaimsProcedure {
   protected readonly formsItems: FormItem[] = [
     {
       title: 'Declaratie accident sofer in Romania',
-      pdfUrl: '../../../assets/pdfs/declaratie-accident-sofer-romania-AXERIA.pdf',
-      iconUrl: '../../../assets/Icons/accident_1.png',
+      pdfUrl: 'assets/pdfs/declaratie-accident-sofer-romania-AXERIA.pdf',
+      iconUrl: 'assets/Icons/accident_1.png',
       iconAlt: 'Romania form icon'
     },
     {
       title: 'Declaratie accident sofer in afara Romaniei',
-      pdfUrl: '../../../assets/pdfs/declaratie-accident-sofer-afara-romaniei-AXERIA.pdf',
-      iconUrl: '../../../assets/Icons/accident_2.png',
+      pdfUrl: 'assets/pdfs/declaratie-accident-sofer-afara-romaniei-AXERIA.pdf',
+      iconUrl: 'assets/Icons/accident_2.png',
       iconAlt: 'Abroad form icon'
     },
     {
       title: 'Cerere despagubire',
-      pdfUrl: '../../../assets/pdfs/Cerere-Despagubire-AXERIA.pdf',
-      iconUrl: '../../../assets/Icons/accident_3.png',
+      pdfUrl: 'assets/pdfs/Cerere-Despagubire-AXERIA.pdf',
+      iconUrl: 'assets/Icons/accident_3.png',
       iconAlt: 'Compensation form icon'
     },
     {
       title: 'Cerere de plata in alt cont (REGIE PROPRIE)',
-      pdfUrl: '../../../assets/pdfs/cerere-plata-alt-cont-AXERIA.pdf',
-      iconUrl: '../../../assets/Icons/accident_4.png',
+      pdfUrl: 'assets/pdfs/cerere-plata-alt-cont-AXERIA.pdf',
+      iconUrl: 'assets/Icons/accident_4.png',
       iconAlt: 'Payment form icon'
     },
     {
       title: 'Scrisoare GDPR',
-      pdfUrl: '../../../assets/pdfs/scrisoare-gdpr-AXERIA.pdf',
-      iconUrl: '../../../assets/Icons/accident_5.png',
+      pdfUrl: 'assets/pdfs/scrisoare-gdpr-AXERIA.pdf',
+      iconUrl: 'assets/Icons/accident_5.png',
       iconAlt: 'GDPR form icon'
     }
   ];
