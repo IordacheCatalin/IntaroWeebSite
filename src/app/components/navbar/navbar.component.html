@@ -1,5 +1,5 @@
 <nav class="main-navbar navbar navbar-expand-lg">
-  <div class="container-fluid navbar-container fs-18">
+  <div class="container-fluid navbar-container fs-16">
 
     <!-- Desktop logo (left) -->
     <a class="navbar-brand d-none d-lg-flex" routerLink="/home">
@@ -8,13 +8,13 @@
 
     <!-- Mobile header (call left, logo center, burger right) -->
     <div class="mobile-header d-flex d-lg-none w-100 align-items-center">
-      <a class="call-btn mobile-call fs-18" href="tel:0219110">Call center 021.9110</a>
+      <a class="call-btn mobile-call fs-16" href="tel:0219110">Call center 021.9110</a>
 
       <a class="mobile-logo mx-auto" routerLink="/">
         <img src="assets/Axeria.png" alt="Axeria" class="navbar-logo mobile-logo-img">
       </a>
 
-      <button class="navbar-toggler mobile-burger fs-18" type="button" data-bs-toggle="offcanvas"
+      <button class="navbar-toggler mobile-burger fs-16" type="button" data-bs-toggle="offcanvas"
         data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Open menu">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -24,14 +24,14 @@
     <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex" id="mainNavbar">
       <ul class="navbar-nav main-menu">
         <li class="nav-item">
-          <a class="nav-link fs-18" routerLink="/" routerLinkActive="active"
+          <a class="nav-link fs-16" routerLink="/" routerLinkActive="active"
             [routerLinkActiveOptions]="{ exact: true }">
             {{ t('navbar') }}
           </a>
         </li>
 
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle fs-18" href="#" role="button" data-bs-toggle="dropdown"
+          <a class="nav-link dropdown-toggle fs-16" href="#" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
             {{ t('navbar1') }}
           </a>
@@ -45,7 +45,7 @@
         </li>
 
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle fs-18" href="#" role="button" data-bs-toggle="dropdown"
+          <a class="nav-link dropdown-toggle fs-16" href="#" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
             {{ t('navbar5') }}
           </a>

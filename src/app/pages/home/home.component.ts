@@ -18,5 +18,5 @@ export class HomeComponent {
 
   public t(key: string): string {
     return this.languageService.translate(key);
-  }
+  } 
 }

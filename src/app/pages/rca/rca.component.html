@@ -8,11 +8,11 @@
 
         <div class="general-rca-hero-content center-flex-align h-100-ic">
             <h1 class="general-rca-hero-title color-white fs-84 wheight600">
-                Asigurari
+                {{ t('rcaHeroTitleLine1') }}
                 <br>
-                Generale
+                {{ t('rcaHeroTitleLine2') }}
                 <br>
-                RCA
+                {{ t('rcaHeroTitleLine3') }}
             </h1>
         </div>
 
@@ -79,32 +79,20 @@
     <section class="general-rca-text-section">
 
         <h2 class="color-primary-project fs-34 wheight500 general-rca-section-title">
-            Asigurari Generale RCA - Acoperire teritoriala
+            {{ t('rcaTerritorialCoverageTitle') }}
         </h2>
 
         <div class="general-rca-paragraphs fs-18 wheight400">
             <p>
-                În cazul în care aveți încheiată o asigurare RCA, pe perioada valabilității acesteia aveți în mod
-                automat și o asigurare Carte Verde valabilă pentru teritoriul statelor membre ale Uniunii Europene
-                precum și pentru teritoriul Islandei, Norvegiei, Liechtenstein, Elveției, Serbiei, Albaniei, Andorei,
-                Moldovei, Turciei, Ucrainei, Azerbaijan, Belarus, Muntenegru fără a plăti nici o primă de asigurare
-                suplimentară.
+                {{ t('rcaTerritorialCoverageParagraph1') }}
             </p>
 
             <p>
-                Atunci când doriți să circulați/ tranzitati cu vehiculul într-o altă țară (de exemplu, Israel, Iran,
-                Maroc, Macedonia, Rusia etc.), verificați acoperirea acesteia pe documentul de asigurare Carte Verde pe
-                care l-ați primit atunci când ați încheiat asigurarea RCA.
+                {{ t('rcaTerritorialCoverageParagraph2') }}
             </p>
 
             <p>
-                Dacă simbolul țării care vă interesează este barat/tăiat, atunci va trebui să încheiați la un asigurător
-                din România o asigurare Carte Verde distinctă față de asigurarea RCA pe care o dețineți, care să fie
-                valabilă în acea țară pe perioada deplasării. În caz contrar, la granița acelei țări va trebui să
-                cumpărați o asigurare de frontieră valabilă doar pentru acea țară. Dacă nu dețineți o asigurare valabilă
-                atunci când circulați cu vehiculul pe teritoriul unui alt stat, riscați să fiți sancționat conform legii
-                din statul respectiv, iar în cazul în care produceți un accident veți fi obligat să suportați
-                contravaloarea pagubelor produse.
+                {{ t('rcaTerritorialCoverageParagraph3') }}
             </p>
         </div>
 
@@ -136,7 +124,7 @@
                             <div class="general-rca-accordion-content">
                                 <p *ngFor="let paragraph of accordionItem.content"
                                     class="fs-16 wheight400 color-primary-project">
-                                    {{ paragraph }}
+                                    <span [innerHTML]="paragraph" class="color-black"></span>
                                 </p>
                             </div>
                         </div>
@@ -147,24 +135,22 @@
             <!-- Right -->
             <div class="general-rca-info-side">
                 <h2 class="color-primary-project fs-60 wheight600 text-center-ic general-rca-info-title">
-                    Asigurari Generale
+                    {{ t('rcaInfoTitleLine1') }}
                     <br>
-                    RCA
+                    {{ t('rcaInfoTitleLine2') }}
                 </h2>
 
                 <div class="general-rca-info-image-wrap">
-                    <img src="assets/Images/5.png" alt="Asigurari Generale RCA" class="general-rca-info-image">
+                    <img src="assets/Images/5.png" alt=" {{ t('rcaInfoImageAlt') }}" class="general-rca-info-image">
                 </div>
 
                 <p class="fs-18 wheight400 general-rca-info-text">
-                    Asiguratorul ofera servicii de decontare directa propriilor Asigurati RCA pentru daunele
-                    produse vehiculului asigurat prin accidente de vehicule de catre terte persoane vinovate,
-                    cu asigurare RCA valabila la data accidentului.
+                    {{ t('rcaInfoText') }}
                 </p>
 
                 <a href="https://www.axeria-iard.ro/" target="_blank" rel="noopener noreferrer"
                     class="general-rca-info-button text-decoration-none-ic center-flex-align">
-                    <span class="fs-20 wheight600 color-white">Tariful Informativ RCA</span>
+                    <span class="fs-20 wheight600 color-white">{{ t('rcaInfoButton') }}</span>
                     <span class="fs-28 wheight700 color-white">›</span>
                 </a>
             </div>
@@ -175,61 +161,51 @@
     <!-- Bottom content -->
     <section class="general-rca-bottom-section">
         <h2 class="color-primary-project fs-34 wheight600 general-rca-section-title">
-            Asigurari Generale RCA
+            {{ t('rcaReferenceRatesTitleLine1') }}
             <br>
-            Tarife de referinta RCA- ASF
+            {{ t('rcaReferenceRatesTitleLine2') }}
         </h2>
 
         <p class="fs-20 wheight600 color-primary-project general-rca-bold-text">
-            Raport cu privire la determinarea tarifelor de referință pentru asigurarea obligatorie de răspundere civilă
-            pentru pagube produse terților prin accidente de vehicule.
+            {{ t('rcaReferenceRatesDescription') }}
         </p>
 
         <p class="fs-20 wheight700 color-primary-project general-rca-bold-text">
-            Criteriile de tarifare AXERIA IARD:
+            {{ t('rcaPricingCriteriaTitle') }}
         </p>
 
         <div class="general-rca-paragraphs fs-18 wheight500 color-primary-project">
             <p>
-                A. Pentru asigurati persoane fizice, criteriile si ajustarile luate in calculul tarifului RCA sunt:
+                {{ t('rcaNaturalPersonsCriteria') }}
             </p>
 
-            <p class="mx-4">→ varsta asiguratului;</p>
-            <p class="mx-4">→ capacitatea cilindrica / masa maxima autorizata / putere / numar de locuri, in functie de
-                categoria autovehiculului;</p>
-            <p class="mx-4">→ durata contractului de asigurare;</p>
-            <p class="mx-4">→ ajustare conform sistem bonus-malus;</p>
-            <p class="mx-4">→ ajustarea in functie de perioada contractului de asigurare (pentru polite cu perioada sub
-                12 luni).</p>
+            <p class="mx-4">{{ t('rcaNaturalPersonsCriteria1') }}</p>
+            <p class="mx-4">{{ t('rcaNaturalPersonsCriteria2') }}</p>
+            <p class="mx-4">{{ t('rcaNaturalPersonsCriteria3') }}</p>
+            <p class="mx-4">{{ t('rcaNaturalPersonsCriteria4') }}</p>
+            <p class="mx-4">{{ t('rcaNaturalPersonsCriteria5') }}</p>
 
-            <p>
-                B. Pentru asigurati persoane juridice, criteriile si ajustarile luate in calculul tarifului RCA sunt:
-            </p>
+            <p> {{ t('rcaLegalPersonsCriteria') }} </p>
+            <p class="mx-4">{{ t('rcaLegalPersonsCriteria1') }}</p>
+            <p class="mx-4">{{ t('rcaLegalPersonsCriteria2') }}</p>
+            <p class="mx-4">{{ t('rcaLegalPersonsCriteria3') }}</p>
+            <p class="mx-4">{{ t('rcaLegalPersonsCriteria4') }}</p>
 
-            <p class="mx-4">→ capacitatea cilindrica / masa maxima autorizata / putere / numar de locuri, in functie de
-                categoria autovehiculului;</p>
-            <p class="mx-4">→ durata contractului de asigurare;</p>
-            <p class="mx-4">→ ajustare conform sistem bonus-malus;</p>
-            <p class="mx-4">→ ajustarea in functie de perioada contractului de asigurare (pentru polite cu perioada sub
-                12 luni).</p>
         </div>
 
         <h2 class="color-primary-project fs-34 wheight500 general-rca-section-title general-rca-pid-title">
-            PID - Document de informare privind produsul de asigurare
+            {{ t('rcaPidTitle') }}
         </h2>
 
         <div class="general-rca-paragraphs fs-18 wheight400">
             <p>
-                Acest document prezintă produsul de asigurare obligatorie de răspundere civilă pentru prejudicii produse
-                prin accidente de vehicule
-                și tramvaie (RCA), asigurare obligatorie, în conformitate cu prevederile legale (Legea nr.132/2017 și
-                Norma ASF nr. 20/2017).
+                {{ t('rcaPidDescription') }}
             </p>
 
             <p class="general-rca-bold-download fs-18 wheight700">
                 <a href="assets/pdfs/Axeria_RCA_PID.pdf" target="_blank" rel="noopener noreferrer"
                     class="text-decoration-none">
-                    Aici puteti descarca documentul de informare privind produsul de asigurare.
+                    {{ t('rcaPidDownload') }}
                 </a>
             </p>
         </div>

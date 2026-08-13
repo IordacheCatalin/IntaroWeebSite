@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { BrokerItem } from '../../Interfaces/BrokerItem.interface';
 import { Banner } from '../home/banner/banner.component';
 
+import { LanguageService } from '../../Services/language.service';
 
 @Component({
   selector: 'app-parteners',
@@ -12,6 +13,12 @@ import { Banner } from '../home/banner/banner.component';
   styleUrl: './parteners.component.css'
 })
 export class BrokersComponent {
+  constructor(private readonly languageService: LanguageService) { }
+
+  public t(key: string): string {
+    return this.languageService.translate(key);
+  }
+
   protected readonly brokers: BrokerItem[] = [
     { name: '5MM BROKER DE ASIGURARE', logo: '' },
     { name: 'ACTIV ASIGURARI – BROKER DE ASIGURARE – REASIGURARE' },

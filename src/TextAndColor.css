@@ -38,6 +38,7 @@ body {
     --color-third-project: #0bc7d3;
     --color-error: #cc0000;
     --color-primary-text: #3827a7;
+    --color-secondary-text: #7a7a7a;
 
     /* buttons */
     --color-primary-btn: #1a1f36;
@@ -245,6 +246,10 @@ body {
 
 .color-black {
     color: #000000 !important;
+}
+
+.color-gray {
+    color: #7a7a7a !important;
 }
 
 .color-white {
