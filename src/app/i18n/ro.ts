@@ -94,16 +94,16 @@ export const roTranslations = {
   rcaCoveredRisksId: 'riscuri',
   rcaCoveredRisksTitle: 'Riscuri acoperite',
   rcaCoveredRisksContent: '<strong>Asigurări Generale RCA</strong>\n<span class="color-gray">(1) Asiguratorul RCA are obligatia de a despagubi partea prejudiciata pentru prejudiciile dovedite suferite în urma accidentului produs prin intermediul vehiculului asigurat.</span>\n<span class="color-gray">(2) Fara a se depasi limitele de raspundere prevazute în contractul RCA si în conditiile in care evenimentul asigurat s-a produs in perioada de valabilitate a contractului RCA, asiguratorul RCA acorda despagubiri in bani pentru:</span>\n<span class="color-gray">→ vatamari corporale sau deces, inclusiv pentru prejudicii fara caracter patrimonial;</span>\n<span class="color-gray">→ prejudicii materiale, inclusiv costuri de radiere si înmatriculare, costuri cu taxe de timbru, cheltuieli cu limitarea prejudiciului, dovedite cu acte, cheltuieli aferente diminuarii valorii vehiculului dupa reparatii, dovedite cu acte sau expertiza;</span>\n<span class="color-gray">→ costuri privind readucerea vehiculului la starea dinaintea evenimentului asigurat, dovedite cu documente emise prin sisteme specializate sau prin documente emise în conditiile legii;</span>\n<span class="color-gray">→ prejudicii reprezentand consecinaa lipsei de folosinta a vehiculului avariat, inclusiv inlocuirea temporara a vehiculului, pe baza optiunii persoanei prejudiciate;</span>\n<span class="color-gray">→ cheltuieli de judecata efectuate de catre persoana prejudiciata sau cheltuieli aferente in cazul solutionarii alternative a litigiului daca solutia este favorabila persoanei prejudiciate si daca sumele reprezentand cheltuieli de judecata sunt mentionate in dispozitivul hotararii judecatoresti;</span>\n<span class="color-gray">→ cheltuielile legate de transportul vehiculului avariat, apartinand tertului pagubit, de la locul accidentului la locatia în care se gaseste centrul de constatare daune, la unitatea reparatoare aleasa de pagubit in vederea repararii vehiculului, cel/cea mai apropiat/apropiata de locul producerii accidentului sau de domiciliul persoanei prejudiciate, dupa caz, daca respectivul vehicul nu se mai poate deplasa prin mijloace proprii, iar asiguratorul nu asigura transportul.</span>\n<strong>Asigurări Generale RCA</strong>\n<span class="color-gray">(3) Indiferent de locul in care s-a produs accidentul de vehicul – pe drumuri publice, pe drumuri care nu sunt deschise circulatiei publice, in incinte si in orice alte locuri, atat in timpul deplasarii, cat si in timpul stationarii vehiculului asigurat, asiguratorul RCA acorda despagubiri pana la limita de raspundere prevazuta in contractul RCA pentru:</span>\n<span class="color-gray">→ prejudiciul produs de dispozitivele sau instalatiile cu care a fost echipat vehiculul, inclusiv pentru prejudiciul produs din cauza desprinderii accidentale a remorcii, semiremorcii ori a atasului tractat de vehicul;</span>\n<span class="color-gray">→ prejudiciul produs din culpa conducatorului vehiculului asigurat;</span>\n<span class="color-gray">→ prejudiciul produs prin fapta lucrului, cand prejudiciul isi are cauza in insusirile, actiunea sau inactiunea vehiculului, prin intermediul altui lucru antrenat de deplasarea vehiculului, prin scurgerea, risipirea ori caderea accidentala a substantelor, materialelor sau a obiectelor transportate;</span>\n<span class="color-gray">→ prejudiciile provocate tertilor, drept consecinta a deschiderii usilor vehiculului, in timpul mersului sau atunci cand vehiculul este oprit ori stationeaza, de catre pasagerii acestuia, fara asigurarea ca nu se pune in pericol siguranta deplasarii celorlalti participanti la trafic;</span>\n<span class="color-gray">→ prejudiciile provocate tertilor, drept consecinta a conducerii vehiculului sub influenta bauturilor alcoolice sau a stupefiantelor.</span>\n<strong>Asigurări Generale RCA</strong>\n<span class="color-gray">(4) Prevederile alin. (3) lit. b) se aplica inclusiv in cazurile in care la data accidentului conducatorul vehiculului:</span>\n<span class="color-gray">→ a condus vehiculul fara consimtamantul expres sau prezumat al asiguratului;</span>\n<span class="color-gray">→ nu este titularul unui permis care atesta dreptul sa conduca vehiculul respectiv;</span>\n<span class="color-gray">→ nu a respectat obligatiile legale cu privire la starea si siguranta vehiculului respectiv.</span>\n<span class="color-gray">(5) Membrii familiei asiguratului, conducatorului auto sau oricarei altei persoane a carei raspundere civila este angajata intr-un accident de vehicule si este acoperita de asigurarea obligatorie RCA nu sunt exclusi de la beneficiul asigurarii pentru propriile lor vatamari corporale.</span>',
- 
+
   rcaAccordionLimitsTitle: 'Limite de despagubire',
   rcaAccordionLimitsContent: '<span class="color-gray">Sunt stabilite de Autoritatea de Supraveghere Financiară. Astfel, începând cu 2017 limitele de despăgubire acordate în cazul unui accident în România sunt:</span>\n<span class="color-gray">→ pentru pagube materiale: 1.220.000 euro per accident, indiferent de numărul autovehiculelor implicate;</span>\n<span class="color-gray">→ pentru vătămări corporale și decese: 6.070.000 euro per accident.</span>\n<span class="color-gray">Pentru accidente produse în afara României, se aplică legislația din statul respectiv, precum și limitele de despăgubire aferente.',
-  
+
   rcaAccordionLegislationTitle: 'Legislatie aplicabila -  Asigurari generale rca',
   rcaAccordionLegislationContent: '<span class="color-gray">Norma nr. 20/2017 privind asigurarile auto din România</span>\n<span class="color-gray">Legea nr. 237/ 2015 privind autorizarea si supravegherea activitatii de asigurare si reasigurare</span>\n<span class="color-gray">Legea nr.132/2017 privind asigurarea obligatorie de raspundere civila auto pentru prejudicii produse tertilor prin accidente de vehicule si tramvaie</span>',
-  
+
   rcaAccordionDirectSettlementTitle: 'Clauza de decontare directa',
   rcaAccordionDirectSettlementContent: '<span class="color-gray">Conditii de asigurare pentru Clauza suplimentara privind Decontarea Directa, atasata politelor de asigurare de raspundere civila auto.</span>\n<strong>INTRODUCERE<strong>\n<span class="color-gray">In conformitate cu prevederile prezentei clauze si in schimbul unei prime suplimentare, Asiguratorul ofera servicii de decontare directa propriilor Asigurati RCA pentru daunele produse vehiculului asigurat prin accidente de vehicule de catre terte persoane vinovate, cu asigurare RCA valabila la data accidentului.</span>\n<span class="color-gray">Clauza suplimentara privind Decontarea Directa este valabila numai in cazul in care este atasata contractului de asigurare de raspundere civila auto incheiat pentru vehicul, ea neputand fi achizitionata independent de acesta.</span>\n<strong>RISCURI ACOPERITE</strong>\n<span class="color-gray">In baza prezentei clauze, Asiguratorul, prin mecanismul de decontare directa, acorda despagubiri catre propriul asigurat RCA in cazul producerii unui risc acoperit prin asigurarea RCA. Prin decontare directa se acorda despagubiri doar pentru:</span>\n<span class="color-gray">→ prejudicii materiale, inclusiv costuri de radiere si inmatriculare, costuri cu taxe de timbru, cheltuieli cu limitarea prejudiciului, dovedite cu acte, cheltuieli aferente diminuarii valorii vehiculului dupa reparatii, dovedite cu acte sau expertiza;</span>\n<span class="color-gray">→ costuri privind readucerea vehiculului la starea dinaintea evenimentului asigurat, dovedite cu documente emise prin sisteme specializate sau documente emise in conditiile legii;</span>\n<span class="color-gray">→ prejudicii reprezentand consecinta lipsei de folosinta a vehiculului avariat, inclusiv inlocuirea temporara a vehiculului, pe baza optiunii persoanei prejudiciate;</span>\n<span class="color-gray">→ cheltuieli de judecata efectuate de catre persoana prejudiciata sau cheltuieli aferente in cazul solutionarii alternative a litigiului daca solutia este favorabila persoanei prejudiciate;</span>\n<span class="color-gray">→ cheltuieli legate de transportul vehiculului avariat, apartinand asiguratului, de la locul accidentului la locatia in care se gaseste centrul de constatare daune, la unitatea reparatoare aleasa de Asigurat in vederea repararii vehiculului, cel/cea/mai apropiat/apropiata de locul producerii accidentului sau de domiciliul asiguratului, dupa caz, daca repectivul vehicul nu se mai poate deplasa prin mijloace proprii.</span>\n<strong>CONDIȚII DE APLICARE A CLAUZEI SUPLIMENTARE DE DECONTARE DIRECTĂ – Asigurari generale rca</strong>\n<span class="color-gray">Decontarea directa intre Asiguratorii RCA este aplicabila numai la indeplinirea cumulativa a urmatoarelor conditii:</span>\n<span class="color-gray">→ accidentele auto se produc pe teritoriul României;</span>\n<span class="color-gray">→ vehiculele implicate in accidentele auto sunt inmatriculate / inregistrate in Romania;</span>\n<span class="color-gray">→ prejudiciile sunt produse exclusiv vehiculelor;</span>\n<span class="color-gray">→ ambele vehicule implicate in accidentul auto au asigurare RCA valabila la data evenimentului;</span>\n<span class="color-gray">→ prejudiciile exclud vatamarile corporale.</span>\n<span class="color-gray">Decontarea directa nu afecteaza dreptul persoanei prejudiciate in urma unui accident auto produs de un vehicul asigurat RCA de a exercita actiunea directa pentru recuperarea prejudiciului produs impotriva asiguratorului RCA al persoanei vinovate de producerea accidentului auto.</span>\n<strong>EXCLUDERI</strong></span>\n<span class="color-gray">Asiguratorul nu acopera situatiile excluse de catre legislatia in materie de asigurari RCA care se regaseste postata pe site-ul Asiguratorului la urmatoarea adresa: www.axeria-iard.ro.</span>\n<span class="color-gray">Prezenta Clauza privind decontarea directa se poate achizitiona de catre Asigurat doar odata cu incheierea asigurarii RCA, fiind parte a acesteia. Astfel, prezenta clauza isi inceteaza valabilitatea odata cu incetarea, din orice motive, a asigurarii RCA. Prezenta clauza nu poate fi denuntata sau reziliata separat.</span>\n<span class="color-gray">In cazul în care Asiguratul datoreaza prime sau rate de prim la data pltii despagubirii, Asiguratorul poate retine din despagubire atat primele/ratele de prima a caror scadenta a fost depasita, cat si ratele scadente viitoare aferente contractului/politei de asigurare la care este anexata prezenta clauza.</span>',
-  
+
   rcaAccordionOffersTitle: 'Modalitati de ofertare',
   rcaAccordionOffersContent: '<span class="color-gray">→ Brokeri – la agentiile partenerilor brokeri -24/7 online pentru tarif indicativ</span>',
 
@@ -112,28 +112,28 @@ export const roTranslations = {
 
   rcaInfoImageAlt: 'Asigurări Generale RCA',
   rcaInfoText: 'Asigurătorul oferă servicii de decontare directă propriilor Asigurați RCA pentru daunele produse vehiculului asigurat prin accidente de vehicule de către terțe persoane vinovate, cu asigurare RCA valabilă la data accidentului.',
-  
+
   rcaInfoButton: 'Tariful Informativ RCA',
   rcaReferenceRatesTitleLine1: 'Asigurări Generale RCA',
 
   rcaReferenceRatesTitleLine2: 'Tarife de referință RCA - ASF',
   rcaReferenceRatesDescription: 'Raport cu privire la determinarea tarifelor de referință pentru asigurarea obligatorie de răspundere civilă pentru pagube produse terților prin accidente de vehicule.',
-  
+
   rcaPricingCriteriaTitle: 'Criteriile de tarifare AXERIA IARD:',
   rcaNaturalPersonsCriteria: 'A. Pentru asigurați persoane fizice, criteriile și ajustările luate în calculul tarifului RCA sunt:',
-  
+
   rcaNaturalPersonsCriteria1: '→ vârsta asiguratului;',
   rcaNaturalPersonsCriteria2: '→ capacitatea cilindrică / masa maximă autorizată / putere / număr de locuri, în funcție de categoria autovehiculului;',
   rcaNaturalPersonsCriteria3: '→ durata contractului de asigurare;',
   rcaNaturalPersonsCriteria4: '→ ajustare conform sistem bonus-malus;',
   rcaNaturalPersonsCriteria5: '→ ajustarea în funcție de perioada contractului de asigurare (pentru polițe cu perioada sub 12 luni).',
-  
+
   rcaLegalPersonsCriteria: 'B. Pentru asigurați persoane juridice, criteriile și ajustările luate în calculul tarifului RCA sunt:',
   rcaLegalPersonsCriteria1: '→ capacitatea cilindrică / masa maximă autorizată / putere / număr de locuri, în funcție de categoria autovehiculului;',
   rcaLegalPersonsCriteria2: '→ durata contractului de asigurare;',
   rcaLegalPersonsCriteria3: '→ ajustare conform sistem bonus-malus;',
   rcaLegalPersonsCriteria4: '→ ajustarea în funcție de perioada contractului de asigurare (pentru polițe cu perioada sub 12 luni).',
- 
+
   rcaPidTitle: 'PID - Document de informare privind produsul de asigurare',
   rcaPidDescription: 'Acest document prezintă produsul de asigurare obligatorie de răspundere civilă pentru prejudicii produse prin accidente de vehicule și tramvaie (RCA), asigurare obligatorie, în conformitate cu prevederile legale (Legea nr. 132/2017 și Norma ASF nr. 20/2017).',
   rcaPidDownload: 'Aici puteți descărca documentul de informare privind produsul de asigurare.',
@@ -216,7 +216,7 @@ Pas 5 - Despăgubirea`,
   claimsHtml015: "SOLUTIONAT IN ROMÂNIA",
   claimsHtml016: "In cazul protocolorii cazului pe baza Constatarii Amiabile de Accident, se recomanda prezenta la constatare a ambilor conducatori si a ambelor autovehicule implicate in evenimentul rutier",
   claimsHtml017: "DOCUMENTE",
-  
+
   claimsHtml018: "Pas 1 - Momentul accidentului",
   claimsHtml019: "La momentul evenimentului trebuie sa procedati pe cat posibil, astfel:",
   claimsHtml020: "AMIABIL",
@@ -259,7 +259,7 @@ Pas 5 - Despăgubirea`,
   claimsHtml057: "Documentele pe care le emite Politia sunt:",
   claimsHtml058: "Proces-Verbal de Constatare a Contraventiei (daca se prezinta vinovatul);",
   claimsHtml059: "Autorizatie de Reparatie.",
-  
+
   claimsHtml060: "Pas 2 - Notificarea daunei (in max. 5 zile lucratoare de la momentul accidentului)",
   claimsHtml061: "Notificarea asiguratorului cu privire la producerea evenimentului asigurat poate fi facuta de catre persoana prejudiciata, asigurat sau mandatarii acestora.",
   claimsHtml062: "Notificarile daunelor se primesc si se inregistreaza astfel:",
@@ -275,12 +275,12 @@ Pas 5 - Despăgubirea`,
   claimsHtml072: "Alte documente, in functie de evenimentul care a avut loc.",
   claimsHtml073: "ATENTIE!!!",
   claimsHtml074: "In cazul in care avariile au survenit ca urmare a mai multor evenimente, acestea trebuie notificate separat.",
-  
+
   claimsHtml075: "Pas 3 - Contactarea beneficiarului politei de asigurare",
   claimsHtml076: "In maxim 24 h, reprezentantii AXERIA analizeaza datele notificate si aloca cazului dvs. un specialist constatari daune (din zona dvs.), care va contacteaza telefonic si va ofera consiliere, stabilind totodata, de comun acord, data, ora si locul in care va avea loc constatarea avariilor si colectarea documentelor necesare instrumentarii dosarului de dauna.",
   claimsHtml077: "NOTA:",
   claimsHtml078: "Procedura se aplica atat pentru vehiculele deplasabile prin forta proprie, cat si pentru cele nedeplasabile.",
-  
+
   claimsHtml079: "Pas 4 - Constatarea avariilor si colectarea documentelor",
   claimsHtml080: "A. Constatarea avariilor",
   claimsHtml081: "B. Colectarea documentelor",
@@ -305,7 +305,7 @@ Pas 5 - Despăgubirea`,
   claimsHtml100: "documente care atesta dreptul de proprietate asupra vehiculului, in cazul in care acesta nu este inmatriculat / inregistrat fiscal de catre noul proprietar;",
   claimsHtml101: "fotografii ale autovehiculului avariat;",
   claimsHtml102: "copii pasaport, etc.",
-  
+
   claimsHtml103: "Pas 5 - Despagubirea",
   claimsHtml104: "AXERIA doreste solutionarea corecta si rapida a daunelor, respectiv plata cererilor temeinice, legale, dovedite si respingerea celor nejustificate.",
   claimsHtml105: "Orice tentativa de obtinere sau facilitare de despagubiri prin declaratii false sau utilizarea de documente false se pedepseste conform Codului Penal din Romania, iar raspunderea apartine in exclusivitate declarantului. Anularea dosarului de dauna si a politei de asigurare se face \"sine die\", de catre asigurator.",
@@ -384,5 +384,108 @@ Pas 5 - Despăgubirea`,
   claimsHtml178: "NOTIFICARE DAUNA PRIN CALL CENTER",
   claimsHtml179: "Documente:",
   claimsHtml180: "Imagine principală daune",
-  claimsHtml181: "Vehicule implicate într-un accident"
+  claimsHtml181: "Vehicule implicate într-un accident",
+
+  cookiePolicyTitle: "Politica Cookies",
+  cookiePolicyCompanyIntroduction: "<strong>Axeria IARD SA Lyon </strong>– Sucursala București, cu sediul în România, Str. Gheorghe Țițeica 212 – 214 (etajul 2), Sector 2, București, înregistrată la Registrul Comerțului sub numărul J2021011706408, CUI 44552384, acționând ca sucursală a <strong>AXERIA IARD</strong>, o companie înființată în Franța, cu un capital social de 38.000.000 euro (numărul de înregistrare 352 893 200) și cu sediul social în Lyon, 129 avenue Felix Faure 69003 (adresa poștală: 26 rue du Général Mouton Duvernet 69003 Lyon), denumită în continuare <strong>„Axeria RO”</strong>, acordă o mare importanță protecției datelor dumneavoastră personale în conformitate cu Legea aplicabilă privind protecția datelor.",
+  cookiePolicyIntroduction: "Prezenta politică privind cookie-urile (denumită în continuare <strong>„Politica Cookie”</strong>) reglementează utilizarea cookie-urilor pe site-ul web accesibil la adresa <a href=\"https://www.axeria-iard.ro/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"cookie-policy-link\">https://www.axeria-iard.ro/</a> publicat de Axeria RO (denumit în continuare <strong>„Site-ul”</strong>). Prezenta Politică Cookie vă informează cu privire la scopurile pentru care utilizăm cookie-urile și modul în care le puteți gestiona.",
+  cookiePolicySectionOneTitle: "1. Ce sunt cookie-urile?",
+  cookiePolicySectionOneDescription: "Cookie-urile sunt mici fișiere text stocate de browserul dvs. web pentru a asigura utilizarea continuă a Site-ului. Acestea sunt stocate atunci când vizitați anumite site-uri web, inclusiv Site-ul nostru. Prin urmare, Site-ul poate scrie informații pe echipamentul dvs. terminal de comunicații electronice și poate accesa informațiile deja stocate acolo.",
+  cookiePolicyClassificationIntroduction: "Există mai multe tipuri de cookie-uri, în funcție de diverse criterii de clasificare, și anume:",
+  cookiePolicyClassificationStorage: "<strong>a) În funcție de durata de stocare:</strong> (i) cookie-uri de sesiune (care expiră imediat după închiderea paginii web vizitate) sau (ii) cookie-uri persistente (care au o durată de viață mai lungă, sunt păstrate, iar informațiile stocate sunt reutilizate de fiecare dată când utilizatorul revine pe acel site web);",
+  cookiePolicyClassificationRole: "<strong>b) În funcție de rolul lor:</strong> (i) cookie-uri strict necesare, (ii) cookie-uri funcționale, (iii) cookie-uri de performanță și analiză și (iv) cookie-uri de targetare și publicitate;",
+  cookiePolicyClassificationSource: "<strong>c) În funcție de sursa lor:</strong> (i) cookie-uri proprii (plasate de domeniul/site-ul web accesat de utilizator) și (ii) cookie-uri terțe (plasate de un domeniu/site web diferit de cel accesat de utilizator – site-ul web accesat conține, de asemenea, informații de la un site web terț).",
+  cookiePolicySectionOneClosing: "În conformitate cu reglementările aplicabile cookie-urilor, sunteți informat cu privire la scopul cookie-urilor utilizate și la mijloacele de care dispuneți pentru a le refuza.",
+  cookiePolicySectionTwoTitle: "2. Ce cookie-uri utilizăm?",
+  cookiePolicySectionTwoIntroduction: "Site-ul nostru utilizează următoarele tipuri de cookie-uri:",
+  cookiePolicyStrictlyNecessaryTitle: "Cookie-uri strict necesare",
+  cookiePolicyStrictlyNecessaryDescription: "Aceste cookie-uri sunt esențiale pentru a vă permite să navigați pe site și să utilizați funcționalitățile acestuia. Fără aceste cookie-uri, servicii precum activarea conținutului adecvat în funcție de tipul dispozitivului dvs. nu pot fi furnizate.",
+  cookiePolicyFunctionalTitle: "Cookie-uri funcționale",
+  cookiePolicyFunctionalDescription: "Aceste cookie-uri permit Site-ului nostru să rețină alegerile pe care le faceți (cum ar fi setările preferințelor privind cookie-urile) și să ofere funcționalități îmbunătățite și mai personalizate. Aceste cookie-uri pot fi utilizate și pentru a furniza serviciile pe care le-ați solicitat. Informațiile colectate de aceste cookie-uri pot fi anonimizate și nu pot urmări activitatea dvs. de navigare pe alte site-uri web. Dacă nu permiteți aceste cookie-uri, este posibil ca unele funcționalități să nu funcționeze corect.",
+  cookiePolicyTableProvider: "Cookie setat de",
+  cookiePolicyTableName: "Nume",
+  cookiePolicyTablePurpose: "Scop",
+  cookiePolicyTableDuration: "Durată",
+  cookiePolicyProviderElementor: "Elementor",
+  cookiePolicyProviderWordPress: "WordPress",
+  cookiePolicyProviderComplianz: "Complianz",
+  cookiePolicyProviderPhpServer: "PHP/Server",
+  cookiePolicyProviderAdobeFonts: "Adobe Fonts",
+  cookiePolicyProviderWordPressThirdParty: "WordPress (terț)",
+  cookiePolicyProviderBlocksyFirstParty: "Blocksy Theme (primă parte)",
+  cookiePolicyProviderComplianzThirdParty: "Complianz (terț)",
+  cookiePolicyNameEGlobals: "e_globals",
+  cookiePolicyNameWpAdmin: "/wp-admin/admin.php*",
+  cookiePolicyNameElementor: "elementor",
+  cookiePolicyNameWordPressLoggedIn: "wordpress_logged_in_*",
+  cookiePolicyNameComplianzFunctional: "cmplz_functional",
+  cookiePolicyNamePhpSessionId: "PHPSESSID",
+  cookiePolicyNameElementorDefaults: "e_kit-elements-defaults",
+  cookiePolicyNameAdobeCleanFontAdded: "adobeCleanFontAdded",
+  cookiePolicyNameComplianzPreferences: "cmplz_preferences",
+  cookiePolicyNameWpEmojiSettingsSupports: "wpEmojiSettingsSupports",
+  cookiePolicyNameWpSettings: "wp-settings-*",
+  cookiePolicyNameBlocksyConsent: "blocksy_cookies_consent_accepted",
+  cookiePolicyNameWpSettingsTime: "wp-settings-time-*",
+  cookiePolicyNameWordPressTestCookie: "wordpress_test_cookie",
+  cookiePolicyNameComplianzStatistics: "cmplz_statistics",
+  cookiePolicyPurposeEGlobal: "Pentru a furniza funcții pe toate paginile Site-ului.",
+  cookiePolicyPurposeWpAdmin: "Asigură funcționarea corectă a panoului de administrare.",
+  cookiePolicyPurposeElementor: "Salvează aspectul și setările utilizate în editorul Elementor.",
+  cookiePolicyPurposeWordPressLoggedIn: "Menține sesiunea unui utilizator conectat.",
+  cookiePolicyPurposeComplianzFunctional: "Înregistrează consimțământul utilizatorului pentru cookie-urile funcționale.",
+  cookiePolicyPurposePhpSessionId: "Menține sesiunea utilizatorului pe durata cererilor.",
+  cookiePolicyPurposeElementorDefaults: "Stochează valorile implicite ale elementelor din kitul Elementor.",
+  cookiePolicyPurposeAdobeCleanFontAdded: "Înregistrează dacă un font web a fost deja încărcat pentru optimizarea performanței.",
+  cookiePolicyPurposeComplianzPreferences: "Salvează setările preferințelor utilizatorului privind cookie-urile.",
+  cookiePolicyPurposeWpEmojiSettingsSupports: "Stochează informații din browser pentru a ajuta site-ul web să funcționeze corect și să afișeze conținutul în mod corespunzător.",
+  cookiePolicyPurposeWpSettings: "Păstrează preferințele utilizatorului în panoul de administrare.",
+  cookiePolicyPurposeBlocksyConsent: "Salvează preferințele utilizatorului privind acceptarea cookie-urilor.",
+  cookiePolicyPurposeWpSettingsTime: "Utilizat pentru a reține preferințele utilizatorului pentru o experiență mai bună.",
+  cookiePolicyPurposeWordPressTestCookie: "Verifică dacă browserul acceptă cookie-uri.",
+  cookiePolicyPurposeComplianzStatistics: "Stochează consimțământul pentru cookie-urile statistice.",
+  cookiePolicyDurationSession: "Acest cookie este temporar, iar durata sa de viață este limitată la sesiunea de navigare.",
+  cookiePolicyDurationPersistent: "Persistent",
+  cookiePolicyDurationOneYear: "1 an",
+  cookiePolicySectionThreeTitle: "3. Cum pot refuza cookie-urile?",
+  cookiePolicySectionThreeDescription: "La prima vizită pe Site, veți fi informat că aveți opțiunea de a refuza stocarea cookie-urilor care sunt necesare pentru funcționarea Site-ului, în special prin refuzul de a le accepta prin intermediul bannerului cookie-urilor. Puteți modifica preferințele dvs. în orice moment făcând clic pe acest buton",
+  cookiePolicySettingsButton: "Cookie settings",
+  cookiePolicySectionFourTitle: "4. Actualizări",
+  cookiePolicySectionFourDescription: "Putem modifica Politica Cookie actualizând această pagină. Vă recomandăm să verificați această pagină cu recurență pentru a vă asigura că sunteți la curent cu orice modificări. Această Politică Cookie a fost actualizată ultima dată la 01.03.2026.",
+  cookiePolicySectionFiveTitle: "5. Contactați-ne",
+  cookiePolicySectionFiveDescription: "Dacă aveți întrebări suplimentare cu privire la această Politică Cookie, vă rugăm să contactați responsabilul nostru cu protecția datelor la adresa:",
+  cookiePolicySectionFiveDescription2: "Putem modifica Politica Cookie, actualizând această pagină. Vă recomandăm să verificați această pagină cu recurență pentru a vă asigura că sunteți la curent cu orice modificări. Această Politică Cookie a fost actualizată ultima dată la 01.03.2026.",
+
+
+  cookieConsentOpenPreferencesAria: "Deschide preferințele pentru cookie-uri",
+  cookieConsentLauncherLabel: "Preferințe cookie",
+  cookieConsentSavedStatusAria: "Preferințe salvate",
+  cookieConsentCloseAria: "Închide fereastra",
+  cookieConsentOverviewTitle: "Preferințele tale privind cookie-urile",
+  cookieConsentPreferencesTitle: "Gestionează preferințele",
+  cookieConsentOverviewDescription: "Folosim cookie-uri necesare pentru funcționarea site-ului. Cu acordul tău, putem utiliza și cookie-uri opționale pentru preferințe, analiză și marketing.",
+  cookieConsentPreferencesDescription: "Alege categoriile opționale pe care le permiți. Cookie-urile necesare rămân active pentru ca site-ul să funcționeze corect.",
+  cookieConsentDurationNote: "Alegerea este memorată timp de",
+  cookieConsentAcceptAll: "Accept toate",
+  cookieConsentRejectOptional: "Refuz opționalele",
+  cookieConsentManage: "Gestionează",
+  cookieConsentNecessaryTitle: "Necesare",
+  cookieConsentAlwaysActive: "Mereu active",
+  cookieConsentNecessaryDescription: "Permit funcțiile de bază, securitatea și memorarea acestei alegeri.",
+  cookieConsentNecessarySwitchAria: "Cookie-uri necesare: activate",
+  cookieConsentPreferencesCategoryTitle: "Preferințe",
+  cookieConsentPreferencesCategoryDescription: "Rețin opțiuni precum limba sau setările interfeței.",
+  cookieConsentPreferencesSwitchAria: "Cookie-uri de preferințe",
+  cookieConsentAnalyticsTitle: "Analiză",
+  cookieConsentAnalyticsDescription: "Ne ajută să înțelegem, în mod agregat, cum este folosit site-ul.",
+  cookieConsentAnalyticsSwitchAria: "Cookie-uri de analiză",
+  cookieConsentMarketingTitle: "Marketing",
+  cookieConsentMarketingDescription: "Permit măsurarea campaniilor și afișarea conținutului relevant.",
+  cookieConsentMarketingSwitchAria: "Cookie-uri de marketing",
+  cookieConsentSaveChoice: "Salvează alegerea",
+  cookieConsentCookiePolicyLink: "Politica de cookie-uri",
+  cookieConsentPrivacyPolicyLink: "Politica de confidențialitate",
+  cookieConsentDurationDaysSuffix: "de zile și poate fi schimbată oricând din butonul minimizat afișat în pagină."
+
+
 };

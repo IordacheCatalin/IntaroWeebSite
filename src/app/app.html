@@ -8,4 +8,8 @@
 </main>
 
 <app-footer *ngIf="shouldShowLayout()"></app-footer>
+<app-cookie-consent
+  (consentChanged)="onCookieConsentChanged($event)">
+</app-cookie-consent>
+
 <!-- <app-footer *ngIf="shouldShowLayout()"></app-footer> -->

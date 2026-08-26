@@ -1,72 +1,219 @@
 .cookie-policy-page {
   background: #f7f7f8;
   min-height: 100vh;
-  padding: 2.5rem 0 4rem;
+  padding: 40px 0 64px;
 }
 
 .cookie-policy-container {
-  max-width: 78rem;
+  max-width: 1248px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .cookie-policy-title {
-  color: var(--color-primary-text);
-  margin: 0 0 2.5rem;
+  margin: 0 0 40px;
 }
 
 .cookie-policy-content {
-  line-height: 1.8;
+  line-height: 1.65;
 }
 
 .cookie-policy-content p {
-  margin: 0 0 1rem;
+  margin: 0 0 20px;
 }
 
 .cookie-policy-section-title {
-  margin: 2rem 0 1rem;
   line-height: 1.2;
-  color: var(--color-primary-text);
+  margin: 28px 0 16px;
 }
 
-.cookie-policy-link {
+.cookie-policy-category-title {
+  margin: 20px 0;
+  padding-left: 16px;
+  position: relative;
+}
+
+.cookie-policy-category-title::before {
+  content: '•';
+  left: 0;
+  position: absolute;
+}
+
+.cookie-policy-classification-list {
+  margin: 0 0 20px 32px;
+  padding: 0;
+}
+
+.cookie-policy-classification-list li {
+  margin-bottom: 6px;
+  padding-left: 4px;
+}
+
+.cookie-policy-link,
+:host ::ng-deep .cookie-policy-link {
   color: #3776ee;
-  text-decoration: none;
 }
 
-.cookie-policy-link:hover {
+.cookie-policy-link:hover,
+:host ::ng-deep .cookie-policy-link:hover {
   text-decoration: underline;
 }
 
-.cookie-policy-list {
-  margin: 0 0 1rem 1.5rem;
-  padding: 0;
-  list-style-type: none;
+.cookie-policy-table-wrap {
+  border-radius: 0;
+  box-shadow: none;
+  margin: 20px 0 28px;
 }
 
-.cookie-policy-list li {
-  margin-bottom: 0.5rem;
+table.gn-table.cookie-policy-table {
+  border-collapse: collapse;
+  border-radius: 0;
+  min-width: 0;
+  table-layout: fixed;
 }
 
-@media (max-width: 62rem) {
+table.gn-table.cookie-policy-table thead th,
+table.gn-table.cookie-policy-table tbody td {
+  overflow-wrap: anywhere;
+  padding: 12px 14px;
+  text-align: left;
+  vertical-align: middle;
+  white-space: normal;
+}
+
+table.gn-table thead th{
+ background: #f7f7f8;
+ color:#000;
+}
+
+table.gn-table tbody td{
+ color:#000;
+}
+
+table.gn-table.cookie-policy-table th:nth-child(1) {
+  width: 17%;
+}
+
+table.gn-table.cookie-policy-table th:nth-child(2) {
+  width: 26%;
+}
+
+table.gn-table.cookie-policy-table th:nth-child(3) {
+  width: 30%;
+}
+
+table.gn-table.cookie-policy-table th:nth-child(4) {
+  width: 27%;
+}
+
+.cookie-policy-settings-button {
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+}
+
+.cookie-policy-settings-button:hover {
+  text-decoration: underline;
+}
+
+/* TABLETĂ */
+@media (max-width: 991.98px) {
   .cookie-policy-page {
-    padding: 2rem 0 3rem;
+    padding: 32px 0 48px;
   }
 
   .cookie-policy-container {
-    padding: 0 1rem;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  table.gn-table.cookie-policy-table {
+    min-width: 760px;
   }
 }
 
-@media (max-width: 48rem) {
+/* TELEFON */
+@media (max-width: 767.98px) {
+  .cookie-policy-page {
+    padding: 24px 0 40px;
+  }
+
+  .cookie-policy-container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
   .cookie-policy-title {
-    margin-bottom: 1.75rem;
+    margin-bottom: 28px;
   }
 
   .cookie-policy-section-title {
-    margin-top: 1.5rem;
+    margin-top: 24px;
   }
 
   .cookie-policy-content {
-    font-size: 1rem !important;
     line-height: 1.7;
+  }
+
+  .cookie-policy-classification-list {
+    margin-left: 20px;
+  }
+
+  .cookie-policy-table-wrap {
+    background: transparent;
+    overflow-x: visible;
+  }
+
+  table.gn-table.cookie-policy-table {
+    background: transparent;
+    border: 0;
+    min-width: 0;
+  }
+
+  table.gn-table.cookie-policy-table thead {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  table.gn-table.cookie-policy-table tbody,
+  table.gn-table.cookie-policy-table tr,
+  table.gn-table.cookie-policy-table tbody td {
+    display: block;
+    width: 100%;
+  }
+
+  table.gn-table.cookie-policy-table tbody tr {
+    background: var(--table-bg);
+    border: 1px solid var(--table-border);
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgb(24 35 52 / 8%);
+    margin-bottom: 16px;
+    overflow: hidden;
+  }
+
+  table.gn-table.cookie-policy-table tbody td {
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--table-border);
+    display: grid;
+    gap: 12px;
+    grid-template-columns: minmax(105px, 34%) minmax(0, 1fr);
+    padding: 12px;
+    white-space: normal;
+  }
+
+  table.gn-table.cookie-policy-table tbody td::before {
+    color: var(--color-primary-project);
+    content: attr(data-label);
+    font-weight: 700;
+  }
+
+  table.gn-table.cookie-policy-table tbody td:last-child {
+    border-bottom: 0;
   }
 }

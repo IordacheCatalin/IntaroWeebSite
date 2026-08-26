@@ -24,42 +24,42 @@
     <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex" id="mainNavbar">
       <ul class="navbar-nav main-menu">
         <li class="nav-item">
-          <a class="nav-link fs-16" routerLink="/" routerLinkActive="active"
+          <a class="nav-link fs-14" routerLink="/" routerLinkActive="active"
             [routerLinkActiveOptions]="{ exact: true }">
             {{ t('navbar') }}
           </a>
         </li>
 
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle fs-16" href="#" role="button" data-bs-toggle="dropdown"
+          <a class="nav-link dropdown-toggle fs-14" href="#" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
             {{ t('navbar1') }}
           </a>
 
           <ul class="dropdown-menu nav-dropdown">
-            <li><a class="dropdown-item nav-dropdown-item" [href]="restitutionUrl" target="_blank" rel="restituiri">{{
+            <li><a class="dropdown-item nav-dropdown-item fs-14" [href]="restitutionUrl" target="_blank" rel="restituiri">{{
                 t('navbar2') }}</a></li>
-            <li><a class="dropdown-item nav-dropdown-item" routerLink="/rca"> {{ t('navbar3') }}</a></li>
-            <li><a class="dropdown-item nav-dropdown-item" routerLink="/claims-procedure">{{ t('navbar4') }}</a></li>
+            <li><a class="dropdown-item nav-dropdown-item fs-14" routerLink="/rca"> {{ t('navbar3') }}</a></li>
+            <li><a class="dropdown-item nav-dropdown-item fs-14" routerLink="/claims-procedure">{{ t('navbar4') }}</a></li>
           </ul>
         </li>
 
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle fs-16" href="#" role="button" data-bs-toggle="dropdown"
+          <a class="nav-link dropdown-toggle fs-14" href="#" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
             {{ t('navbar5') }}
           </a>
           <ul class="dropdown-menu nav-dropdown">
-            <li><a class="dropdown-item nav-dropdown-item" routerLink="/brokeri"> {{ t('navbar6') }}</a></li>
+            <li><a class="dropdown-item nav-dropdown-item fs-14" routerLink="/brokeri"> {{ t('navbar6') }}</a></li>
           </ul>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="https://axeria.fr/" target="_blank" rel="axeria-iard fr">AXERIA IARD</a>
+          <a class="nav-link fs-14" href="https://axeria.fr/" target="_blank" rel="axeria-iard fr">AXERIA IARD</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" routerLink="/contact" routerLinkActive="active">CONTACT</a>
+          <a class="nav-link fs-14" routerLink="/contact" routerLinkActive="active">CONTACT</a>
         </li>
 
         <li class="nav-item">
@@ -76,7 +76,7 @@
     </div>
 
     <!-- Desktop right actions -->
-    <div class="navbar-actions d-none d-lg-flex">
+    <div class="navbar-actions d-none d-lg-flex fs-14">
       <!-- <div class="search-icon">
         <i class="fa-solid fa-magnifying-glass"></i>
       </div> -->
@@ -109,45 +109,45 @@
     <ul class="mobile-menu list-unstyled">
 
       <li class="mobile-item">
-        <a class="mobile-link active" routerLink="/" data-bs-dismiss="offcanvas">{{ t('navbar') }}</a>
+        <a class="mobile-link active fs-14" routerLink="/" data-bs-dismiss="offcanvas">{{ t('navbar') }}</a>
       </li>
 
       <!-- Produse si servicii (collapse) -->
       <li class="mobile-item">
-        <button class="mobile-link mobile-collapse-btn" type="button" data-bs-toggle="collapse"
+        <button class="mobile-link mobile-collapse-btn fs-14" type="button" data-bs-toggle="collapse"
           data-bs-target="#mobileProducts" aria-expanded="false" aria-controls="mobileProducts">
           {{ t('navbar1') }}
           <i class="fa-solid fa-chevron-down"></i>
         </button>
 
         <div id="mobileProducts" class="collapse mobile-submenu">
-          <a class="mobile-sublink" [href]="restitutionUrl" target="_blank" rel="restituiri"
+          <a class="mobile-sublink fs-14" [href]="restitutionUrl" target="_blank" rel="restituiri"
             data-bs-dismiss="offcanvas">{{ t('navbar2') }}</a>
-          <a class="mobile-sublink" routerLink="/rca" data-bs-dismiss="offcanvas">{{ t('navbar3') }}</a>
+          <a class="mobile-sublink fs-14" routerLink="/rca" data-bs-dismiss="offcanvas">{{ t('navbar3') }}</a>
           <a class="mobile-sublink" routerLink="/claims-procedure" data-bs-dismiss="offcanvas">{{ t('navbar4') }}</a>
         </div>
       </li>
 
       <!-- Parteneri (collapse) -->
       <li class="mobile-item">
-        <button class="mobile-link mobile-collapse-btn" type="button" data-bs-toggle="collapse"
+        <button class="mobile-link mobile-collapse-btn fs-14" type="button" data-bs-toggle="collapse"
           data-bs-target="#mobilePartners" aria-expanded="false" aria-controls="mobilePartners">
           {{ t('navbar5') }}
           <i class="fa-solid fa-chevron-down"></i>
         </button>
 
         <div id="mobilePartners" class="collapse mobile-submenu">
-          <a class="mobile-sublink" routerLink="/brokeri" data-bs-dismiss="offcanvas">{{ t('navbar6') }}</a>
+          <a class="mobile-sublink fs-14" routerLink="/brokeri" data-bs-dismiss="offcanvas">{{ t('navbar6') }}</a>
         </div>
       </li>
 
       <li class="mobile-item">
-        <a class="mobile-link" href="https://axeria.fr/" target="_blank" rel="axeria-iard fr"
+        <a class="mobile-link fs-14" href="https://axeria.fr/" target="_blank" rel="axeria-iard fr"
           data-bs-dismiss="offcanvas">Axeria IARD</a>
       </li>
 
       <li class="mobile-item">
-        <a class="mobile-link" routerLink="/contact" data-bs-dismiss="offcanvas">Contact</a>
+        <a class="mobile-link fs-14" routerLink="/contact" data-bs-dismiss="offcanvas">Contact</a>
       </li>
     </ul>
   </div>
