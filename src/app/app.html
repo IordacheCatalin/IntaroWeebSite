@@ -1,15 +1,11 @@
-<app-startup-overlay *ngIf="showStartupOverlay" (closed)="onOverlayClosed()">
-</app-startup-overlay>
+<app-startup-overlay *ngIf="showStartupOverlay" (closed)="onOverlayClosed()"></app-startup-overlay>
 <app-navbar *ngIf="shouldShowLayout()"></app-navbar>
 <main [class]="mainClass()">
-
-
   <router-outlet></router-outlet>
 </main>
 
 <app-footer *ngIf="shouldShowLayout()"></app-footer>
-<app-cookie-consent
-  (consentChanged)="onCookieConsentChanged($event)">
-</app-cookie-consent>
+<app-cookie-consent *ngIf="!showStartupOverlay && showStartupCookiesPolicy"
+  (consentChanged)="onCookieConsentChanged($event)"></app-cookie-consent>
 
 <!-- <app-footer *ngIf="shouldShowLayout()"></app-footer> -->

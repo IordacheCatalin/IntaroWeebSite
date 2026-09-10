@@ -34,7 +34,7 @@ input {
 
 .cc-dialog {
   position: relative;
-  width: min(680px, 100%);
+  width: min(520px, 100%);
   max-height: calc(100dvh - 48px);
   overflow: auto;
   color: var(--cc-text);
@@ -87,7 +87,7 @@ input {
 }
 
 .cc-header {
-  padding: 30px 74px 24px 32px;
+  padding: 10px 20px;
   border-bottom: 1px solid #edf0f4;
 }
 
@@ -146,8 +146,8 @@ input {
 }
 
 .cc-button {
-  min-height: 46px;
-  padding: 10px 18px;
+  min-height: 36px;
+  padding: 8px 10px;
   border: 1px solid transparent;
   border-radius: 11px;
   line-height: 1.2;
@@ -201,8 +201,8 @@ input {
 .cc-category {
   align-items: flex-start;
   justify-content: space-between;
-  margin: 0 32px;
-  padding: 18px 0;
+  margin: 0 15px;
+  padding: 10px 0;
   border-bottom: 1px solid #edf0f4;
 }
 
@@ -344,6 +344,24 @@ input {
   box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.18);
 }
 
+.cc-description__link {
+  color: var(--cc-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 150ms ease;
+}
+
+.cc-description__link:hover {
+  color: var(--cc-primary-hover);
+}
+
+.cc-description__link:focus-visible {
+  outline: 2px solid var(--cc-focus);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
 @keyframes cc-fade-in {
   from {
     opacity: 0;
@@ -377,7 +395,7 @@ input {
   }
 
   .cc-header {
-    padding: 24px 60px 20px 22px;
+    padding: 10px 60px 20px 22px;
   }
 
   .cc-content {

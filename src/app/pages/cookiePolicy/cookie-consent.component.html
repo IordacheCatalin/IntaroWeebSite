@@ -44,7 +44,7 @@
                     </svg>
                 </span>
 
-                <h2 id="cookie-consent-title" class="cc-title fs-24 wheight700 color-black">
+                <h2 id="cookie-consent-title" class="cc-title fs-14 wheight700 color-black">
                     {{
                     t(
                     activeView === 'overview'
@@ -54,9 +54,22 @@
                     }}
                 </h2>
 
-                <p id="cookie-consent-description" class="cc-description fs-14 wheight400 color-gray text-justify-ic">
+                <p id="cookie-consent-description" class="cc-description fs-11 wheight400 color-gray text-justify-ic">
                     <ng-container *ngIf="activeView === 'overview'; else preferencesDescription">
-                        {{ t('cookieConsentOverviewDescription') }}
+                        {{ t('cookieConsentOverviewDescriptionBeforeCookiePolicy') + ' ' }}
+
+                        <a href="/cookie-policy" class="cc-description__link">
+                            {{ t('cookieConsentCookiePolicyInlineLink') }}
+                        </a>
+
+                        {{ ' ' + t('cookieConsentOverviewDescriptionAfterCookiePolicy') + ' ' }}
+                        
+                        <br>
+
+                        <a href="/partners-operators"
+                            class="cc-description__link">
+                            {{ t('cookieConsentPartnersInlineLink') }}
+                        </a>.
                     </ng-container>
 
                     <ng-template #preferencesDescription>
@@ -66,23 +79,23 @@
             </header>
 
             <div *ngIf="activeView === 'overview'; else preferencesView" class="cc-content">
-                <p class="cc-note fs-14 wheight400 color-gray">
+                <p class="cc-note fs-12 wheight400 color-gray">
                     {{ t('cookieConsentDurationNote') }}
                     {{ consentDurationDays }}
                     {{ t('cookieConsentDurationDaysSuffix') }}
                 </p>
 
-                <div class="cc-actions cc-actions--overview gap10">
-                    <button type="button" class="cc-button cc-button--primary fs-14 wheight600" (click)="acceptAll()">
+                <div class="cc-actions cc-actions--overview gap10 fs-13">
+                    <button type="button" class="cc-button cc-button--primary fs-13 wheight600" (click)="acceptAll()">
                         {{ t('cookieConsentAcceptAll') }}
                     </button>
 
-                    <button type="button" class="cc-button cc-button--secondary fs-14 wheight600"
+                    <button type="button" class="cc-button cc-button--secondary fs-13 wheight600"
                         (click)="rejectOptional()">
                         {{ t('cookieConsentRejectOptional') }}
                     </button>
 
-                    <button type="button" class="cc-button cc-button--secondary fs-14 wheight600"
+                    <button type="button" class="cc-button cc-button--secondary fs-13 wheight600"
                         (click)="showPreferences()">
                         {{ t('cookieConsentManage') }}
                     </button>
@@ -177,18 +190,18 @@
                         </label>
                     </div>
 
-                    <div class="cc-actions cc-actions--preferences gap10">
-                        <button type="button" class="cc-button cc-button--text fs-14 wheight600"
+                    <div class="cc-actions cc-actions--preferences gap10 fs-13">
+                        <button type="button" class="cc-button cc-button--text fs-13 wheight600"
                             (click)="rejectOptional()">
                             {{ t('cookieConsentRejectOptional') }}
                         </button>
 
-                        <button type="button" class="cc-button cc-button--secondary fs-14 wheight600"
+                        <button type="button" class="cc-button cc-button--secondary fs-13 wheight600"
                             (click)="acceptAll()">
                             {{ t('cookieConsentAcceptAll') }}
                         </button>
 
-                        <button type="button" class="cc-button cc-button--primary fs-14 wheight600"
+                        <button type="button" class="cc-button cc-button--primary fs-13 wheight600"
                             (click)="savePreferences()">
                             {{ t('cookieConsentSaveChoice') }}
                         </button>
@@ -196,13 +209,13 @@
                 </div>
             </ng-template>
 
-            <footer class="cc-footer d-flex-ic flex-wrap gap20">
-                <a href="/cookie-policy" class="fs-12 wheight600 color-primary-project text-decoration-none-ic">
+            <footer class="cc-footer d-flex-ic flex-wrap gap20 fs-12 ">
+                <a href="/cookie-policy" class="fs-10 wheight600 color-primary-project text-decoration-none-ic">
                     {{ t('cookieConsentCookiePolicyLink') }}
                 </a>
 
                 <a href="/politica-confidentialitate"
-                    class="fs-12 wheight600 color-primary-project text-decoration-none-ic">
+                    class="fs-10 wheight600 color-primary-project text-decoration-none-ic">
                     {{ t('cookieConsentPrivacyPolicyLink') }}
                 </a>
             </footer>

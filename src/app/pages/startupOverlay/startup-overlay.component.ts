@@ -30,18 +30,17 @@ export class StartupOverlayComponent implements OnInit, OnDestroy {
   constructor(
     @Inject(PLATFORM_ID) private platformId: object,
     private changeDetectorRef: ChangeDetectorRef
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     if (!isPlatformBrowser(this.platformId)) {
-      this.isVisible = false;
       return;
     }
 
     const alreadySeen = sessionStorage.getItem(this.storageKey) === 'true';
 
     if (alreadySeen) {
-      this.isVisible = false;
+      queueMicrotask(() => this.closeOverlay());
       return;
     }
 

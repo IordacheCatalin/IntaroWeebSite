@@ -1,0 +1,74 @@
+<main class="partners-page">
+  <div class="container partners-container">
+    <h1 class="partners-title color-primary-project fs-42 wheight600">
+      {{ t('partnersDataPageTitle') }}
+    </h1>
+
+    <div class="partners-content fs-14 wheight400 text-justify-ic">
+      <p class="partners-introduction">
+        {{ t('partnersDataIntroduction') }}
+      </p>
+
+      <section class="main-operator" aria-labelledby="main-operator-title">
+        <h2
+          id="main-operator-title"
+          class="partners-section-title color-primary-project fs-28 wheight600"
+        >
+          {{ t('partnersDataMainOperatorTitle') }}
+        </h2>
+
+        <address class="operator-address">
+          <strong class="wheight600">{{ t('partnersDataCompanyName') }}</strong>
+          <span>{{ t('partnersDataCompanyAddress') }}</span>
+          <span>{{ t('partnersDataCompanyVatNumber') }}</span>
+          <span>{{ t('partnersDataCompanyRegistrationNumber') }}</span>
+        </address>
+
+        <p>{{ t('partnersDataMainOperatorDescription') }}</p>
+      </section>
+
+      <section
+        *ngFor="let partner of partners; let index = index"
+        class="partner-section"
+        [attr.aria-labelledby]="'partner-title-' + index"
+      >
+        <h2
+          [id]="'partner-title-' + index"
+          class="partner-title color-primary-project fs-28 wheight600"
+        >
+          {{ index + 1 }}. {{ t(partner.nameKey) }}
+        </h2>
+
+        <dl class="partner-details">
+          <div class="partner-detail">
+            <dt class="wheight600">{{ t('partnersDataPurposeLabel') }}</dt>
+            <dd>{{ t(partner.purposeKey) }}</dd>
+          </div>
+
+          <div class="partner-detail">
+            <dt class="wheight600">{{ t('partnersDataTypesLabel') }}</dt>
+            <dd>{{ t(partner.dataTypesKey) }}</dd>
+          </div>
+
+          <div class="partner-detail">
+            <dt class="wheight600">{{ t('partnersDataPrivacyPolicyLabel') }}</dt>
+            <dd>
+              <a
+                class="partner-link"
+                [href]="partner.privacyPolicyUrl"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {{ partner.privacyPolicyUrl }}
+              </a>
+            </dd>
+          </div>
+        </dl>
+      </section>
+
+      <p class="partners-transfer-note">
+        {{ t('partnersDataTransferNote') }}
+      </p>
+    </div>
+  </div>
+</main>

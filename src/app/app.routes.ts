@@ -56,15 +56,19 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/rca/rca.component').then(m => m.RcaComponent)
   },
-  
+
   {
     path: 'rca-risc',
     loadComponent: () =>
       import('./pages/rcaRisc/rcaRisc.component').then(m => m.RcaRiscComponent)
   },
-
-
-  
+  {
+    path: 'partners-operators',
+    loadComponent: () =>
+      import(
+        './pages/cookiePolicy/partners-data-operators.component'
+      ).then(component => component.PartnersDataOperatorsComponent)
+  },
 
 
   {

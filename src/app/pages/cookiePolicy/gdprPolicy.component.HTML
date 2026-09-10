@@ -1,138 +1,477 @@
 <app-banner></app-banner>
 
-<section class="cookie-policy-page">
-    <div class="container cookie-policy-container">
-
-        <h1 class="cookie-policy-title fs-42 wheight600">
-            Protectia datelor cu caracter personal (GDPR)
+<main class="gdpr-policy-page">
+    <div class="container gdpr-policy-container">
+        <h1 class="gdpr-policy-title color-primary-project fs-38 wheight600 mt-4">
+            {{ t('gdprPageTitle') }}
         </h1>
 
-        <div class="cookie-policy-content fs-16 wheight400 text-justify-ic">
-
+        <article class="gdpr-policy-content fs-13 wheight400 text-justify-ic">
             <p>
-                Această informare descrie modul în care site-ul
-                <a href="https://www.axeria-iard.ro/" target="_blank" class="cookie-policy-link">
-                    www.axeria-iard.ro
-                </a>
-                poate prelucra datele dumneavoastră cu caracter personal, în conformitate cu
-                Regulamentul (UE) 2016/679 (GDPR).
-            </p>
+                <strong>{{ t('gdprIntroCompanyName') }}</strong>
 
-            <!-- DEFINITII -->
-            <h2 class="cookie-policy-section-title fs-28 wheight600">
-                1. Definitii
-            </h2>
+                {{ t('gdprIntroCompanyPartOne') }}
 
-            <p><strong>Date cu caracter personal</strong> – orice informații privind o persoană fizică identificată sau
-                identificabilă.</p>
+                <strong>{{ t('gdprIntroParentCompanyName') }}</strong>
 
-            <p><strong>Prelucrare</strong> – orice operațiune efectuată asupra datelor personale, cum ar fi colectarea,
-                stocarea, utilizarea sau ștergerea acestora.</p>
+                {{ t('gdprIntroCompanyPartTwo') }}
 
-            <p><strong>Operator</strong> – entitatea care stabilește scopul și mijloacele prelucrării datelor.</p>
+                <strong>{{ t('gdprIntroShortName') }}</strong>
 
-            <p><strong>Persoana vizata</strong> – persoana fizică ale cărei date sunt prelucrate.</p>
-
-            <p><strong>Persoana imputernicita</strong> – entitatea care prelucrează datele în numele operatorului.</p>
-
-            <!-- PRINCIPII -->
-            <h2 class="cookie-policy-section-title fs-28 wheight600">
-                2. Principiile prelucrarii datelor
-            </h2>
-
-            <p>
-                Datele sunt prelucrate în mod legal, echitabil și transparent, colectate în scopuri determinate,
-                limitate la ceea ce este necesar și păstrate doar pe perioada necesară.
-            </p>
-
-            <!-- DATE COLECTATE -->
-            <h2 class="cookie-policy-section-title fs-28 wheight600">
-                3. Ce date colectam
-            </h2>
-
-            <ul class="cookie-policy-list">
-                <li>nume si prenume;</li>
-                <li>adresa de email;</li>
-                <li>numar de telefon;</li>
-                <li>date introduse in formulare;</li>
-                <li>date tehnice (IP, browser, dispozitiv);</li>
-            </ul>
-
-            <!-- SCOP -->
-            <h2 class="cookie-policy-section-title fs-28 wheight600">
-                4. Scopul prelucrarii
-            </h2>
-
-            <ul class="cookie-policy-list">
-                <li>procesarea solicitarilor transmise prin site;</li>
-                <li>comunicarea cu utilizatorii;</li>
-                <li>indeplinirea obligatiilor legale;</li>
-                <li>securitatea si functionarea site-ului;</li>
-            </ul>
-
-            <!-- TEMEI LEGAL -->
-            <h2 class="cookie-policy-section-title fs-28 wheight600">
-                5. Temeiul legal
-            </h2>
-
-            <p>
-                Prelucrarea datelor se face pe baza consimtamantului, executarii unui contract,
-                obligatiilor legale sau interesului legitim al operatorului.
-            </p>
-
-            <!-- DREPTURI -->
-            <h2 class="cookie-policy-section-title fs-28 wheight600">
-                6. Drepturile dumneavoastra
-            </h2>
-
-            <ul class="cookie-policy-list">
-                <li>dreptul de acces la date;</li>
-                <li>dreptul la rectificare;</li>
-                <li>dreptul la stergere;</li>
-                <li>dreptul la restrictionare;</li>
-                <li>dreptul la portabilitate;</li>
-                <li>dreptul la opozitie;</li>
-            </ul>
-
-            <!-- STOCARE -->
-            <h2 class="cookie-policy-section-title fs-28 wheight600">
-                7. Perioada de stocare
-            </h2>
-
-            <p>
-                Datele sunt păstrate doar pe durata necesară scopurilor pentru care au fost colectate,
-                conform legislației aplicabile.
-            </p>
-
-            <!-- SECURITATE -->
-            <h2 class="cookie-policy-section-title fs-28 wheight600">
-                8. Securitatea datelor
-            </h2>
-
-            <p>
-                Implementăm măsuri tehnice și organizatorice pentru protejarea datelor împotriva accesului
-                neautorizat, pierderii sau modificării.
-            </p>
-
-            <!-- CONTACT -->
-            <h2 class="cookie-policy-section-title fs-28 wheight600">
-                9. Contact
-            </h2>
-
-            <p>
-                Pentru orice solicitări privind datele personale, ne puteți contacta la:
-                <a href="petitii_online/mesaje_transmise.html">
-                    click aici
-                </a>
+                {{ t('gdprIntroCompanyPartThree') }}
             </p>
 
             <p>
-                De asemenea, aveți dreptul de a depune o plângere la autoritatea de supraveghere:
-                <a href="https://www.dataprotection.ro/" target="_blank" class="cookie-policy-link">
-                    www.dataprotection.ro
-                </a>
+                {{ t('gdprIntroPurpose') }}
             </p>
 
-        </div>
+            <!-- SECȚIUNEA 1 -->
+            <section aria-labelledby="gdpr-section-1">
+                <h2 id="gdpr-section-1" class="gdpr-policy-section-title color-primary-project fs-28 wheight600">
+                    {{ t('gdprSectionOneTitle') }}
+                </h2>
+
+                <p>
+                    {{ t('gdprDefinitionsIntroduction') }}
+                </p>
+
+                <dl class="gdpr-definitions">
+                    <div *ngFor="let definition of definitions" class="gdpr-definition">
+                        <dt class="wheight600 color-black">
+                            {{ t(definition.titleKey) }}
+                        </dt>
+
+                        <dd>
+                            {{ t(definition.descriptionKey) }}
+                        </dd>
+                    </div>
+                </dl>
+            </section>
+
+            <!-- SECȚIUNEA 2 -->
+            <section aria-labelledby="gdpr-section-2">
+                <h2 id="gdpr-section-2" class="gdpr-policy-section-title color-primary-project fs-28 wheight600">
+                    {{ t('gdprSectionTwoTitle') }}
+                </h2>
+
+                <p>
+                    {{ t('gdprProcessingSourcesIntroduction') }}
+                </p>
+
+                <ul class="gdpr-policy-list">
+                    <li *ngFor="let sourceKey of processingSources">
+                        {{ t(sourceKey) }}
+                    </li>
+
+                    <li>
+                        {{ t('gdprProcessingSourceSite') }}
+
+                        <a class="gdpr-policy-link" routerLink="/cookie-policy">
+                            {{ t('gdprHereLink') }}
+                        </a>.
+                    </li>
+                </ul>
+
+                <p>
+                    {{ t('gdprProcessingPurposesIntroduction') }}
+                </p>
+
+                <ul class="gdpr-policy-list gdpr-purpose-list">
+                    <li>
+                        <strong>
+                            {{ t('gdprPurposeWebsiteTitle') }}
+                        </strong>
+
+                        {{ t('gdprPurposeWebsiteText') }}
+
+                        <a class="gdpr-policy-link" routerLink="/cookie-policy">
+                            {{ t('gdprHereLink') }}
+                        </a>.
+                    </li>
+
+                    <li>
+                        <strong>
+                            {{ t('gdprPurposeMarketingTitle') }}
+                        </strong>
+
+                        {{ t('gdprPurposeMarketingText') }}
+                    </li>
+
+                    <li>
+                        <strong>
+                            {{ t('gdprPurposeRightsTitle') }}
+                        </strong>
+
+                        {{ t('gdprPurposeRightsText') }}
+                    </li>
+
+                    <li>
+                        <strong>
+                            {{ t('gdprPurposeClaimsTitle') }}
+                        </strong>
+
+                        {{ t('gdprPurposeClaimsText') }}
+
+                        <a class="gdpr-policy-link" routerLink="/claims-procedure">
+                            {{ t('gdprHereLink') }}
+                        </a>.
+                    </li>
+
+                    <li>
+                        <strong>
+                            {{ t('gdprPurposeComplaintsTitle') }}
+                        </strong>
+
+                        {{ t('gdprPurposeComplaintsText') }}
+                    </li>
+
+                    <li>
+                        <strong>
+                            {{ t('gdprPurposeContactTitle') }}
+                        </strong>
+
+                        <a class="gdpr-policy-link" routerLink="/petitii-online">
+                            {{ t('gdprHereLink') }}
+                        </a>
+
+                        {{ t('gdprPurposeContactText') }}
+                    </li>
+                </ul>
+
+                <p>
+                    {{ t('gdprProcessingCompliance') }}
+                </p>
+
+                <p>
+                    {{ t('gdprPolicyAvailability') }}
+
+                    <a class="gdpr-policy-link" href="mailto:dpo@axeria-iard.ro">
+                        dpo@axeria-iard.ro
+                    </a>.
+                </p>
+            </section>
+
+            <!-- SECȚIUNEA 3 -->
+            <section aria-labelledby="gdpr-section-3">
+                <h2 id="gdpr-section-3" class="gdpr-policy-section-title color-primary-project fs-28 wheight600">
+                    {{ t('gdprSectionThreeTitle') }}
+                </h2>
+
+                <p>
+                    {{ t('gdprCollectionIntroduction') }}
+                </p>
+
+                <ul class="gdpr-policy-list">
+                    <li>
+                        <strong>
+                            {{ t('gdprIdentificationDataTitle') }}
+                        </strong>
+
+                        {{ t('gdprIdentificationDataText') }}
+                    </li>
+
+                    <li>
+                        <strong>
+                            {{ t('gdprBrowsingDataTitle') }}
+                        </strong>
+
+                        {{ t('gdprBrowsingDataText') }}
+                    </li>
+                </ul>
+            </section>
+
+            <!-- SECȚIUNEA 4 -->
+            <section aria-labelledby="gdpr-section-4">
+                <h2 id="gdpr-section-4" class="gdpr-policy-section-title color-primary-project fs-28 wheight600">
+                    {{ t('gdprSectionFourTitle') }}
+                </h2>
+
+                <p>
+                    {{ t('gdprStorageHostingText') }}
+
+                    <a class="gdpr-policy-link" routerLink="/partners-operators">
+                        {{ t('gdprHereLink') }}
+                    </a>.
+                </p>
+
+                <p>
+                    {{ t('gdprStorageSecurityText') }}
+                </p>
+            </section>
+
+            <!-- SECȚIUNEA 5 -->
+            <section aria-labelledby="gdpr-section-5">
+                <h2 id="gdpr-section-5" class="gdpr-policy-section-title color-primary-project fs-28 wheight600">
+                    {{ t('gdprSectionFiveTitle') }}
+                </h2>
+
+                <p>
+                    {{ t('gdprRecipientsIntroduction') }}
+                </p>
+
+                <ul class="gdpr-policy-list">
+                    <li>
+                        {{ t('gdprRecipientCategoryHosting') }}
+                    </li>
+
+                    <li>
+                        {{ t('gdprRecipientCategoryDevelopment') }}
+                    </li>
+
+                    <li>
+                        {{ t('gdprRecipientCategoryComplaints') }}
+                    </li>
+                </ul>
+
+                <p>
+                    {{ t('gdprInternationalTransfers') }}
+                </p>
+
+                <div class="gdpr-table-wrap">
+                    <table class="gn-table gdpr-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">
+                                    {{ t('gdprTableRecipient') }}
+                                </th>
+
+                                <th scope="col">
+                                    {{ t('gdprTableData') }}
+                                </th>
+
+                                <th scope="col">
+                                    {{ t('gdprTablePurpose') }}
+                                </th>
+
+                                <th scope="col">
+                                    {{ t('gdprTableLocation') }}
+                                </th>
+
+                                <th scope="col">
+                                    {{ t('gdprTableProtection') }}
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr *ngFor="let recipient of recipients">
+                                <td [attr.data-label]="t('gdprTableRecipient')">
+                                    {{ t(recipient.recipientKey) }}
+                                </td>
+
+                                <td [attr.data-label]="t('gdprTableData')">
+                                    {{ t(recipient.dataKey) }}
+                                </td>
+
+                                <td [attr.data-label]="t('gdprTablePurpose')">
+                                    {{ t(recipient.purposeKey) }}
+                                </td>
+
+                                <td [attr.data-label]="t('gdprTableLocation')">
+                                    {{ t(recipient.locationKey) }}
+                                </td>
+
+                                <td [attr.data-label]="t('gdprTableProtection')">
+                                    {{ t(recipient.protectionKey) }}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- SECȚIUNEA 6 -->
+            <section aria-labelledby="gdpr-section-6">
+                <h2 id="gdpr-section-6" class="gdpr-policy-section-title color-primary-project fs-28 wheight600">
+                    {{ t('gdprSectionSixTitle') }}
+                </h2>
+
+                <p>
+                    {{ t('gdprHyperlinksText') }}
+                </p>
+            </section>
+
+            <!-- SECȚIUNEA 7 -->
+            <section aria-labelledby="gdpr-section-7">
+                <h2 id="gdpr-section-7" class="gdpr-policy-section-title color-primary-project fs-28 wheight600">
+                    {{ t('gdprSectionSevenTitle') }}
+                </h2>
+
+                <p>
+                    {{ t('gdprSecurityText') }}
+                </p>
+            </section>
+
+            <!-- SECȚIUNEA 8 -->
+            <section aria-labelledby="gdpr-section-8">
+                <h2 id="gdpr-section-8" class="gdpr-policy-section-title color-primary-project fs-28 wheight600">
+                    {{ t('gdprSectionEightTitle') }}
+                </h2>
+
+                <p>
+                    {{ t('gdprRightsIntroduction') }}
+                </p>
+
+                <ul class="gdpr-policy-list">
+                    <li *ngFor="let rightKey of rightsSummary">
+                        {{ t(rightKey) }}
+                    </li>
+                </ul>
+
+                <!-- DREPTUL DE ACCES -->
+                <section id="gdpr-right-access" class="gdpr-right" aria-labelledby="gdpr-right-access-title">
+                    <h3 id="gdpr-right-access-title" class="gdpr-right-title fs-13 wheight600">
+                        {{ t('gdprRightAccessTitle') }}
+                    </h3>
+
+                    <p>
+                        {{ t('gdprRightAccessIntroduction') }}
+                    </p>
+
+                    <ol class="gdpr-access-list">
+                        <li *ngFor="let informationKey of accessInformation">
+                            {{ t(informationKey) }}
+                        </li>
+                    </ol>
+
+                    <p>{{ t('gdprRightAccessTransfer') }}</p>
+                    <p>{{ t('gdprRightAccessCopy') }}</p>
+                    <p>{{ t('gdprRightAccessFee') }}</p>
+                    <p>{{ t('gdprRightAccessElectronic') }}</p>
+                    <p>{{ t('gdprRightAccessOthers') }}</p>
+                </section>
+
+                <!-- DREPTUL DE RECTIFICARE -->
+                <section class="gdpr-right" aria-labelledby="gdpr-right-rectification-title">
+                    <h3 id="gdpr-right-rectification-title" class="gdpr-right-title fs-13 wheight600">
+                        {{ t('gdprRightRectificationTitle') }}
+                    </h3>
+
+                    <p>
+                        {{ t('gdprRightRectificationText') }}
+                    </p>
+                </section>
+
+                <!-- DREPTUL DE ȘTERGERE -->
+                <section class="gdpr-right" aria-labelledby="gdpr-right-deletion-title">
+                    <h3 id="gdpr-right-deletion-title" class="gdpr-right-title fs-13 wheight600">
+                        {{ t('gdprRightDeletionTitle') }}
+                    </h3>
+
+                    <p>
+                        {{ t('gdprRightDeletionIntroduction') }}
+                    </p>
+
+                    <div class="gdpr-letter-list">
+                        <p *ngFor="let reasonKey of deletionReasons">
+                            {{ t(reasonKey) }}
+                        </p>
+                    </div>
+                </section>
+
+                <!-- DREPTUL DE RESTRICȚIONARE -->
+                <section class="gdpr-right" aria-labelledby="gdpr-right-restriction-title">
+                    <h3 id="gdpr-right-restriction-title" class="gdpr-right-title fs-13 wheight600">
+                        {{ t('gdprRightRestrictionTitle') }}
+                    </h3>
+
+                    <p>
+                        {{ t('gdprRightRestrictionIntroduction') }}
+                    </p>
+
+                    <div class="gdpr-letter-list">
+                        <p *ngFor="let reasonKey of restrictionReasons">
+                            {{ t(reasonKey) }}
+                        </p>
+                    </div>
+                </section>
+
+                <!-- DREPTUL DE PORTABILITATE -->
+                <section class="gdpr-right" aria-labelledby="gdpr-right-portability-title">
+                    <h3 id="gdpr-right-portability-title" class="gdpr-right-title fs-13 wheight600">
+                        {{ t('gdprRightPortabilityTitle') }}
+                    </h3>
+
+                    <p>
+                        {{ t('gdprRightPortabilityIntroduction') }}
+                    </p>
+
+                    <div class="gdpr-letter-list">
+                        <p *ngFor="let conditionKey of portabilityConditions">
+                            {{ t(conditionKey) }}
+                        </p>
+                    </div>
+
+                    <p>
+                        {{ t('gdprRightPortabilityTransfer') }}
+                    </p>
+
+                    <p>
+                        {{ t('gdprRightPortabilityOthers') }}
+                    </p>
+                </section>
+
+                <!-- DREPTUL DE OPOZIȚIE -->
+                <section class="gdpr-right" aria-labelledby="gdpr-right-objection-title">
+                    <h3 id="gdpr-right-objection-title" class="gdpr-right-title fs-13 wheight600">
+                        {{ t('gdprRightObjectionTitle') }}
+                    </h3>
+
+                    <p>
+                        {{ t('gdprRightObjectionText') }}
+                    </p>
+                </section>
+
+                <!-- INSTRUCȚIUNI POST-MORTEM -->
+                <section class="gdpr-right" aria-labelledby="gdpr-right-post-mortem-title">
+                    <h3 id="gdpr-right-post-mortem-title" class="gdpr-right-title fs-13 wheight600">
+                        {{ t('gdprRightPostMortemTitle') }}
+                    </h3>
+
+                    <p>
+                        {{ t('gdprRightPostMortemText') }}
+                    </p>
+
+                    <p>
+                        {{ t('gdprPostMortemIntroduction') }}
+                    </p>
+
+                    <ul class="gdpr-policy-list">
+                        <li *ngFor="let informationKey of postMortemInformation">
+                            {{ t(informationKey) }}
+                        </li>
+                    </ul>
+
+                    <p>
+                        {{ t('gdprPostMortemClosing') }}
+                    </p>
+                </section>
+            </section>
+
+            <!-- SECȚIUNEA 9 -->
+            <section aria-labelledby="gdpr-section-9">
+                <h2 id="gdpr-section-9" class="gdpr-policy-section-title color-primary-project fs-28 wheight600">
+                    {{ t('gdprSectionNineTitle') }}
+                </h2>
+
+                <p>
+                    {{ t('gdprExerciseContact') }}
+
+                    <a class="gdpr-policy-link" href="mailto:dpo@axeria-iard.ro">
+                        dpo@axeria-iard.ro
+                    </a>.
+                </p>
+
+                <p>{{ t('gdprExerciseIdentity') }}</p>
+                <p>{{ t('gdprExerciseResponseTime') }}</p>
+                <p>{{ t('gdprExerciseExtension') }}</p>
+                <p>{{ t('gdprExerciseArchive') }}</p>
+                <p>{{ t('gdprExerciseComplaint') }}</p>
+
+                <p class="gdpr-version">
+                    {{ t('gdprPolicyVersion') }}
+                </p>
+            </section>
+        </article>
     </div>
-</section>
+</main>

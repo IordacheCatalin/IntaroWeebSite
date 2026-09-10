@@ -17,6 +17,7 @@ import { StartupOverlayComponent } from './pages/startupOverlay/startup-overlay.
 })
 export class App {
   public showStartupOverlay = true;
+  public showStartupCookiesPolicy = false;
   private readonly router = inject(Router);
   private readonly hiddenLayoutRoutes: string[] = [
     '/login',
@@ -45,6 +46,7 @@ export class App {
 
   public onOverlayClosed(): void {
     this.showStartupOverlay = false;
+    this.showStartupCookiesPolicy = true;
   }
 
   public onCookieConsentChanged(

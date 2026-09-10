@@ -1,0 +1,149 @@
+:host {
+  display: block;
+}
+
+.partners-page {
+  min-height: 100vh;
+  padding: 0.25rem 0 3.5rem;
+  background: #f7f7f8;
+}
+
+.partners-container {
+  max-width: 78rem;
+}
+
+.partners-title {
+  margin: 0 0 2.75rem;
+  line-height: 1.18;
+  text-align: center;
+}
+
+.partners-content {
+  color: #344054;
+  line-height: 1.55;
+}
+
+.partners-content p {
+  margin: 0;
+}
+
+.partners-introduction {
+  margin-bottom: 1rem !important;
+  color: #111827;
+}
+
+.partners-section-title,
+.partner-title {
+  margin: 0;
+  line-height: 1.25;
+}
+
+.partners-section-title {
+  margin-bottom: 1rem;
+}
+
+.operator-address {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin: 0 0 1.25rem;
+  font-style: normal;
+}
+
+.main-operator > p {
+  margin-bottom: 0.85rem;
+}
+
+.partner-section {
+  margin-top: 0.85rem;
+}
+
+.partner-title {
+  margin-bottom: 0.85rem;
+}
+
+.partner-details {
+  margin: 0;
+}
+
+.partner-detail {
+  margin-bottom: 1rem;
+}
+
+.partner-detail dt,
+.partner-detail dd {
+  margin: 0;
+}
+
+.partner-detail dt {
+  margin-bottom: 0.15rem;
+  color: #344054;
+}
+
+.partner-link {
+  color: #2878d0;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+}
+
+.partner-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.15rem;
+}
+
+.partner-link:focus-visible {
+  border-radius: 0.15rem;
+  outline: 0.15rem solid rgb(40 120 208 / 35%);
+  outline-offset: 0.15rem;
+}
+
+.partners-transfer-note {
+  margin-top: 0.25rem !important;
+}
+
+@media (max-width: 62rem) {
+  .partners-page {
+    padding: 1.5rem 0 3rem;
+  }
+
+  .partners-container {
+    padding-inline: 1rem;
+  }
+}
+
+@media (max-width: 48rem) {
+  .partners-page {
+    padding: 1.25rem 0 2.5rem;
+  }
+
+  .partners-title {
+    margin-bottom: 2rem;
+    font-size: 2rem !important;
+  }
+
+  .partners-section-title,
+  .partner-title {
+    font-size: 1.5rem !important;
+  }
+
+  .partners-content {
+    font-size: 0.875rem !important;
+    line-height: 1.65;
+    text-align: left;
+  }
+}
+
+@media (max-width: 30rem) {
+  .partners-container {
+    padding-inline: 0.75rem;
+  }
+
+  .partners-title {
+    font-size: 1.75rem !important;
+  }
+
+  .partners-section-title,
+  .partner-title {
+    font-size: 1.3rem !important;
+  }
+}
